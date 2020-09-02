@@ -2,6 +2,10 @@
 
 Custom WordPress theme for [The Green Web Foundation](https://www.thegreenwebfoundation.org/).
 
+## License
+
+The parent theme (Neve created by ThemeIsle) and this child theme are under a GNU GENERAL PUBLIC LICENSE. For more details see [license.txt](license.txt).
+
 ## Install
 
 The theme should be installed in the `/wp-content/themes/` WordPress directory.
