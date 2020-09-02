@@ -1,0 +1,77 @@
+/**
+ * Main SCSS file loading in all the partials needed.
+*/
+
+// Bootstrap grid 
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+
+@import "bootstrap/mixins/breakpoints";
+@import "bootstrap/mixins/grid-framework";
+@import "bootstrap/mixins/grid";
+
+// @import "bootstrap/grid";
+// @import "bootstrap/utilities/display";
+// @import "bootstrap/utilities/flex";
+
+
+// Base styles
+// Core styles that form the base brand and layout.
+@import 'base/rem';
+@import 'base/colours';
+@import 'base/variables';
+@import 'base/fonts';
+@import 'base/typography';
+@import 'base/htmlelements';
+@import 'base/utilities';
+@import 'base/layout';
+@import 'base/neve-basic-styles';
+
+
+// Reusable components
+// Styles or layouts that could appear multiple times on an given screen.
+@import 'components/icons';
+@import 'components/social-icons';
+@import 'components/button';
+@import 'components/navigation';
+@import 'components/footer';
+@import 'components/post-meta';
+@import 'components/grids';
+@import 'components/pagination';
+@import 'components/forms';
+
+
+// Gutenberg blocks
+@import 'blocks/utility-classes';
+@import 'blocks/block-group';
+@import 'blocks/block-cover';
+@import 'blocks/block-columns';
+@import 'blocks/block-button';
+
+
+
+// Vendor
+// Styling and customisations for plugins or other third party code.
+
+
+
+// Layouts
+// Layouts for sections you'd expect to only find once per page.
+@import 'layouts/header';
+@import 'layouts/main-menu';
+@import 'layouts/entry-classes';
+@import 'layouts/featured-image';
+@import 'layouts/post';
+
+
+
+// Content partials
+// Styles and layouts that match up with a specific php template.
+// These php files are typically found in /template-parts/
+
+
+// Pages
+// Unique customisations for a specific page.
+// Typically these styles can't be used elsewhere.
+// These are loaded alphabetically.
+@import 'pages/home';

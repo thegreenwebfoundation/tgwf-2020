@@ -1,0 +1,33 @@
+/**
+ * Styling overrides for basic HTML elements.
+*/
+
+body {
+	// font-family: $body-font;
+	// font-weight: $default-font-weight;
+	// color: $default-font-colour;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	// font-family: $title-font;
+	// font-weight: $bold-font-weight;
+
+	> a {
+		text-decoration: none;
+		
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+h1 {
+}
+
+a:link, a:hover {
+	text-decoration: underline;
+	
+	&:hover {
+		text-decoration: none;
+	}
+}
