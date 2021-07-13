@@ -6,3 +6,18 @@
 /* 2. COLOUR CLASSES      */
 
 
+
+/* 1. GENERAL CLASSES     */
+
+// This should be in the theme but for some reason doesn't always apply.
+// Sometimes it shows up as an inline style.
+// It's here as backup.
+.alignfull > [class*="__inner-container"],
+.alignwide > [class*="__inner-container"] {
+	margin: auto;
+}
+
+
+/* 2. COLOUR CLASSES      */
+
+
