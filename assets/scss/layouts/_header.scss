@@ -1,3 +1,12 @@
 /**
  * Styling / layout for the header
 */
+
+.hfg_header .header-bottom-inner {
+	background-color: $tgwf-darkdarkgreen;
+
+	.brand {
+		font-size: 1.2em;
+		font-weight: bold;
+	}
+}
