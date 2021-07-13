@@ -8,3 +8,11 @@
 		justify-content: flex-start;
 	}
 }
+
+.nav-menu-primary {
+	li.menu-item {
+		a {
+			text-decoration: none;
+		}
+	}
+}
