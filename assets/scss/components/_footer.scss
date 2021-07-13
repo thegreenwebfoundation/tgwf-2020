@@ -1,3 +1,14 @@
 /**
  * Styling and layout for the footer.
 */
+
+.site-footer {
+	
+	.footer-top-inner {
+		padding-top: rem($medium-spacing);
+		padding-bottom: rem($medium-spacing);
+	}
+	.footer-bottom-inner {
+		padding-bottom: rem($medium-spacing);
+	}
+}
