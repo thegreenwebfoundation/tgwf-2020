@@ -21,8 +21,8 @@ div[class*="__inner-container"] {
 
 	.has-background & {
 		padding: rem($medium-spacing) 0;
-		margin-top: rem($medium-spacing);
-		margin-bottom: rem($medium-spacing); 
+		margin-top: rem($large-spacing);
+		margin-bottom: rem($large-spacing); 
 	}
 
 }
