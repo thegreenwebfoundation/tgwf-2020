@@ -17,6 +17,16 @@
 	margin: auto;
 }
 
+div[class*="__inner-container"] {
+
+	.has-background & {
+		padding: rem($medium-spacing) 0;
+		margin-top: rem($medium-spacing);
+		margin-bottom: rem($medium-spacing); 
+	}
+
+}
+
 
 /* 2. COLOUR CLASSES      */
 
