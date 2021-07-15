@@ -3,3 +3,15 @@
 .nv-page-title-wrap.nv-big-title .nv-page-title {
 	border-width: 0;
 }
+
+.nv-content-wrap {
+	margin-top: rem($small-spacing);
+
+	@include media-breakpoint-up( sm ) {
+		margin-top: $medium-spacing;
+	}
+}
+
+.nv-page-title-wrap + .nv-content-wrap {
+	margin-top: 0;
+}
