@@ -2,6 +2,15 @@
  * Customisations for gutenberg button blocks.
 */
 
-/* 1. CUSTOM CLASSES    */
+.wp-block-button__link {
+	background-color: var(--nv-c-2);
+}
+
+.wp-block-button.is-style-outline {
+	.wp-block-button__link {
+		color: var(--nv-c-2);
+		border-color: var(--nv-c-2);
+	}
+}
 
 

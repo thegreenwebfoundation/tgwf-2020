@@ -2,3 +2,7 @@
  * Base layout styles.
  * These are largely going to be affected the outer most containers of each page.
 */
+
+.wp-block-buttons + h3 {
+	margin-top: rem($medium-spacing);
+}
