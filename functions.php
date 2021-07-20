@@ -2,7 +2,7 @@
 /**
  * Key functions for the Neve child theme.
  *
- * @package v24
+ * @package tgwf
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -10,4 +10,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 require 'inc/enqueue.php';
-

@@ -2,7 +2,7 @@
 /**
  * Functions for loading in stylesheets and scripts.
  *
- * @package V24
+ * @package tgwf
  */
 
 add_action( 'wp_enqueue_scripts', 'neve_child_load_css', 20 );
