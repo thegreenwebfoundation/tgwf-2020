@@ -16,6 +16,11 @@
 .alignwide > [class*="__inner-container"] {
 	margin: auto;
 }
+.alignfull > [class*="__inner-container"] {
+	@include media-breakpoint-up(lg) {
+		max-width: 70%;
+	}
+}
 
 div[class*="__inner-container"] {
 
