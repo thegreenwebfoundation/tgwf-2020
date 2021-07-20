@@ -12,3 +12,7 @@
 		padding-bottom: rem($medium-spacing);
 	}
 }
+
+.footer--row .footer--row-inner .container .row {
+	align-items: flex-start;
+}
