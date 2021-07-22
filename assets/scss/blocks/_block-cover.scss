@@ -5,6 +5,15 @@
 
 .wp-block-cover {
 
-
+	&.hide-image-on-mobile {
+		
+		img {
+			display: none;
+		
+			@include media-breakpoint-up(md) {
+				display: block;
+			}
+		}
+	}
 }
 
