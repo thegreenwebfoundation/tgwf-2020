@@ -68,14 +68,4 @@ Gulp will take the file `js/scripts.js` convert it to `js/theme.js`. It does thi
 
 
 
-## Theme structure
-
-
-## Styling (CSS)
-
-
-## Fonts
-
-
-
 
