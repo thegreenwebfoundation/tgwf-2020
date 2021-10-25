@@ -1,0 +1,11 @@
+/* Styling for widgets */
+
+.widget {
+	> *:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.widget_text + .widget_text {
+	margin-top: -20px;
+}

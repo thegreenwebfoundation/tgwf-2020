@@ -40,6 +40,7 @@
 @import 'components/pagination';
 @import 'components/forms';
 @import 'components/summary';
+@import 'components/widgets';
 
 
 // Gutenberg blocks
@@ -78,3 +79,4 @@
 // Typically these styles can't be used elsewhere.
 // These are loaded alphabetically.
 @import 'pages/home';
+@import 'pages/fellowship-post';

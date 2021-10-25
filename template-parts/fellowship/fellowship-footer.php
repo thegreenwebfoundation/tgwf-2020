@@ -11,7 +11,7 @@
 if ( is_active_sidebar( 'fellowship-footer' ) ) :
 	?>
 
-	<div class="wp-block-group alignfull has-background has-neve-link-color-background-color has-nv-site-bg-color">
+	<div class="fellowship-post__content-widget-container wp-block-group alignfull has-background">
 		<div class="wp-block-group__inner-container">
 			<?php dynamic_sidebar( 'fellowship-footer' ); ?>
 		</div>
