@@ -7,6 +7,9 @@
 
 add_action( 'neve_before_posts_loop', 'tgwf_display_news_categories' );
 
+/**
+ * Display the list of post categories on the blog archive page only.
+ */
 function tgwf_display_news_categories() {
 
 	if ( is_home() ) :
