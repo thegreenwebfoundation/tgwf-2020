@@ -39,6 +39,7 @@
 @import 'components/grids';
 @import 'components/pagination';
 @import 'components/forms';
+@import 'components/summary';
 
 
 // Gutenberg blocks
@@ -68,6 +69,8 @@
 // Content partials
 // Styles and layouts that match up with a specific php template.
 // These php files are typically found in /template-parts/
+@import 'partials/category';
+
 
 
 // Pages

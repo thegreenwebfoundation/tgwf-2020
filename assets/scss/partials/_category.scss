@@ -1,0 +1,15 @@
+/* Styling for the category archive pages. */
+
+.category {
+	.nv-page-title p {
+		@extend .summary-highlight;
+	}
+
+	.nv-page-title-wrap.nv-big-title .nv-page-title h1 + p {
+		margin-bottom: rem($medium-spacing);
+
+		@include media-breakpoint-up( md ) {
+			margin-bottom: rem($large-spacing);
+		}
+	}
+}

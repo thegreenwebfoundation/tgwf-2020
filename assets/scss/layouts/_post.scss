@@ -2,8 +2,31 @@
  * SCSS targetting posts of all types.
 */
 
-/* 1. POST GENERAL       */
-/* 2. POST CTA           */
-/* 3. POST TEASER        */
-/* 4. POST ARCHIVE       */
+/* 1. POST GENERAL            */
+/* 2. POST CTA                */
+/* 3. POST TEASER             */
+/* 4. POST ARCHIVE            */
 
+
+/* 1. POST GENERAL            */
+
+
+/* 2. POST CTA                */
+
+
+/* 3. POST TEASER             */
+
+
+/* 4. POST ARCHIVE            */
+
+.blog-categories-list {
+
+	> * {
+		margin-right: rem($small-spacing);
+		margin-bottom: rem($small-spacing);
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
