@@ -10,3 +10,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 require 'inc/enqueue.php';
+require 'inc/news-archive.php';
