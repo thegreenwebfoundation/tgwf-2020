@@ -26,7 +26,7 @@ if ( is_active_sidebar( 'fellowship-header' ) ) :
 	?>
 	<div class="fellowship-post__header">
 		<div class="fellowship-post__category">
-			<a href="<?php esc_html( $category_link ); ?>">
+			<a href="<?php echo esc_html( $category_link ); ?>">
 				<?php echo esc_html( $fellowship_cat ); ?>
 			</a>
 		</div>
