@@ -5,7 +5,7 @@
  * @package tgwf
  */
 
-add_action( 'neve_before_content', 'tgwf_output_fellowship_header' );
+add_action( 'neve_before_post_content', 'tgwf_output_fellowship_header' );
 add_action( 'neve_after_content', 'tgwf_output_fellowship_footer' );
 
 /**
@@ -13,10 +13,16 @@ add_action( 'neve_after_content', 'tgwf_output_fellowship_footer' );
  */
 function tgwf_output_fellowship_header() {
 
-	// Only do this for posts.
-	if ( is_single() && in_category( 'fellowship' ) ) :
+	$fellowship_cat = 'Fellowship';
 
-		get_template_part( 'template-parts/fellowship/fellowship-header' );
+	$args = array(
+		'fellowship_cat' => $fellowship_cat,
+	);
+
+	// Only do this for posts.
+	if ( is_single() && in_category( $fellowship_cat ) ) :
+
+		get_template_part( 'template-parts/fellowship/fellowship-header', '', $args );
 
 	endif;
 }
