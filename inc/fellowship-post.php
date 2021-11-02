@@ -13,7 +13,7 @@ add_action( 'neve_after_content', 'tgwf_output_fellowship_footer' );
  */
 function tgwf_output_fellowship_header() {
 
-	$fellowship_cat = 'Fellowship';
+	$fellowship_cat = 'Fellowship notebook';
 
 	$args = array(
 		'fellowship_cat' => $fellowship_cat,
