@@ -34,10 +34,14 @@ function tgwf_output_fellowship_footer() {
 
 	$fellowship_cat = 'Fellowship notebook';
 
+	$args = array(
+		'fellowship_cat' => $fellowship_cat,
+	);
+
 	// Only do this for posts.
 	if ( is_single() && in_category( $fellowship_cat ) ) :
 
-		get_template_part( 'template-parts/fellowship/fellowship-footer' );
+		get_template_part( 'template-parts/fellowship/fellowship-footer', '', $args );
 
 	endif;
 }

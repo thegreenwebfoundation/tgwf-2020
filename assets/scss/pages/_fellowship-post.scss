@@ -42,7 +42,9 @@
 		}
 
 		&:first-child {
-			margin-top: 1rem;
+			.fellowship-post__header & {
+				margin-top: 1rem;
+			}
 		}
 
 		&:last-child {
