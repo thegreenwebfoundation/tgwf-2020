@@ -25,7 +25,7 @@ function tgwf_display_news_categories() {
 		echo '<h3 style="display: inline-block;">Browse our posts by topic</h3>';
 
 		foreach ( $categories as $category ) {
-			echo '<div class="wp-block-button" style="display: inline-block;">';
+			echo '<div class="wp-block-button is-style-primary" style="display: inline-block;">';
 			printf(
 				'<a class="wp-block-button__link" href="%1$s">%2$s</a>',
 				esc_url( get_category_link( $category->term_id ) ),
