@@ -1,0 +1,63 @@
+// Styling and layout tweaks for single fellowship post.
+
+.fellowship-post__header {
+	position: relative;
+}
+
+.fellowship-post__category {
+	background-color: var(--nv-c-2);
+	font-weight: $bold-font-weight;
+	display: inline-block;
+	padding: 0.3rem 0.8rem;
+	position: absolute;
+	margin-top: -1rem;
+	margin-left: 1rem;
+
+	@include media-breakpoint-up(md) {
+		margin-left: 2rem;
+	}
+
+	&:hover {
+		background-color: $tgwf-green400;
+	}
+
+	a {
+		color: white;
+		text-decoration: none;
+	}
+}
+
+.fellowship-post__content-widget-container {
+	background-color: $tgwf-yellow800;
+	font-family: $sketchy-font;
+	font-size: 1.4em;
+
+	> * > * {
+		padding-right: 1rem;
+		padding-left: 1rem;
+
+		@include media-breakpoint-up(md) {
+			padding-left: 2rem;
+			padding-right: 2rem;
+		}
+
+		&:first-child {
+			.fellowship-post__header & {
+				margin-top: 1rem;
+			}
+		}
+
+		&:last-child {
+			padding-bottom: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	h1, h2, h3, h4, h5 {
+		font-family: $sketchy-font;
+	}
+	
+	a {
+		color: $tgwf-green300;
+	}
+}

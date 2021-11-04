@@ -10,3 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 require 'inc/enqueue.php';
+require 'inc/widgets.php';
+
+require 'inc/news-archive.php';
+require 'inc/fellowship-post.php';
