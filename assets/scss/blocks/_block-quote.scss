@@ -1,0 +1,59 @@
+/* Styling for the blockquote (quotes) block */
+
+blockquote::after,
+blockquote::before {
+	display: none;
+}
+
+blockquote.wp-block-quote {
+	border-left: $border-thickness solid $tgwf-green500;
+	font-family: $sketchy-font;
+	font-weight: $bold-font-weight;
+
+	> * {
+		padding: 1rem;
+	}
+
+	p:first-of-type {
+		padding-top: 0;
+	}
+
+	cite {
+		font-family: $body-font;
+		color: $tgwf-green400;
+		padding-top: 0;
+		padding-bottom: 0;
+
+		&::before {
+			content: '- ';
+			display: inline-block;
+			width: 1em;
+			height: 1rem;
+		}
+	}
+
+	&.is-style-large {
+		padding: 0;
+		margin-bottom: 40px;
+		
+		p {
+			@include media-breakpoint-down(sm) {
+				font-size: 1.4rem;
+			}
+		}
+
+		cite {
+			text-align: left;
+		}
+
+		@include media-breakpoint-up(md) {
+			padding-left: 1rem;
+		}
+	}
+
+	&.is-style-default {
+		p {
+			font-size: 1.3em;
+		}
+	}
+}
