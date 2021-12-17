@@ -1,6 +1,7 @@
 <?php
 /**
- * A Template.
+ * A Template to implement some of the ideas for presenting a
+ * Report on the Web
  *
  * @package tgwf
  * @since   0.0.0
@@ -10,11 +11,22 @@ $container_class = apply_filters( 'neve_container_class_filter', 'container', 's
 get_header();
 
 ?>
+
+<?php
+
+	wp_enqueue_style( 'fog-of-enactment-report', get_stylesheet_directory_uri() . '/assets/css/tufte.css');
+?>
+
+
 <div class="<?php echo esc_attr( $container_class ); ?> single-page-container">
 	<div class="row">
-	
+
 		<?php do_action( 'neve_do_sidebar', 'single-page', 'left' ); ?>
-		<div class="nv-single-page-wrap col">
+
+
+
+		<div class="nv-single-page-wrap col fog-of-enactment">
+			<article>
 			<?php
 			/**
 			 * Executes actions before the page header.
@@ -43,6 +55,7 @@ get_header();
 
 			if ( have_posts() ) {
 				while ( have_posts() ) {
+
 					the_post();
 					get_template_part( 'template-parts/content', 'page' );
 				}
@@ -59,6 +72,7 @@ get_header();
 			 */
 			do_action( 'neve_after_content', 'single-page' );
 			?>
+			</article>
 		</div>
 		<?php do_action( 'neve_do_sidebar', 'single-page', 'right' ); ?>
 	</div>
