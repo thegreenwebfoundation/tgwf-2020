@@ -1,6 +1,48 @@
 @charset "UTF-8";
 
 
+/* First basic grid for report */
+
+
+/* grid plan */
+.fog-of-enactment {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+/* we want our left nav to be sticky */
+
+.fog-of-enactment nav {
+  background-color: #eee;
+  padding: 2rem;
+
+}
+
+.fog-of-enactment nav ol {
+  margin-top:0.5rem;
+  margin-left:0.5rem;
+}
+
+.fog-of-enactment nav ol li {
+    font-size:0.8rem;
+
+  }
+
+
+.fog-of-enactment article {
+  padding:2rem;
+
+}
+
+
+/* make the wrap element the grid cotainer */
+
+/* then
+fixed min width, plus 1 fr, then one fixed width
+
+
+
+*/
 
 /*
 This is a subset of the styles from Tufte CSS
@@ -10,7 +52,7 @@ https://edwardtufte.github.io/tufte-css/
 hr {
   display: block;
   height: 1px;
-  width: 55%;
+  width:  45rem;
   border: 0;
   border-top: 1px solid #ccc;
   margin: 1em 0;
@@ -73,12 +115,12 @@ blockquote {
 }
 
 blockquote p {
-  width: 55%;
+  width:  45rem;
   margin-right: 40px;
 }
 
 blockquote footer {
-  width: 55%;
+  width:  45rem;
   font-size: 1.1rem;
   text-align: right;
 }
@@ -86,14 +128,14 @@ blockquote footer {
 section > p,
 section > footer,
 section > table {
-  width: 55%;
+  width:  45rem;
 }
 
 /* 50 + 5 == 55, to be the same width as paragraph */
 section > dl,
 section > ol,
 section > ul {
-  width: 50%;
+  width: 50rem;
   -webkit-padding-start: 5%;
 }
 
@@ -108,7 +150,7 @@ figure {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  max-width: 55%;
+  max-width:  45rem;
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
   margin: 0 0 3em 0;
@@ -147,7 +189,7 @@ img {
     float: right;
     clear: right;
     margin-right: -60%;
-    width: 50%;
+    width: 50rem;
     margin-top: 0.3rem;
     margin-bottom: 0;
     font-size: 1.1rem;

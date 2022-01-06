@@ -18,16 +18,115 @@ get_header();
 ?>
 
 
-<div class="<?php echo esc_attr( $container_class ); ?> single-page-container">
+<div class="">
 	<div class="row">
+
 
 		<?php do_action( 'neve_do_sidebar', 'single-page', 'left' ); ?>
 
 
 
 		<div class="nv-single-page-wrap col fog-of-enactment">
+
+			<nav>
+				<div class="logo">
+					<a class="brand" href="https://www.thegreenwebfoundation.org/" title="The Green Web Foundation"
+						aria-label="The Green Web Foundation">
+						<?php
+							$logo_path = get_stylesheet_directory_uri() . '/assets/img/thegreenwebfoundation-logo.png';
+							?>
+						<img src="<?php echo $logo_path ?>" />
+					</a>
+				</div>
+
+
+				<div class="toc">
+					<ol>
+						<li>
+							<details>
+								<summary>Acknowledgements</summary>
+								<ol>
+									<li>The Green Web Foundation</li>
+									<li>About the author</li>
+									<li>Suggested Citation</li>
+								</ol>
+							</details>
+						</li>
+						<li>
+							<details>
+								<summary>Foreword</summary>
+								<ol>
+									<li>The Fog of Enactment</li>
+									<li>Why we published this report</li>
+								</ol>
+							</details>
+						</li>
+
+
+						<li>
+							<details>
+								<summary>Executive summary</summary>
+								<ol>
+									<li>Gaps in how environmental impact is modeled</li>
+									<li>Critical assessment of industry sustainability claims</li>
+									<li>Extractive industries and the tech sector: the case of fossil fuels</li>
+								</ol>
+							</details>
+						</li>
+						<li>
+							<!-- this is the only part without sub items -->
+							Introduction
+						</li>
+						<li>
+
+							<details>
+								<summary>Gaps in how we model impact</summary>
+								<ol>
+									<li>Estimating the footprint of a digital service or product</li>
+									<li>What about global estimates?</li>
+								</ol>
+							</details>
+						</li>
+
+						<li>
+							<details>
+								<summary>Industry claims largely unchallenged</summary>
+								<ol>
+									<li>Looking at direct and indirect effects</li>
+									<li>Claims of positive impacts</li>
+									<li>Lessons learned</li>
+								</ol>
+							</details>
+						</li>
+
+
+						<li>
+							<details>
+								<summary>
+									Extractive industries and the tech sector: the case of fossil fuels
+								</summary>
+								<ol>
+									<li>Reaching carbon neutrality?</li>
+									<li>Digitization for fossil fuel industry?</li>
+									<li>Reducing embodied emissions</li>
+								</ol>
+							</details>
+						</li>
+						<li>Conclusion</li>
+						<li>Footnotes</li>
+						<li>Appendix</li>
+
+					</ol>
+
+
+				</div>
+
+			</nav>
+
 			<article>
-			<?php
+
+
+				<?php
 			/**
 			 * Executes actions before the page header.
 			 *
