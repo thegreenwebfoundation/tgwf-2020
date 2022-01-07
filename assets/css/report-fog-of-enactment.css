@@ -3,15 +3,22 @@
 
 /* First basic grid for report */
 
-/* we want one sidebar for nav and brand logo */
-/* and one main well for content on larger screens */
-/* on small screens, we stack */
+/**
+ * we want one sidebar for nav and brand logo
+ *  and one main well for content on larger screens
+ * on small screens, we stack the columns one on top of each other
+ * see the media query
+*/
 
 .fog-of-enactment {
   display: grid;
   grid-template-columns: 1fr 3fr;
 }
 
+/* side nav styles */
+
+
+/* we use z-index, to account for cover image clipping the sidebar */
 .fog-of-enactment nav {
   background-color: #eee;
   padding: 2rem;
@@ -23,7 +30,6 @@
   padding-bottom: 3rem;
   padding-left: 1rem;
 }
-
 
 .fog-of-enactment nav ol {
   margin-top:0.5rem;
@@ -37,13 +43,15 @@
     padding:0.3rem;
   }
 
-
 .fog-of-enactment details > summary {
   list-style: none;
   cursor: pointer;
 }
 
-
+/*
+  these are overrides to remove whitespace between the cover
+  image and the top of the page
+*/
 .fog-of-enactment article {
   padding-top:0;
   padding-left:2rem;
@@ -58,6 +66,7 @@
   margin-top:0;
 }
 
+/* add max width for readability */
 
 .fog-of-enactment article p {
   max-width: 50rem;
@@ -72,7 +81,6 @@
   float:none;
 }
 
-*/
 
 /*
 This is a subset of the styles from Tufte CSS
@@ -106,6 +114,7 @@ p.subtitle {
   color: red;
 }
 
+
 article {
   padding: 5rem 0rem;
 }
@@ -115,30 +124,6 @@ section {
   padding-bottom: 1rem;
 }
 
-
-/* Chapter Epigraphs */
-div.epigraph {
-  margin: 5em 0;
-}
-
-div.epigraph > blockquote {
-  margin-top: 3em;
-  margin-bottom: 3em;
-}
-
-div.epigraph > blockquote,
-div.epigraph > blockquote > p {
-  font-style: italic;
-}
-
-div.epigraph > blockquote > footer {
-  font-style: normal;
-}
-
-div.epigraph > blockquote > footer > cite {
-  font-style: italic;
-}
-/* end chapter epigraphs styles */
 
 blockquote {
   font-size: 1.4rem;
@@ -211,6 +196,11 @@ figure.fullwidth img {
   width:100%;
 }
 
+/*
+ colwidth is a class to handle SVG graphics - without this, they default
+ to being around 100px wide. This scales them back up
+ */
+
 figure.colwidth img {
   width:100%;
   max-width:50rem;
@@ -229,6 +219,8 @@ a:visited {
 img {
     max-width: 100%;
 }
+
+
 
 .sidenote,
 .marginnote {

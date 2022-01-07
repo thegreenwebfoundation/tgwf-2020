@@ -14,7 +14,9 @@ get_header();
 
 <?php
 
-	wp_enqueue_style( 'fog-of-enactment-report', get_stylesheet_directory_uri() . '/assets/css/tufte.css');
+	wp_enqueue_style( 'fog-of-enactment-report', get_stylesheet_directory_uri() . '/assets/css/report-fog-of-enactment.css');
+	wp_enqueue_script( 'fog-of-enactment-report', get_stylesheet_directory_uri() . '/assets/js/fog-of-enactment.js' );
+
 ?>
 
 
@@ -44,81 +46,120 @@ get_header();
 					<ol>
 						<li>
 							<details>
-								<summary>Acknowledgements</summary>
+								<summary><a href="#acknowledgements">Acknowledgements</a></summary>
 								<ol>
-									<li>The Green Web Foundation</li>
-									<li>About the author</li>
-									<li>Suggested Citation</li>
+									<li><a href="#the-green-web-foundation">The Green Web Foundation</a></li>
+									<li><a href="#about-the-author">About the author</a></li>
+									<li><a href="#suggested-citation">Suggested Citation</a></li>
 								</ol>
 							</details>
 						</li>
 						<li>
 							<details>
-								<summary>Foreword</summary>
+								<summary><a href="#foreword">Foreword</a></summary>
 								<ol>
-									<li>The Fog of Enactment</li>
-									<li>Why we published this report</li>
+									<li><a href="#the-fog-of-enactment">The Fog of Enactment</a></li>
+									<li><a href="#why-we-published-this-report">Why we published this report</a></li>
 								</ol>
 							</details>
 						</li>
 
-
+						<!--
+							these are short enough not to need the sub items
+							is the only part without sub items
+						-->
 						<li>
-							<details>
-								<summary>Executive summary</summary>
-								<ol>
-									<li>Gaps in how environmental impact is modeled</li>
-									<li>Critical assessment of industry sustainability claims</li>
-									<li>Extractive industries and the tech sector: the case of fossil fuels</li>
-								</ol>
-							</details>
+							<a href="#executive-summary">Executive summary</a></summary>
 						</li>
 						<li>
-							<!-- this is the only part without sub items -->
-							Introduction
+							<a href="#introduction">Introduction</a>
 						</li>
-						<li>
-
-							<details>
-								<summary>Gaps in how we model impact</summary>
-								<ol>
-									<li>Estimating the footprint of a digital service or product</li>
-									<li>What about global estimates?</li>
-								</ol>
-							</details>
-						</li>
-
-						<li>
-							<details>
-								<summary>Industry claims largely unchallenged</summary>
-								<ol>
-									<li>Looking at direct and indirect effects</li>
-									<li>Claims of positive impacts</li>
-									<li>Lessons learned</li>
-								</ol>
-							</details>
-						</li>
-
 
 						<li>
 							<details>
 								<summary>
-									Extractive industries and the tech sector: the case of fossil fuels
+									<a href="#gaps-in-how-we-model-impact">Gaps in how we model impact</a>
 								</summary>
 								<ol>
-									<li>Reaching carbon neutrality?</li>
-									<li>Digitization for fossil fuel industry?</li>
-									<li>Reducing embodied emissions</li>
+									<li><a href="#estimating-footprint-of-a-digital-service-or-product">Estimating the footprint of a
+											digital service or product</a>
+										</a></li>
+									<li>
+										<a href="#what-about-global-estimates">What about global estimates?</a>
+										</a></li>
 								</ol>
 							</details>
 						</li>
-						<li>Conclusion</li>
-						<li>Footnotes</li>
-						<li>Appendix</li>
 
+						<li>
+							<details>
+								<summary>
+									<a href="#critical-assessment-of-industry-sustainability-claims">
+										Critical assessment of industry sustainability claims
+									</a>
+								</summary>
+								<ol>
+									<li><a href="#looking-at-direct-and-indirect-effects">
+											Looking at direct and indirect effects
+										</a>
+									</li>
+									<li>
+										<a href="#claims-of-positive-impacts">
+											Claims of positive impacts
+										</a>
+									</li>
+									<li>
+										<a href="#lessons-learned">
+											Lessons learned
+										</a>
+
+									</li>
+								</ol>
+
+							</details>
+
+							<details>
+								<summary>
+									<a href="#extractive-industries-and-the-tech-sector-the-case-of-fossil-fuels">
+										Extractive industries and the tech sector: the case of fossil fuels
+									</a>
+								</summary>
+								<ol>
+
+									<li>
+										<a href="#reaching-carbon-neutrality">
+											Reaching carbon neutrality
+										</a>
+
+									</li>
+									<li>
+										<a href="#digitization-for-fossil-fuel-industry">
+											Digitization for fossil fuel industry?
+										</a>
+									</li>
+
+									<li><a href="#reducing-embodied-emissions">
+											Reducing Embodied Emissions
+										</a>
+									</li>
+								</ol>
+							</details>
+						</li>
+						<li><a href="#conclusion">
+								Conclusion
+							</a>
+						</li>
+						<li>
+							<a href="#footnotes">
+								Footnotes
+							</a>
+						</li>
+						<li>
+							<a href="#appendix">
+								Appendix
+							</a>
+						</li>
 					</ol>
-
-
 				</div>
 
 			</nav>
@@ -153,14 +194,22 @@ get_header();
 			do_action( 'neve_before_content', 'single-page' );
 
 			if ( have_posts() ) {
-				while ( have_posts() ) {
+				while ( have_posts() ) { ?>
+				<section>
 
+					<?
 					the_post();
 					get_template_part( 'template-parts/content', 'page' );
-				}
-			} else {
-				get_template_part( 'template-parts/content', 'none' );
-			}
+					?>
+				</section>
+				<? }
+
+			} else { ?>
+				<section>
+
+					<? get_template_part( 'template-parts/content', 'none' ); ?>
+				</section>
+				<? }
 
 			/**
 			 * Executes actions after the page content.
