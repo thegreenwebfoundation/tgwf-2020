@@ -41,12 +41,33 @@
 }
 
 
-/* make the wrap element the grid cotainer */
+.fog-of-enactment article {
+  padding-top:0;
+  padding-left:2rem;
+  padding-right:2rem;
+}
 
-/* then
-fixed min width, plus 1 fr, then one fixed width
+.fog-of-enactment article section {
+  padding-top: 0;
+}
+.fog-of-enactment article section .nv-content-wrap {
+  padding-top:0;
+  margin-top:0;
+}
 
 
+.fog-of-enactment article p {
+  max-width: 50rem;
+}
+
+.wp-block-image {
+  margin-bottom: 4rem;
+}
+.wp-block-image figcaption {
+  font-size:0.8rem;
+  text-align:center;
+  float:none;
+}
 
 */
 
@@ -137,12 +158,17 @@ section > table {
   width:  45rem;
 }
 
-/* 50 + 5 == 55, to be the same width as paragraph */
+
+/* 45 + 5 == 55, to be the same width as paragraph */
 section > dl,
 section > ol,
 section > ul {
   width: 50rem;
   -webkit-padding-start: 5%;
+}
+
+section  li {
+  width: 45rem;
 }
 
 dt:not(:first-child),
@@ -177,6 +203,17 @@ figcaption {
 figure.fullwidth figcaption {
   margin-right: 24%;
 }
+
+figure.fullwidth img {
+  width:100%;
+}
+
+figure.colwidth img {
+  width:100%;
+  max-width:50rem;
+}
+
+
 
 /* Links: replicate underline that clears descenders */
 a:link,
