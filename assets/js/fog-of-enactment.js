@@ -82,7 +82,26 @@ function addScrollingToToC() {
   }
 }
 
+function addToggleMobileToC() {
+  const tocToggleBtn = document.querySelector('button.tocToggle')
+  const toc = document.querySelector('nav .toc')
+  const tocCloseBtn = document.querySelector('.toc button')
+
+  tocToggleBtn.addEventListener("click", function (event) {
+    toc.classList.toggle("visible");
+  })
+
+  tocCloseBtn.addEventListener("click", function (event) {
+    toc.classList.remove("visible");
+  })
+
+
+
+}
+
+
 window.addEventListener('DOMContentLoaded', function (event) {
   addScrollingToToC()
+  addToggleMobileToC()
 });
 

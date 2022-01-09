@@ -1,0 +1,508 @@
+@charset "UTF-8";
+
+/* side nav styles */
+.fog-of-enactment {
+  nav {
+    background-color: #eee;
+    padding: 2rem;
+    /* we use z-index, to account for cover image clipping the sidebar */
+    z-index: 1000;
+    position: fixed;
+    width: 25rem;
+    height: 100vh;
+    transition: transform 0.2s;
+    font-weight: 800;
+
+
+    .logo {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      padding-left: 1rem;
+    }
+
+    .tocToggle {
+      display: none;
+    }
+
+    .toc {
+      position: relative;
+
+      button {
+        display: none;
+      }
+    }
+
+    ol {
+      margin-top: 0.5rem;
+      margin-left: 0.5rem;
+      list-style: none;
+      margin-top: 0.5rem;
+
+    }
+
+    ol li {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      padding: 0.3rem;
+    }
+
+    ol li a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    details {
+      margin-top: 0.5rem;
+    }
+
+    details>summary {
+      list-style: none;
+      cursor: pointer;
+    }
+  }
+
+
+
+  /*
+    these are overrides to remove whitespace between the cover
+    image and the top of the page
+  */
+  article {
+    padding-top: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: 25rem;
+  }
+
+  article section {
+    padding-top: 0;
+  }
+
+  article section .nv-content-wrap {
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  /* add max width for readability */
+
+  article p {
+    max-width: 50rem;
+  }
+
+}
+
+
+
+.wp-block-image {
+  margin-bottom: 4rem;
+}
+
+.wp-block-image figcaption {
+  font-size: 0.8rem;
+  text-align: center;
+  float: none;
+}
+
+
+/*
+This is a subset of the styles from Tufte CSS
+https://edwardtufte.github.io/tufte-css/
+*/
+
+hr {
+  display: block;
+  height: 1px;
+  width: 45rem;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+p.subtitle {
+  font-style: italic;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  display: block;
+  line-height: 1;
+}
+
+.numeral {
+  font-family: et-book-roman-old-style;
+}
+
+.danger {
+  color: red;
+}
+
+article {
+  padding: 5rem 0rem;
+}
+
+section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+
+blockquote {
+  font-size: 1.4rem;
+}
+
+blockquote p {
+  width: 45rem;
+  margin-right: 40px;
+}
+
+blockquote footer {
+  width: 45rem;
+  font-size: 1.1rem;
+  text-align: right;
+}
+
+section>p,
+section>footer,
+section>table {
+  width: 45rem;
+}
+
+
+
+section>dl,
+section>ol,
+section>ul {
+  max-width: 50rem;
+  -webkit-padding-start: 5%;
+}
+
+section li {
+  max-width: 45rem;
+}
+
+dt:not(:first-child),
+li:not(:first-child) {
+  margin-top: 0.25rem;
+}
+
+figure {
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  max-width: 45rem;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  margin: 0 0 3em 0;
+}
+
+figcaption {
+  float: right;
+  clear: right;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  vertical-align: baseline;
+  position: relative;
+  max-width: 40%;
+}
+
+figure.fullwidth figcaption {
+  margin-right: 24%;
+}
+
+figure.fullwidth img {
+  width: 100%;
+}
+
+/*
+ colwidth is a class to handle SVG graphics - without this, they default
+ to being around 100px wide. This scales them back up
+ */
+
+figure.colwidth img {
+  width: 100%;
+  max-width: 50rem;
+}
+
+
+
+/* Links: replicate underline that clears descenders */
+a:link,
+a:visited {
+  color: inherit;
+}
+
+
+/* Sidenotes, margin notes, figures, captions */
+img {
+  max-width: 100%;
+}
+
+
+
+.sidenote,
+.marginnote {
+  float: right;
+  clear: right;
+  margin-right: -50rem;
+  width: 50rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0;
+  font-size: 0.8rem;
+  line-height: 1.3;
+  vertical-align: baseline;
+  position: relative;
+  border: 1px solid grey;
+}
+
+.sidenote-number {
+  counter-increment: sidenote-counter;
+}
+
+.sidenote-number:after,
+.sidenote:before {
+  font-family: et-book-roman-old-style;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.sidenote-number:after {
+  content: counter(sidenote-counter);
+  font-size: 1rem;
+  top: -0.5rem;
+  left: 0.1rem;
+}
+
+.sidenote:before {
+  content: counter(sidenote-counter) " ";
+  font-size: 1rem;
+  top: -0.5rem;
+}
+
+blockquote .sidenote,
+blockquote .marginnote {
+  margin-right: -82%;
+  min-width: 59%;
+  text-align: left;
+}
+
+div.fullwidth,
+table.fullwidth {
+  width: 100%;
+}
+
+div.table-wrapper {
+  overflow-x: auto;
+
+}
+
+
+h1>code,
+h2>code,
+h3>code {
+  font-size: 0.80em;
+}
+
+.marginnote>code,
+.sidenote>code {
+  font-size: 1rem;
+}
+
+pre>code {
+  font-size: 0.9rem;
+  width: 52.5%;
+  margin-left: 2.5%;
+  overflow-x: auto;
+  display: block;
+}
+
+pre.fullwidth>code {
+  width: 90%;
+}
+
+.fullwidth {
+  max-width: 90%;
+  clear: both;
+}
+
+
+input.margin-toggle {
+  display: none;
+}
+
+label.sidenote-number {
+  display: inline-block;
+  max-height: 2rem;
+  /* should be less than or equal to paragraph line-height */
+}
+
+label.margin-toggle:not(.sidenote-number) {
+  display: none;
+}
+
+
+/*
+override on the footer to push it over enough to account
+our static sidebar.
+*/
+.site-footer {
+  margin-left: 25rem;
+}
+
+
+
+@media (max-width: 760px) {
+
+
+  .fog-of-enactment .logo {
+    max-width: 10rem;
+  }
+
+  /* negate the large screen fixed menu styles */
+  .fog-of-enactment nav {
+    width: 100%;
+    height: auto;
+    /* padding: 2rem; */
+    position: initial;
+  }
+
+  .fog-of-enactment {
+
+    button.tocToggle {
+      position: fixed;
+      display: block;
+      bottom: 30px;
+      right: 30px;
+      background-color: $tgwf-green500;
+      padding: 1rem;
+
+    }
+  }
+
+
+  /* we don't show this */
+  .fog-of-enactment nav {
+
+    .toc {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      height: 70vh;
+      width: 15rem;
+      background-color: $tgwf-green500;
+      overflow: auto;
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+      border: none;
+      z-index: 999;
+      border-radius: 5px;
+      padding: 2rem 1rem 1rem 1rem;
+      opacity: 0;
+      visibility: hidden;
+      color: #fff;
+
+      button {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+      }
+    }
+
+    .visible {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+
+  .fog-of-enactment nav button.tocDisplay {}
+
+  .fog-of-enactment nav>button.tocClose {}
+
+  /* negate the large screen margin for the fixed menu */
+  .fog-of-enactment article {
+    margin-left: 0rem;
+  }
+
+  hr,
+  section>p,
+  section>footer,
+  section>table {
+    width: 100%;
+  }
+
+  pre>code {
+    width: 97%;
+  }
+
+  section>dl,
+  section>ol,
+  section>ul {
+    width: 90%;
+  }
+
+  figure {
+    max-width: 90%;
+  }
+
+  figcaption,
+  figure.fullwidth figcaption {
+    margin-right: 0%;
+    max-width: none;
+  }
+
+  blockquote {
+    margin-left: 1.5em;
+    margin-right: 0em;
+  }
+
+  blockquote p,
+  blockquote footer {
+    width: 100%;
+  }
+
+  label.margin-toggle:not(.sidenote-number) {
+    display: inline;
+  }
+
+  .sidenote,
+  .marginnote {
+    display: none;
+  }
+
+  .margin-toggle:checked+.sidenote,
+  .margin-toggle:checked+.marginnote {
+    display: block;
+    float: left;
+    left: 1rem;
+    clear: both;
+    width: 95%;
+    margin: 1rem 2.5%;
+    vertical-align: baseline;
+    position: relative;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  div.table-wrapper,
+  table {
+    width: 85%;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  /* negate the large screen override for the footer */
+  .site-footer {
+    margin-left: 0rem;
+  }
+}

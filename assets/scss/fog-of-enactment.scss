@@ -1,0 +1,13 @@
+/**
+ * Report specific SCSS files
+ * These styles only apply on the report pages
+ * and we already import the main css file in the header
+ * in the theme
+*/
+
+// colors
+@import "base/colours";
+
+// Pages
+// These are loaded alphabetically.
+@import 'pages/report-fog-of-enactment';

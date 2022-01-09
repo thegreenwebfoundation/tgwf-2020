@@ -10,27 +10,40 @@ $container_class = apply_filters( 'neve_container_class_filter', 'container', 's
 
 get_header();
 
+// headers and nav are disabled in the page UI. We need to import a
+// menu ourselves if we want to display any navigation options for the site
+
+// wp_nav_menu( $args );
+
 ?>
 
 <?php
 
-	wp_enqueue_style( 'fog-of-enactment-report', get_stylesheet_directory_uri() . '/assets/css/report-fog-of-enactment.css');
+	wp_enqueue_style( 'fog-of-enactment-report', get_stylesheet_directory_uri() . '/assets/css/fog-of-enactment.css');
+
+	wp_enqueue_script( 'sticky-js', get_stylesheet_directory_uri() . '/assets/js/sticky-sidebar.js' );
+
 	wp_enqueue_script( 'fog-of-enactment-report', get_stylesheet_directory_uri() . '/assets/js/fog-of-enactment.js' );
+
 
 ?>
 
 
 <div class="">
+	<?php
+	// TODO make a pared back menu, or decide if this would do by itself
+	// wp_nav_menu( array( 'menu' => '3') );
+?>
+
 	<div class="row">
 
 
 		<?php do_action( 'neve_do_sidebar', 'single-page', 'left' ); ?>
 
 
-
 		<div class="nv-single-page-wrap col fog-of-enactment">
 
-			<nav>
+			<nav id="toc_nav_holder">
 				<div class="logo">
 					<a class="brand" href="https://www.thegreenwebfoundation.org/" title="The Green Web Foundation"
 						aria-label="The Green Web Foundation">
@@ -41,8 +54,19 @@ get_header();
 					</a>
 				</div>
 
+				<button class="tocToggle">
+					Table of Contents
+				</button>
+
 
 				<div class="toc">
+					<!--
+						button for showing the ToC in
+						fixed form for touch devices
+					-->
+					<button>
+						Close
+					</button>
 					<ol>
 						<li>
 							<details>
@@ -117,6 +141,8 @@ get_header();
 								</ol>
 
 							</details>
+							</li>
+							<li>
 
 							<details>
 								<summary>
@@ -162,6 +188,7 @@ get_header();
 					</ol>
 				</div>
 
+					<!-- close the nav wrapper for the sticky sidebar -->
 			</nav>
 
 			<article>
@@ -225,4 +252,6 @@ get_header();
 		<?php do_action( 'neve_do_sidebar', 'single-page', 'right' ); ?>
 	</div>
 </div>
+
 <?php get_footer(); ?>
+
