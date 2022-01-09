@@ -27,6 +27,7 @@
     /* we use z-index, to account for cover image clipping the sidebar */
     z-index: 1000;
     position: fixed;
+    overflow: auto;
     width: 25rem;
     height: 100vh;
     transition: transform 0.2s;
@@ -460,14 +461,6 @@ our static sidebar.
     max-width: 10rem;
   }
 
-  /* negate the large screen fixed menu styles */
-  .fog-of-enactment nav {
-    width: 100%;
-    height: auto;
-    /* padding: 2rem; */
-    position: initial;
-  }
-
   .fog-of-enactment {
 
     button.tocToggle {
@@ -484,6 +477,10 @@ our static sidebar.
 
   /* we don't show this */
   .fog-of-enactment nav {
+    /* negate the large screen fixed menu styles */
+    width: 100%;
+    height: auto;
+    position: initial;
 
     .toc {
       position: fixed;
@@ -492,7 +489,6 @@ our static sidebar.
       height: 70vh;
       width: 15rem;
       background-color: $tgwf-green500;
-      overflow: auto;
       transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
       border: none;
       z-index: 999;
