@@ -12,16 +12,11 @@ get_header();
 
 // headers and nav are disabled in the page UI. We need to import a
 // menu ourselves if we want to display any navigation options for the site
-
-// wp_nav_menu( $args );
-
 ?>
 
 <?php
 
 	wp_enqueue_style( 'fog-of-enactment-report', get_stylesheet_directory_uri() . '/assets/css/fog-of-enactment.css');
-
-	wp_enqueue_script( 'sticky-js', get_stylesheet_directory_uri() . '/assets/js/sticky-sidebar.js' );
 
 	wp_enqueue_script( 'fog-of-enactment-report', get_stylesheet_directory_uri() . '/assets/js/fog-of-enactment.js' );
 
@@ -29,19 +24,43 @@ get_header();
 ?>
 
 
+
 <div class="">
-	<?php
-	// TODO make a pared back menu, or decide if this would do by itself
-	// wp_nav_menu( array( 'menu' => '3') );
-?>
 
 	<div class="row">
-
 
 		<?php do_action( 'neve_do_sidebar', 'single-page', 'left' ); ?>
 
 
 		<div class="nv-single-page-wrap col fog-of-enactment">
+
+		<div class="report-site-nav-menu">
+				<div class="menu-mobile-toggle item-button navbar-toggle-wrapper">
+					<button
+						class="toggle navbar-toggle"
+						value="Site Navigation Menu"
+						aria-label="Site Navigation Menu">
+						<span class="bars">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</span>
+					</button>
+				</div>
+
+				<div class=".header-menu-sidebar-inner ">
+				<?php
+				wp_nav_menu( array(
+					'menu' => '3',
+					'menu_class' => 'nav-ul',
+					'container_class' => "nav-menu-primary visually-hidden" ));
+				?>
+				</div>
+		</div>
+
+
+
+
 
 			<nav id="toc_nav_holder">
 				<div class="logo">
@@ -187,8 +206,6 @@ get_header();
 						</li>
 					</ol>
 				</div>
-
-					<!-- close the nav wrapper for the sticky sidebar -->
 			</nav>
 
 			<article>

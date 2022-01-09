@@ -86,6 +86,9 @@ function addToggleMobileToC() {
   const tocToggleBtn = document.querySelector('button.tocToggle')
   const toc = document.querySelector('nav .toc')
   const tocCloseBtn = document.querySelector('.toc button')
+  const siteNavMenu = document.querySelector('.report-site-nav-menu .nav-menu-primary')
+  const siteNavBtn = document.querySelector('.report-site-nav-menu button')
+
 
   tocToggleBtn.addEventListener("click", function (event) {
     toc.classList.toggle("visible");
@@ -94,6 +97,15 @@ function addToggleMobileToC() {
   tocCloseBtn.addEventListener("click", function (event) {
     toc.classList.remove("visible");
   })
+
+  siteNavBtn.addEventListener("click", function (event) {
+    siteNavMenu.classList.toggle("visible");
+    siteNavMenu.classList.toggle("visually-hidden");
+
+
+  })
+
+
 
 
 
