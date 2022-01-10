@@ -38,13 +38,13 @@
     z-index: 1000;
     position: fixed;
     overflow: auto;
-    width: 25rem;
+    width: 20rem;
     height: 100vh;
     transition: transform 0.2s;
 
     .logo {
-      padding-top: 3rem;
-      padding-bottom: 3rem;
+      padding-top: 1em;
+      padding-bottom: 1rem;
       padding-left: 1rem;
     }
 
@@ -99,13 +99,14 @@
   */
   article {
     padding-top: 0;
-    padding-left: 2rem;
-    padding-right: 2rem;
+
 
     // margin-left is used to accout for the static sidebar
-    margin-left: 25rem;
+    margin-left: 20rem;
 
     section {
+      padding-left: 2rem;
+      padding-right: 2rem;
       padding-top: 0;
 
       /* add max width for readability */
@@ -193,10 +194,10 @@ override on the footer to push it over enough to account
 our static sidebar.
 */
 .site-footer {
-  margin-left: 25rem;
+  margin-left: 20rem;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1024px) {
 
   /*
   visually hidden class to avoid touches/clicks on the site
