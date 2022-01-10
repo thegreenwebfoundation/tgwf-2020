@@ -20,9 +20,7 @@ get_header();
 
 	wp_enqueue_script( 'fog-of-enactment-report', get_stylesheet_directory_uri() . '/assets/js/fog-of-enactment.js' );
 
-
 ?>
-
 
 
 <div class="">
@@ -30,7 +28,6 @@ get_header();
 	<div class="row">
 
 		<?php do_action( 'neve_do_sidebar', 'single-page', 'left' ); ?>
-
 
 		<div class="nv-single-page-wrap col fog-of-enactment">
 
@@ -50,6 +47,7 @@ get_header();
 
 				<div class=".header-menu-sidebar-inner ">
 				<?php
+				// menu 3 is our main menu that we use on across the site
 				wp_nav_menu( array(
 					'menu' => '3',
 					'menu_class' => 'nav-ul',
@@ -57,10 +55,6 @@ get_header();
 				?>
 				</div>
 		</div>
-
-
-
-
 
 			<nav id="toc_nav_holder">
 				<div class="logo">
@@ -76,7 +70,6 @@ get_header();
 				<button class="tocToggle">
 					Table of Contents
 				</button>
-
 
 				<div class="toc">
 					<!--
@@ -107,10 +100,6 @@ get_header();
 							</details>
 						</li>
 
-						<!--
-							these are short enough not to need the sub items
-							is the only part without sub items
-						-->
 						<li>
 							<a href="#executive-summary">Executive summary</a></summary>
 						</li>
@@ -124,8 +113,7 @@ get_header();
 									<a href="#gaps-in-how-we-model-impact">Gaps in how we model impact</a>
 								</summary>
 								<ol>
-									<li><a href="#estimating-footprint-of-a-digital-service-or-product">Estimating the footprint of a
-											digital service or product</a>
+									<li><a href="#estimating-footprint-of-a-digital-service-or-product">Estimating the footprint of a digital service or product</a>
 										</a></li>
 									<li>
 										<a href="#what-about-global-estimates">What about global estimates?</a>
@@ -155,7 +143,6 @@ get_header();
 										<a href="#lessons-learned">
 											Lessons learned
 										</a>
-
 									</li>
 								</ol>
 
@@ -213,6 +200,12 @@ get_header();
 
 				<?php
 			/**
+			 * These are the usual neve actions. These might not be necessary,
+			 * but this tries to follow the usual neve page logic.
+			 *
+			 * */
+
+			/**
 			 * Executes actions before the page header.
 			 *
 			 * @since 2.4.0
@@ -240,7 +233,6 @@ get_header();
 			if ( have_posts() ) {
 				while ( have_posts() ) { ?>
 				<section>
-
 					<?
 					the_post();
 					get_template_part( 'template-parts/content', 'page' );
@@ -250,7 +242,6 @@ get_header();
 
 			} else { ?>
 				<section>
-
 					<? get_template_part( 'template-parts/content', 'none' ); ?>
 				</section>
 				<? }
