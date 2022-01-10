@@ -1,0 +1,314 @@
+/*
+This is a subset of the styles from Tufte CSS
+https://edwardtufte.github.io/tufte-css/
+
+These are the styles that hav enot been converted to SCSS, and move these here into
+a "parts drawer" until we can implement the TufteCSS related sidenotes.
+*/
+
+hr {
+  display: block;
+  height: 1px;
+  width: 45rem;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+p.subtitle {
+  font-style: italic;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  display: block;
+  line-height: 1;
+}
+
+.numeral {
+  font-family: et-book-roman-old-style;
+}
+
+.danger {
+  color: red;
+}
+
+article {
+  padding: 5rem 0rem;
+}
+
+section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+
+blockquote {
+  font-size: 1.4rem;
+}
+
+blockquote p {
+  width: 45rem;
+  margin-right: 40px;
+}
+
+blockquote footer {
+  width: 45rem;
+  font-size: 1.1rem;
+  text-align: right;
+}
+
+section>p,
+section>footer,
+section>table {
+  width: 45rem;
+}
+
+
+
+section>dl,
+section>ol,
+section>ul {
+  max-width: 50rem;
+  -webkit-padding-start: 5%;
+}
+
+section li {
+  max-width: 45rem;
+}
+
+dt:not(:first-child),
+li:not(:first-child) {
+  margin-top: 0.25rem;
+}
+
+figure {
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  max-width: 45rem;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  margin: 0 0 3em 0;
+}
+
+figcaption {
+  float: right;
+  clear: right;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  vertical-align: baseline;
+  position: relative;
+  max-width: 40%;
+}
+
+figure.fullwidth figcaption {
+  margin-right: 24%;
+}
+
+figure.fullwidth img {
+  width: 100%;
+}
+
+/*
+ colwidth is a class to handle SVG graphics - without this, they default
+ to being around 100px wide. This scales them back up
+ */
+
+figure.colwidth img {
+  width: 100%;
+  max-width: 50rem;
+}
+
+
+
+/* Links: replicate underline that clears descenders */
+a:link,
+a:visited {
+  color: inherit;
+}
+
+
+/* Sidenotes, margin notes, figures, captions */
+img {
+  max-width: 100%;
+}
+
+
+
+.sidenote,
+.marginnote {
+  float: right;
+  clear: right;
+  margin-right: -50rem;
+  width: 50rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0;
+  font-size: 0.8rem;
+  line-height: 1.3;
+  vertical-align: baseline;
+  position: relative;
+  border: 1px solid grey;
+}
+
+.sidenote-number {
+  counter-increment: sidenote-counter;
+}
+
+.sidenote-number:after,
+.sidenote:before {
+  font-family: et-book-roman-old-style;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.sidenote-number:after {
+  content: counter(sidenote-counter);
+  font-size: 1rem;
+  top: -0.5rem;
+  left: 0.1rem;
+}
+
+.sidenote:before {
+  content: counter(sidenote-counter) " ";
+  font-size: 1rem;
+  top: -0.5rem;
+}
+
+blockquote .sidenote,
+blockquote .marginnote {
+  margin-right: -82%;
+  min-width: 59%;
+  text-align: left;
+}
+
+div.fullwidth,
+table.fullwidth {
+  width: 100%;
+}
+
+div.table-wrapper {
+  overflow-x: auto;
+
+}
+
+
+h1>code,
+h2>code,
+h3>code {
+  font-size: 0.80em;
+}
+
+.marginnote>code,
+.sidenote>code {
+  font-size: 1rem;
+}
+
+pre>code {
+  font-size: 0.9rem;
+  width: 52.5%;
+  margin-left: 2.5%;
+  overflow-x: auto;
+  display: block;
+}
+
+pre.fullwidth>code {
+  width: 90%;
+}
+
+.fullwidth {
+  max-width: 90%;
+  clear: both;
+}
+
+
+input.margin-toggle {
+  display: none;
+}
+
+label.sidenote-number {
+  display: inline-block;
+  max-height: 2rem;
+  /* should be less than or equal to paragraph line-height */
+}
+
+label.margin-toggle:not(.sidenote-number) {
+  display: none;
+}
+
+
+
+hr,
+section>p,
+section>footer,
+section>table {
+  width: 100%;
+}
+
+pre>code {
+  width: 97%;
+}
+
+section>dl,
+section>ol,
+section>ul {
+  width: 90%;
+}
+
+figure {
+  max-width: 90%;
+}
+
+figcaption,
+figure.fullwidth figcaption {
+  margin-right: 0%;
+  max-width: none;
+}
+
+blockquote {
+  margin-left: 1.5em;
+  margin-right: 0em;
+}
+
+blockquote p,
+blockquote footer {
+  width: 100%;
+}
+
+label.margin-toggle:not(.sidenote-number) {
+  display: inline;
+}
+
+.sidenote,
+.marginnote {
+  display: none;
+}
+
+.margin-toggle:checked+.sidenote,
+.margin-toggle:checked+.marginnote {
+  display: block;
+  float: left;
+  left: 1rem;
+  clear: both;
+  width: 95%;
+  margin: 1rem 2.5%;
+  vertical-align: baseline;
+  position: relative;
+}
+
+label {
+  cursor: pointer;
+}
+
+div.table-wrapper,
+table {
+  width: 85%;
+}
+
+img {
+  width: 100%;
+}

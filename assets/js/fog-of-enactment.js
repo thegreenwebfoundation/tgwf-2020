@@ -104,16 +104,33 @@ function addToggleMobileToC() {
 
 
   })
-
-
-
-
-
 }
 
+/**
+ * Accept a link pointing to footnote text in a document, then
+ * create a easier to read sidenote
+ *
+ * @param  {HTMLElement} footnote
+ */
+function addSideNote(footnote) {
+  const reference = footnote.hash
+  // copy the element, so we can remove the unneeded return link
+  const clonedReference = document.querySelector(reference).cloneNode(true)
+  clonedReference.querySelector("a[rev='footnote']").remove()
+  const referenceText = clonedReference.innerHTML
+  const sideNoteText = '<span class="sidenote">' + footnote.innerText + '. ' + referenceText + '</span>'
+  footnote.insertAdjacentHTML('afterend', sideNoteText)
+}
 
 window.addEventListener('DOMContentLoaded', function (event) {
   addScrollingToToC()
   addToggleMobileToC()
+
+  for (const footnote of document.querySelectorAll("a[rel='footnote']")) {
+    addSideNote(footnote)
+  }
+
+
+
 });
 
