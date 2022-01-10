@@ -1,10 +1,10 @@
 
 /**
- * Accept an element, and if it's a link inside suumary element,
+ * Accept an element, and if it's a link inside summary element,
  * open the parent details element to show extra content
  * @param  {HTMLElement} elem
  */
-function openDetailsIfSummary(elem) {
+function toggleDetailsIfSummary(elem) {
   if (elem.tagName == "A" && elem.parentNode.tagName == "SUMMARY") {
 
     // we have a link, check if we're in a details element
@@ -38,7 +38,7 @@ function addScrollBehaviourToLink(elem) {
 
     // does this heading have further items to disclose?
     // Trigger open / close if necessary
-    openDetailsIfSummary(elem)
+    toggleDetailsIfSummary(elem)
 
     // then scroll into view
     if (elem.hash) {
@@ -48,7 +48,7 @@ function addScrollBehaviourToLink(elem) {
           block: "center"
         }
       )
-      // finally update the location bar with the correct url fragment
+      // finally update the location bar with the correct url fragment.
       // this allows us to come back to it in history or share
       // links to a given section
       history.pushState({}, "", elem.hash)
@@ -57,7 +57,7 @@ function addScrollBehaviourToLink(elem) {
 }
 
 /**
- * Debugging function List all the headings in a report post, so we can sanity
+ * Debugging function: list all the headings in a report post, so we can sanity
  * check we have the necessary headings listed.
  */
 function listAllHeadingsWithIds() {
@@ -71,7 +71,7 @@ function listAllHeadingsWithIds() {
 }
 /**
  *
- * Enrich our table of content with nicer scrolling behaviour
+ * Enrich our table of contents with nicer scrolling behaviour
  *
  */
 function addScrollingToToC() {
@@ -81,14 +81,16 @@ function addScrollingToToC() {
     addScrollBehaviourToLink(link)
   }
 }
-
+/**
+ * Add the floating mobile table of contents to make navigation through a large
+ * page easier on devices with small screens
+ */
 function addToggleMobileToC() {
   const tocToggleBtn = document.querySelector('button.tocToggle')
   const toc = document.querySelector('nav .toc')
   const tocCloseBtn = document.querySelector('.toc button')
   const siteNavMenu = document.querySelector('.report-site-nav-menu .nav-menu-primary')
   const siteNavBtn = document.querySelector('.report-site-nav-menu button')
-
 
   tocToggleBtn.addEventListener("click", function (event) {
     toc.classList.toggle("visible");
@@ -101,14 +103,12 @@ function addToggleMobileToC() {
   siteNavBtn.addEventListener("click", function (event) {
     siteNavMenu.classList.toggle("visible");
     siteNavMenu.classList.toggle("visually-hidden");
-
-
   })
 }
 
 /**
  * Accept a link pointing to footnote text in a document, then
- * create a easier to read sidenote
+ * create a easier-to-read sidenote
  *
  * @param  {HTMLElement} footnote
  */
@@ -129,8 +129,4 @@ window.addEventListener('DOMContentLoaded', function (event) {
   for (const footnote of document.querySelectorAll("a[rel='footnote']")) {
     addSideNote(footnote)
   }
-
-
-
 });
-

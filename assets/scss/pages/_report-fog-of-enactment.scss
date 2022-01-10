@@ -5,7 +5,6 @@
  * we use these so we still have nav options
  * to the rest of the site
 */
-
 .report-site-nav-menu {
   float: right;
 
@@ -165,18 +164,21 @@
 
 
 /*
- colwidth is a class to handle SVG graphics - without this, they default
- to being around 100px wide. This scales them back up
- */
+colwidth is a class to handle SVG graphics - without this, they default
+to being around 100px wide. This scales them back up
+*/
 
 figure.colwidth img {
   width: 100%;
   max-width: 50rem;
 }
 
-
 .wp-block-image {
   margin-bottom: 4rem;
+  /*
+  we add the clear both to account for spaces where we have long sidenotes
+  that overlap with images. this makes sure we have the whitespace
+  */
   clear: both;
 }
 
@@ -185,8 +187,6 @@ figure.colwidth img {
   text-align: center;
   float: none;
 }
-
-
 
 /*
 override on the footer to push it over enough to account
@@ -220,6 +220,10 @@ our static sidebar.
 
 
   .report-site-nav-menu {
+
+    /*
+    replicate the look and feel of the usual disclosure button for the site nav
+    */
     button.toggle {
       display: block;
       position: absolute;
@@ -269,6 +273,7 @@ our static sidebar.
       }
     }
 
+
     .visible {
       opacity: 1;
       visibility: visible;
@@ -289,12 +294,14 @@ our static sidebar.
       right: 30px;
       background-color: $tgwf-green500;
       padding: 1rem;
-
     }
   }
 
 
-  /* we don't show this */
+  /*
+  we don't show this by default on mobile, but we fade it in
+  when triggering the table of contents toggle
+  */
   .fog-of-enactment nav {
     /* negate the large screen fixed menu styles */
     width: 100%;
@@ -326,7 +333,7 @@ our static sidebar.
         right: 10px;
       }
 
-      // override to make sure our site nav links are black / dark grey
+      // override to make sure our site nav links are the correct color
       a {
         color: #fff;
       }
@@ -338,20 +345,16 @@ our static sidebar.
     }
   }
 
-
-
-
-  .fog-of-enactment nav button.tocDisplay {}
-
-  .fog-of-enactment nav>button.tocClose {}
-
   /* negate the large screen margin for the fixed menu */
   .fog-of-enactment article {
     margin-left: 0rem;
   }
 
 
-  /* negate the large screen override for the footer */
+  /*
+  negate the large screen override for the footer as we don't have
+  a fixed sidebar to compensate for
+  */
   .site-footer {
     margin-left: 0rem;
   }
