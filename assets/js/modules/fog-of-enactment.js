@@ -128,7 +128,8 @@ function addSideNote(footnote) {
  *
  */
 function addSideNotes() {
-  for (const footnote of document.querySelectorAll("a[rel='footnote']")) {
+  const footnotes = document.querySelectorAll("a[rel='footnote']")
+  for (const footnote of footnotes) {
     addSideNote(footnote)
   }
 }
@@ -136,5 +137,9 @@ function addSideNotes() {
 window.addEventListener('DOMContentLoaded', function (event) {
   addScrollingToToC()
   addToggleMobileToC()
-  addSideNotes()
+  // introduce some delay to allow the footnotes to load
+  setTimeout(() => {
+    addSideNotes()
+  }, 250);
+
 });
