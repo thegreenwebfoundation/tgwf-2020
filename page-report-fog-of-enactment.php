@@ -15,12 +15,6 @@ get_header();
 // menu ourselves if we want to display any navigation options for the site
 ?>
 
-<?php
-
-
-?>
-
-
 <div class="">
 
 	<div class="row">
