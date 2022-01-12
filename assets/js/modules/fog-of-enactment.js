@@ -137,9 +137,5 @@ function addSideNotes() {
 window.addEventListener('DOMContentLoaded', function (event) {
   addScrollingToToC()
   addToggleMobileToC()
-  // introduce some delay to allow the footnotes to load
-  setTimeout(() => {
-    addSideNotes()
-  }, 250);
-
+  addSideNotes()
 });
