@@ -15,7 +15,7 @@ get_header();
 // menu ourselves if we want to display any navigation options for the site
 ?>
 
-<div class="">
+<div class="report-page">
 
 	<div class="row">
 

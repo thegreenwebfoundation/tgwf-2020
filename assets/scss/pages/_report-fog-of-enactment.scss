@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+/* Override the Miso typeface  */
+
 /*
  * top site nav styles
  * we use these so we still have nav options
@@ -22,9 +24,36 @@
   }
 }
 
+div.report-page {
+  max-width: 85rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
 
-/* side nav styles */
 .fog-of-enactment {
+
+  p,
+  li {
+    font-size: 18px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: Lato, sans-serif;
+  }
+
+
+  .wp-block-cover__inner-container {
+
+    h2,
+    h3 {
+      padding-left: 1rem;
+    }
+  }
 
   // override to remove extra whitespace from borrowing neve styles
   .item-button {
@@ -105,20 +134,32 @@
     margin-left: 20rem;
 
     section {
-      padding-left: 2rem;
-      padding-right: 2rem;
+
       padding-top: 0;
+
+      h2,
+      h3 {
+        padding-left: 2rem;
+      }
+
+      li>h3,
+      li>p {
+        padding-left: 0;
+      }
+
 
       /* add max width for readability */
       p {
         max-width: 50rem;
-        width: 60%
+        width: 60%;
+        padding-left: 2rem;
       }
 
       dl,
       ol,
       ul {
         max-width: 50rem;
+        padding-left: 2rem;
         -webkit-padding-start: 5%;
         width: 60%
       }
@@ -149,6 +190,8 @@
         li {
           width: 100%;
           display: inline;
+          padding-left: 0;
+          font-size: 0.8rem
         }
       }
 
@@ -194,7 +237,10 @@ override on the footer to push it over enough to account
 our static sidebar.
 */
 .site-footer {
-  margin-left: 20rem;
+  padding-left: 20rem;
+  max-width: 85rem;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 @media (max-width: 1024px) {
@@ -241,7 +287,7 @@ our static sidebar.
 
     .nav-menu-primary {
       position: fixed;
-      top: 60px;
+      top: 5rem;
       right: 6px;
       height: 90vh;
       width: 90%;
@@ -282,8 +328,11 @@ our static sidebar.
   }
 
 
+
+
   .fog-of-enactment .logo {
     max-width: 10rem;
+    padding-top: 0;
   }
 
   .fog-of-enactment {
@@ -308,6 +357,14 @@ our static sidebar.
     width: 100%;
     height: auto;
     position: initial;
+    padding-bottom: 0;
+    padding-top: 0.5rem;
+
+    .logo {
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+    }
 
     .toc {
       position: fixed;
@@ -357,6 +414,6 @@ our static sidebar.
   a fixed sidebar to compensate for
   */
   .site-footer {
-    margin-left: 0rem;
+    padding-left: 0;
   }
 }
