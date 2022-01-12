@@ -344,7 +344,6 @@ our static sidebar.
 
 
 
-
   .fog-of-enactment .logo {
     max-width: 10rem;
     padding-top: 0;
@@ -359,6 +358,19 @@ our static sidebar.
       right: 30px;
       background-color: $tgwf-green500;
       padding: 1rem;
+    }
+
+
+    article {
+      section {
+
+        p,
+        dl,
+        ol,
+        ul {
+          width: 90%
+        }
+      }
     }
   }
 
@@ -421,6 +433,31 @@ our static sidebar.
   /* negate the large screen margin for the fixed menu */
   .fog-of-enactment article {
     margin-left: 0rem;
+  }
+
+  label.margin-toggle:not(.sidenote-number) {
+    display: inline;
+  }
+
+
+  /* sidenote handling on mobile */
+  .sidenote {
+    display: none;
+  }
+
+  .margin-toggle:checked+.sidenote {
+    display: block;
+    float: left;
+    left: 1rem;
+    clear: both;
+    width: 95%;
+    margin: 1rem 2.5%;
+    vertical-align: baseline;
+    position: relative;
+  }
+
+  label {
+    cursor: pointer;
   }
 
 
