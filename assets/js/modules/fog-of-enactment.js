@@ -122,12 +122,8 @@ function addSideNote(footnote) {
   footnote.insertAdjacentHTML('afterend', sideNoteText)
 }
 
-/*
-Use 'load' instead of 'DOMContentLoaded' because calling
-`document.querySelector(reference)` in addSitenote()
-kept coming back with null, causing a js error
-**/
-window.addEventListener('load', function (event) {
+
+window.addEventListener('DOMContentLoaded', function (event) {
   addScrollingToToC()
   addToggleMobileToC()
 
