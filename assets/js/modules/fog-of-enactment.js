@@ -122,12 +122,19 @@ function addSideNote(footnote) {
   footnote.insertAdjacentHTML('afterend', sideNoteText)
 }
 
+/**
+ * Find all the footnotes in the text and add the
+ * easier-to-read sidenotes on the page.
+ *
+ */
+function addSideNotes() {
+  for (const footnote of document.querySelectorAll("a[rel='footnote']")) {
+    addSideNote(footnote)
+  }
+}
 
 window.addEventListener('DOMContentLoaded', function (event) {
   addScrollingToToC()
   addToggleMobileToC()
-
-  for (const footnote of document.querySelectorAll("a[rel='footnote']")) {
-    addSideNote(footnote)
-  }
+  addSideNotes()
 });
