@@ -1,4 +1,5 @@
 <?php
+
 /**
  * A Template to implement some of the ideas for presenting a
  * Report on the Web
@@ -6,7 +7,7 @@
  * @package tgwf
  * @since   0.0.0
  */
-$container_class = apply_filters( 'neve_container_class_filter', 'container', 'single-page' );
+$container_class = apply_filters('neve_container_class_filter', 'container', 'single-page');
 
 get_header();
 
@@ -16,9 +17,6 @@ get_header();
 
 <?php
 
-	wp_enqueue_style( 'fog-of-enactment-report', get_stylesheet_directory_uri() . '/assets/css/fog-of-enactment.css');
-
-	wp_enqueue_script( 'fog-of-enactment-report', get_stylesheet_directory_uri() . '/assets/js/fog-of-enactment.js' );
 
 ?>
 
@@ -27,16 +25,13 @@ get_header();
 
 	<div class="row">
 
-		<?php do_action( 'neve_do_sidebar', 'single-page', 'left' ); ?>
+		<?php do_action('neve_do_sidebar', 'single-page', 'left'); ?>
 
 		<div class="nv-single-page-wrap col fog-of-enactment">
 
-		<div class="report-site-nav-menu">
+			<div class="report-site-nav-menu">
 				<div class="menu-mobile-toggle item-button navbar-toggle-wrapper">
-					<button
-						class="toggle navbar-toggle"
-						value="Site Navigation Menu"
-						aria-label="Site Navigation Menu">
+					<button class="toggle navbar-toggle" value="Site Navigation Menu" aria-label="Site Navigation Menu">
 						<span class="bars">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -46,23 +41,23 @@ get_header();
 				</div>
 
 				<div class=".header-menu-sidebar-inner ">
-				<?php
-				// menu 3 is our main menu that we use on across the site
-				wp_nav_menu( array(
-					'menu' => '3',
-					'menu_class' => 'nav-ul',
-					'container_class' => "nav-menu-primary visually-hidden" ));
-				?>
+					<?php
+					// menu 3 is our main menu that we use on across the site
+					wp_nav_menu(array(
+						'menu' => '3',
+						'menu_class' => 'nav-ul',
+						'container_class' => "nav-menu-primary visually-hidden"
+					));
+					?>
 				</div>
-		</div>
+			</div>
 
 			<nav id="toc_nav_holder">
 				<div class="logo">
-					<a class="brand" href="https://www.thegreenwebfoundation.org/" title="The Green Web Foundation"
-						aria-label="The Green Web Foundation">
+					<a class="brand" href="https://www.thegreenwebfoundation.org/" title="The Green Web Foundation" aria-label="The Green Web Foundation">
 						<?php
-							$logo_path = get_stylesheet_directory_uri() . '/assets/img/thegreenwebfoundation-logo.png';
-							?>
+						$logo_path = get_stylesheet_directory_uri() . '/assets/img/thegreenwebfoundation-logo.png';
+						?>
 						<img src="<?php echo $logo_path ?>" />
 					</a>
 				</div>
@@ -117,7 +112,8 @@ get_header();
 										</a></li>
 									<li>
 										<a href="#what-about-global-estimates">What about global estimates?</a>
-										</a></li>
+										</a>
+									</li>
 								</ol>
 							</details>
 						</li>
@@ -147,8 +143,8 @@ get_header();
 								</ol>
 
 							</details>
-							</li>
-							<li>
+						</li>
+						<li>
 
 							<details>
 								<summary>
@@ -199,67 +195,65 @@ get_header();
 
 
 				<?php
-			/**
-			 * These are the usual neve actions. These might not be necessary,
-			 * but this tries to follow the usual neve page logic.
-			 *
-			 * */
+				/**
+				 * These are the usual neve actions. These might not be necessary,
+				 * but this tries to follow the usual neve page logic.
+				 *
+				 * */
 
-			/**
-			 * Executes actions before the page header.
-			 *
-			 * @since 2.4.0
-			 */
-			do_action( 'neve_before_page_header' );
+				/**
+				 * Executes actions before the page header.
+				 *
+				 * @since 2.4.0
+				 */
+				do_action('neve_before_page_header');
 
-			/**
-			 * Executes the rendering function for the page header.
-			 *
-			 * @param string $context The displaying location context.
-			 *
-			 * @since 1.0.7
-			 */
-			do_action( 'neve_page_header', 'single-page' );
+				/**
+				 * Executes the rendering function for the page header.
+				 *
+				 * @param string $context The displaying location context.
+				 *
+				 * @since 1.0.7
+				 */
+				do_action('neve_page_header', 'single-page');
 
-			/**
-			 * Executes actions before the page content.
-			 *
-			 * @param string $context The displaying location context.
-			 *
-			 * @since 1.0.7
-			 */
-			do_action( 'neve_before_content', 'single-page' );
+				/**
+				 * Executes actions before the page content.
+				 *
+				 * @param string $context The displaying location context.
+				 *
+				 * @since 1.0.7
+				 */
+				do_action('neve_before_content', 'single-page');
 
-			if ( have_posts() ) {
-				while ( have_posts() ) { ?>
-				<section>
-					<?
-					the_post();
-					get_template_part( 'template-parts/content', 'page' );
-					?>
-				</section>
+				if (have_posts()) {
+					while (have_posts()) { ?>
+						<section>
+							<?
+							the_post();
+							get_template_part('template-parts/content', 'page');
+							?>
+						</section>
+					<? }
+				} else { ?>
+					<section>
+						<? get_template_part('template-parts/content', 'none'); ?>
+					</section>
 				<? }
 
-			} else { ?>
-				<section>
-					<? get_template_part( 'template-parts/content', 'none' ); ?>
-				</section>
-				<? }
-
-			/**
-			 * Executes actions after the page content.
-			 *
-			 * @param string $context The displaying location context.
-			 *
-			 * @since 1.0.7
-			 */
-			do_action( 'neve_after_content', 'single-page' );
-			?>
+				/**
+				 * Executes actions after the page content.
+				 *
+				 * @param string $context The displaying location context.
+				 *
+				 * @since 1.0.7
+				 */
+				do_action('neve_after_content', 'single-page');
+				?>
 			</article>
 		</div>
-		<?php do_action( 'neve_do_sidebar', 'single-page', 'right' ); ?>
+		<?php do_action('neve_do_sidebar', 'single-page', 'right'); ?>
 	</div>
 </div>
 
 <?php get_footer(); ?>
-
