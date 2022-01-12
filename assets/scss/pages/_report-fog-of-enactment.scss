@@ -426,3 +426,12 @@ our static sidebar.
     padding-left: 0;
   }
 }
+
+/*
+Override for the scroll to top button. Most of the time we need it,
+but on the report page we don't.
+*/
+
+#scroll-to-top {
+  display: none;
+}
