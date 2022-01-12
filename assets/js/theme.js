@@ -115,8 +115,14 @@ function addSideNote(footnote) {
   const sideNoteText = '<span class="sidenote">' + footnote.innerText + '. ' + referenceText + '</span>';
   footnote.insertAdjacentHTML('afterend', sideNoteText);
 }
+/*
+Use 'load' instead of 'DOMContentLoaded' because calling
+`document.querySelector(reference)` in addSitenote()
+kept coming back with null, causing a js error
+**/
 
-window.addEventListener('DOMContentLoaded', function (event) {
+
+window.addEventListener('load', function (event) {
   addScrollingToToC();
   addToggleMobileToC();
 
