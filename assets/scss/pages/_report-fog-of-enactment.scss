@@ -54,6 +54,8 @@ div.report-page {
     h3 {
       padding-left: 1rem;
     }
+
+
   }
 
   // override to remove extra whitespace from borrowing neve styles
@@ -151,6 +153,22 @@ div.report-page {
 
       padding-top: 0;
 
+      .wp-block-cover__inner-container {
+
+        h2,
+        h3 {
+          padding-left: 1rem;
+        }
+
+        p {
+          width: 100%;
+          max-width: 100%;
+          padding-left: 1rem;
+        }
+
+      }
+
+
       h2,
       h3 {
         padding-left: 2rem;
@@ -184,6 +202,11 @@ div.report-page {
         p {
           width: 100%;
         }
+      }
+
+      table p {
+        width: 100%;
+        font-size: 0.9rem;
       }
 
       .sidenote {
