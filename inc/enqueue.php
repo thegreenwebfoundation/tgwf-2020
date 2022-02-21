@@ -16,12 +16,12 @@ if ( ! function_exists( 'neve_child_load_css' ) ) :
 	 */
 	function neve_child_load_css() {
 		$css_version = filemtime( get_stylesheet_directory() . '/assets/css/main.css' );
-		wp_enqueue_style( 'neve-child-style', trailingslashit( get_stylesheet_directory_uri() ) . '/assets/css/main.min.css', array( 'neve-style' ), $css_version );
+		wp_enqueue_style( 'neve-child-style', trailingslashit( get_stylesheet_directory_uri() ) . 'assets/css/main.min.css', array( 'neve-style' ), $css_version );
 
 		// Conditionally load FOE report CSS.
 		if ( is_page( 'report-fog-of-enactment' ) ) {
 			$foe_css_version = filemtime( get_stylesheet_directory() . '/assets/css/fog-of-enactment.min.css' );
-			wp_enqueue_style( 'fog-of-enactment-report', get_stylesheet_directory_uri() . '/assets/css/fog-of-enactment.min.css', array( 'neve-child-style' ), $foe_css_version );
+			wp_enqueue_style( 'fog-of-enactment-report', trailingslashit( get_stylesheet_directory_uri() ) . 'assets/css/fog-of-enactment.min.css', array( 'neve-child-style' ), $foe_css_version );
 		}
 	}
 endif;
