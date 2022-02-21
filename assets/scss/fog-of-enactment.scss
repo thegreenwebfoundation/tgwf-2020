@@ -1,0 +1,12 @@
+/**
+ * Report specific SCSS files
+ * These styles only apply on the report pages
+ * We already import the main css file in the header
+ * in the theme, so we want to minimise the redeclared styles
+*/
+
+// colors
+@import "base/colours";
+
+// Page specific styles
+@import 'pages/report-fog-of-enactment';

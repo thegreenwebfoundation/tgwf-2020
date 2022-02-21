@@ -1,0 +1,503 @@
+@charset "UTF-8";
+
+/* Override the Miso typeface  */
+
+/*
+ * top site nav styles
+ * we use these so we still have nav options
+ * to the rest of the site
+*/
+.report-site-nav-menu {
+  float: right;
+
+  // override to make sure our site nav links are black / dark grey
+  a {
+    color: #111;
+  }
+
+  button.toggle {
+    display: none;
+  }
+
+  ul.sub-menu {
+    background-color: #fff;
+  }
+}
+
+div.report-page {
+  max-width: 85rem;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0px 38px 40px rgba(0, 0, 0, 0.2);
+}
+
+.fog-of-enactment {
+
+  p,
+  li {
+    font-size: 18px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: Lato, sans-serif;
+  }
+
+
+  .wp-block-cover__inner-container {
+
+    h2,
+    h3 {
+      padding-left: 1rem;
+    }
+
+
+  }
+
+  // override to remove extra whitespace from borrowing neve styles
+  .item-button {
+    display: block;
+  }
+
+  nav {
+    background-color: #eee;
+    padding: 2rem;
+    /* we use z-index, to account for cover image clipping the sidebar */
+    z-index: 1000;
+    position: fixed;
+    overflow: auto;
+    width: 20rem;
+    height: 100vh;
+    transition: transform 0.2s;
+
+    .logo {
+      padding-top: 1em;
+      padding-bottom: 1rem;
+      padding-left: 1rem;
+    }
+
+    .tocToggle {
+      display: none;
+    }
+
+    .toc {
+      position: relative;
+
+      button {
+        display: none;
+      }
+    }
+
+    ol {
+      margin-top: 0.5rem;
+      margin-left: 0.5rem;
+      list-style: none;
+      margin-top: 0.5rem;
+
+    }
+
+    ol li {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      padding: 0.3rem;
+    }
+
+    ol li a {
+      text-decoration: none;
+      color: #111;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    details {
+      margin-top: 0.5rem;
+    }
+
+    details>summary {
+      list-style: none;
+      cursor: pointer;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  .footnotes {
+
+    p,
+    li {
+      font-size: 0.8rem
+    }
+
+  }
+
+  /*
+    these are overrides to remove whitespace between the cover
+    image and the top of the page
+  */
+  article {
+    padding-top: 0;
+
+
+    // margin-left is used to accout for the static sidebar
+    margin-left: 20rem;
+
+    section {
+
+      padding-top: 0;
+
+      .wp-block-cover__inner-container {
+
+        h2,
+        h3 {
+          padding-left: 1rem;
+        }
+
+        p {
+          width: 100%;
+          max-width: 100%;
+          padding-left: 1rem;
+        }
+
+      }
+
+
+      h2,
+      h3 {
+        padding-left: 2rem;
+      }
+
+      li>h3,
+      li>p {
+        padding-left: 0;
+      }
+
+
+      /* add max width for readability */
+      p {
+        max-width: 50rem;
+        width: 60%;
+        padding-left: 2rem;
+      }
+
+      dl,
+      ol,
+      ul {
+        max-width: 50rem;
+        padding-left: 2rem;
+        -webkit-padding-start: 5%;
+        width: 60%
+      }
+
+      li {
+        max-width: 45rem;
+
+        p {
+          width: 100%;
+        }
+      }
+
+      table p {
+        width: 100%;
+        font-size: 0.9rem;
+      }
+
+      .sidenote {
+        float: right;
+        clear: right;
+        margin-right: -40%;
+        width: 30%;
+        margin-top: 0.3rem;
+
+        font-size: 0.8rem;
+        line-height: 1.3;
+        vertical-align: baseline;
+        position: relative;
+
+        margin-bottom: 1rem;
+
+        p,
+        li {
+          width: 100%;
+          display: inline;
+          padding-left: 0;
+          font-size: 0.8rem
+        }
+      }
+
+
+      .nv-content-wrap {
+        padding-top: 0;
+        margin-top: 0;
+      }
+    }
+  }
+
+
+}
+
+
+/*
+colwidth is a class to handle SVG graphics - without this, they default
+to being around 100px wide. This scales them back up
+*/
+
+figure.colwidth img {
+  width: 100%;
+  max-width: 50rem;
+}
+
+.wp-block-image {
+  margin-bottom: 4rem;
+  /*
+  we add the clear both to account for spaces where we have long sidenotes
+  that overlap with images. this makes sure we have the whitespace
+  */
+  clear: both;
+}
+
+.wp-block-image figcaption {
+  font-size: 0.8rem;
+  text-align: center;
+  float: none;
+}
+
+/*
+override on the footer to push it over enough to account
+our static sidebar.
+*/
+.site-footer {
+  padding-left: 20rem;
+  max-width: 85rem;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0px 38px 40px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1024px) {
+
+  /*
+  visually hidden class to avoid touches/clicks on the site
+  nav menu being triggered when trying to click on the
+  report table of contents
+  https://www.a11yproject.com/posts/how-to-hide-content/
+*/
+  .visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  .item-button {
+    display: inline-block;
+  }
+
+
+  .report-site-nav-menu {
+
+    /*
+    replicate the look and feel of the usual disclosure button for the site nav
+    */
+    button.toggle {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #fff;
+      border: 1px solid black;
+
+      .icon-bar {
+        background-color: black;
+      }
+    }
+
+
+    .nav-menu-primary {
+      position: fixed;
+      top: 5rem;
+      right: 6px;
+      height: 90vh;
+      width: 90%;
+      background-color: #fff;
+      overflow: auto;
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+      border: none;
+      z-index: 999;
+      padding: 2rem 1rem 1rem 1rem;
+      opacity: 0;
+      visibility: hidden;
+      border-radius: 5px;
+
+
+
+      /* overrides to show the full menu on mobile */
+      .nav-ul {
+        display: block;
+      }
+
+      /* more overrides */
+      .sub-menu {
+        visibility: visible;
+        position: inherit;
+        top: auto;
+        opacity: 1;
+        border: none;
+        box-shadow: none;
+
+      }
+    }
+
+
+    .visible {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+
+
+  .fog-of-enactment .logo {
+    max-width: 10rem;
+    padding-top: 0;
+  }
+
+  .fog-of-enactment {
+
+    button.tocToggle {
+      position: fixed;
+      display: block;
+      bottom: 30px;
+      right: 30px;
+      background-color: $tgwf-green500;
+      padding: 1rem;
+    }
+
+
+    article {
+      section {
+
+        p,
+        dl,
+        ol,
+        ul {
+          width: 90%
+        }
+      }
+    }
+  }
+
+
+  /*
+  we don't show this by default on mobile, but we fade it in
+  when triggering the table of contents toggle
+  */
+  .fog-of-enactment nav {
+    /* negate the large screen fixed menu styles */
+    width: 100%;
+    height: auto;
+    position: initial;
+    padding-bottom: 0;
+    padding-top: 0.5rem;
+
+    .logo {
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+    }
+
+    .toc {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      height: 70vh;
+      width: 15rem;
+      background-color: $tgwf-green500;
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+      border: none;
+      z-index: 999;
+      border-radius: 5px;
+      padding: 2rem 1rem 1rem 1rem;
+      opacity: 0;
+      visibility: hidden;
+      color: #fff;
+      font-weight: bold;
+      overflow: auto;
+
+      button {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+
+      // override to make sure our site nav links are the correct color
+      a {
+        color: #fff;
+      }
+    }
+
+    .visible {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  /* negate the large screen margin for the fixed menu */
+  .fog-of-enactment article {
+    margin-left: 0rem;
+  }
+
+  label.margin-toggle:not(.sidenote-number) {
+    display: inline;
+  }
+
+
+  /* sidenote handling on mobile */
+  .sidenote {
+    display: none;
+  }
+
+  .margin-toggle:checked+.sidenote {
+    display: block;
+    float: left;
+    left: 1rem;
+    clear: both;
+    width: 95%;
+    margin: 1rem 2.5%;
+    vertical-align: baseline;
+    position: relative;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+
+  /*
+  negate the large screen override for the footer as we don't have
+  a fixed sidebar to compensate for
+  */
+  .site-footer {
+    padding-left: 0;
+  }
+}
+
+/*
+Override for the scroll to top button. Most of the time we need it,
+but on the report page we don't.
+*/
+
+#scroll-to-top {
+  display: none;
+}

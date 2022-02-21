@@ -81,6 +81,7 @@ gulp.task('minifycss', function () {
 		.src([
 			// `${paths.css}/custom-editor-style.css`,
 			`${paths.css}/main.css`,
+			`${paths.css}/fog-of-enactment.css`,
 		])
 		.pipe(sourcemaps.init({
 			loadMaps: true
