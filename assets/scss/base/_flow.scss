@@ -3,6 +3,28 @@
  * These are largely going to be affected the outer most containers of each page.
 */
 
+.entry-content {
+	> div[class*="wp-block-"] {
+		margin-top: rem($medium-spacing);
+
+		@include media-breakpoint-up(md) {
+			margin-top: rem($large-spacing);	
+		}
+
+		&:first-child,
+		+ div[class*="has-background"] {
+			margin-top: 0;
+		}
+	}
+
+	> div[class*="has-background"] {
+		> * {
+			padding: rem($medium-spacing) 0 rem($large-spacing); 
+		}
+
+	}
+}
+
 .wp-block-buttons + h3 {
 	margin-top: rem($medium-spacing);
 }
