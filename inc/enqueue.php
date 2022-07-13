@@ -38,4 +38,15 @@ function tgwf_load_footer_scripts() {
 		$foe_js_version = filemtime( get_stylesheet_directory() . '/assets/js/theme.js' );
 		wp_enqueue_script( 'fog-of-enactment-report', get_stylesheet_directory_uri() . '/assets/js/theme.min.js', array(), $foe_js_version, true );
 	}
+
+	// Only enqueue this JS if there is an FAQ block present on the page.
+	if ( has_block( 'yoast/faq-block' ) ) {
+		wp_enqueue_script(
+			'faqs-js',
+			get_stylesheet_directory_uri() . '/assets/js/block-faq.js',
+			array( 'jquery' ),
+			true,
+			true
+		);
+	}
 }
