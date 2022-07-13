@@ -29,6 +29,24 @@ h2 {
 	}
 }
 
+h3 {
+	margin-top: rem($medium-spacing);
+
+	@include media-breakpoint-up(md) {
+		margin-top: rem($large-spacing);	
+	}
+}
+
+h4 {
+	margin-top: 1.3rem;
+
+	@include media-breakpoint-up(md) {
+		margin-top: 1.5rem;	
+	}
+}
+
+
+
 a:link, a:hover {
 	text-decoration: underline;
 	
@@ -36,3 +54,4 @@ a:link, a:hover {
 		text-decoration: none;
 	}
 }
+

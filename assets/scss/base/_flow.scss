@@ -6,3 +6,7 @@
 .wp-block-buttons + h3 {
 	margin-top: rem($medium-spacing);
 }
+
+h2 + h3 {
+	margin-top: 1rem;
+}

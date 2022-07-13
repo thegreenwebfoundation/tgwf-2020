@@ -5,3 +5,13 @@
 /* 1. GENERAL BLOCK CUSTOMISATIONS */
 /* 2. CUSTOM CLASSES               */
 
+
+/* 1. GENERAL BLOCK CUSTOMISATIONS */
+.wp-block-group {
+	.wp-block-group__inner-container {
+		> h2:first-of-type {
+			margin-top: 1rem;
+		}
+	}
+}
+
