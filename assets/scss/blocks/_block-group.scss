@@ -17,6 +17,14 @@
 		}
 	}
 
+	&[class*="has-background"] {
+		
+		// Nice spacing for blocks with background colour.
+		> * {
+			padding: rem($medium-spacing) 0 rem($large-spacing); 
+		}
+	}
+
 	.wp-block-group__inner-container {
 		> h2:first-of-type, h3:first-of-type, h4:first-of-type {
 			margin-top: 1rem;

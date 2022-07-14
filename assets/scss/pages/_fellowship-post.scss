@@ -2,6 +2,13 @@
 
 .fellowship-post__header {
 	position: relative;
+	margin-top: rem($medium-spacing);
+	margin-bottom: rem($medium-spacing);	
+
+	@include media-breakpoint-up(md) {
+		margin-top: rem($large-spacing);
+		margin-bottom: rem($large-spacing);
+	}
 }
 
 .fellowship-post__category {

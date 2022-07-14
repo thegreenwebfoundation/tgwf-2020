@@ -4,6 +4,12 @@
 */
 
 .entry-content {
+	padding-bottom: rem($medium-spacing);
+
+	@include media-breakpoint-up(md) {
+		padding-bottom: rem($large-spacing);	
+	}
+
 	> div[class*="wp-block-"] {
 		margin-top: rem($medium-spacing);
 
@@ -11,17 +17,19 @@
 			margin-top: rem($large-spacing);	
 		}
 
-		&:first-child,
-		+ div[class*="has-background"] {
+		// We want the top most element to butt up under the header.
+		&:first-child {
 			margin-top: 0;
 		}
 	}
 
-	> div[class*="has-background"] {
-		> * {
-			padding: rem($medium-spacing) 0 rem($large-spacing); 
-		}
+	> div[class*="has-background"],
+	> div.wp-block-cover {
 
+		// Consequective background coloured areas should butt up against each other.
+		+ div[class*="has-background"] {
+			margin-top: 0;
+		}		
 	}
 }
 
