@@ -31,6 +31,12 @@
 			margin-top: 0;
 		}		
 	}
+
+	p, ol, ul {
+		+ .wp-block-buttons {
+			margin-top: 0;
+		}
+	}
 }
 
 .wp-block-buttons + h3 {
