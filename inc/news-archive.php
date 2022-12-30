@@ -22,7 +22,7 @@ function tgwf_display_news_categories() {
 		);
 
 		echo '<div class="blog-categories-list summary-highlight">';
-		echo '<h3 style="display: inline-block;">Browse our posts by topic</h3>';
+		echo '<h3 class="mt-0">Browse our posts by topic</h3>';
 
 		foreach ( $categories as $category ) {
 			echo '<div class="wp-block-button is-style-primary" style="display: inline-block;">';
