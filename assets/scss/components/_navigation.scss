@@ -3,6 +3,10 @@
  * even if we have to target lots of CSS classes specifically.
 */
 
+.nav-ul {
+	font-family: $title-font;
+}
+
 .nav-ul .sub-menu {
 	li > a {
 		justify-content: flex-start;
@@ -17,16 +21,18 @@
 	}
 
 	.wp-block-button__link.menu-item {
-		border-radius: 4px;
-		padding: 6px rem($small-spacing);
+		background-color: var(--nv-primary-accent);
+		border: $border-width solid var(--nv-text-color);
+		border-radius: $border-radius;
+		padding: 0.75rem 1rem;
 
 		&:hover {
 			background-color: darken( $tgwf-green400, 5% );
 		}
 		a {
-			color: white !important;
+			color: var(--nv-text-color) !important; // Override inline styles.
 			font-size: 1rem;
-			font-weight: $bold-font-weight;
+			// font-weight: $bold-font-weight;
 		}
 	}
 }

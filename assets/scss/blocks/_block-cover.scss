@@ -15,5 +15,11 @@
 			}
 		}
 	}
+	&.hide-bg-on-mobile .wp-block-cover__background {
+		
+		@include media-breakpoint-down(sm) {
+			background: none !important;
+		}
+	}
 }
 

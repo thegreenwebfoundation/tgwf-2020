@@ -1,3 +1,10 @@
-.home .tgwf-search-form__wrapper {
-	color: white;
+.tgwf-search-form {
+	margin-top: 2rem;
+
+	h1, p {
+		@extend .border-bottom;
+	}
+	p {
+		font-size: 1.25rem;
+	}
 }

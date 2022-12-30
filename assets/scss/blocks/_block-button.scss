@@ -3,14 +3,12 @@
 */
 
 .wp-block-button__link {
-	background-color: var(--nv-c-2);
-}
 
-.wp-block-button.is-style-outline {
-	.wp-block-button__link {
-		color: var(--nv-c-2);
-		border-color: var(--nv-c-2);
+	&:hover {
+		//background: linear-gradient(274deg, rgba(187,247,187,1) 0%, rgba(0,255,0,1) 50%, rgba(187,247,187,1) 100%);
+		background: linear-gradient(180deg, rgba(187,247,187,1) 20%, rgba(0,255,0,1) 100%);
 	}
 }
+
 
 

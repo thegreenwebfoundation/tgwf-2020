@@ -1,12 +1,20 @@
 /* Font definitions */
 
 @font-face {
-    font-family: 'miso';
-    src: url('../fonts/miso/miso-webfont.woff2') format('woff2'),
-         url('../fonts/miso/miso-webfont.woff') format('woff');
+    font-family: 'twkeverett';
+    src: url('../fonts/twkeverett/twkeverett-regular.woff2') format('woff2'),
+         url('../fonts/twkeverett/twkeverett-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'twkeverett';
+    src: url('../fonts/twkeverett/twkeverett-regularitalic.woff2') format('woff2'),
+         url('../fonts/twkeverett/twkeverett-regularitalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
 
 @font-face {
     font-family: 'caveatreg';
