@@ -1,13 +1,25 @@
 .tgwf-search-form {
 	margin-top: 2rem;
-
-	h1, p {
+	
+	h1 {
 		@extend .border-bottom;
 	}
-	p {
+	p, input {
 		font-size: 1.25rem;
 	}
+	form {
+		@extend .border-top;
+	}
+
+	input.form-control {
+		flex-grow: 1;
+	}
+
+	&__button {
+		max-width: 280px;
+	}
 }
+
 
 .tgwf-image {
 	max-width: 200px;
