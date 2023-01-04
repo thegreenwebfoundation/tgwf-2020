@@ -10,18 +10,18 @@
 .wp-block-group {
 
 	&:not(.has-background) {
-		margin-top: rem($medium-spacing);
+		//margin-top: rem($medium-spacing);
 
 		@include media-breakpoint-up(md) {
-			margin-top: rem($large-spacing);	
+			//margin-top: rem($large-spacing);	
 		}
 	}
 
-	&[class*="has-background"] {
+	&[class*="has-background"]:not(.alignfull) {
 		
 		// Nice spacing for blocks with background colour.
 		> * {
-			padding: rem($medium-spacing) 0 rem($large-spacing); 
+			//padding: rem($medium-spacing) 0 rem($large-spacing); 
 		}
 	}
 

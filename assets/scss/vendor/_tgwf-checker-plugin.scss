@@ -8,3 +8,11 @@
 		font-size: 1.25rem;
 	}
 }
+
+.tgwf-image {
+	max-width: 200px;
+
+	@include media-breakpoint-up(lg) {
+		max-width: none;
+	}
+}

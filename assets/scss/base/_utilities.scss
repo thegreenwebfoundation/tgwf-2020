@@ -1,5 +1,9 @@
 /* Useful classes that can be reused in all sorts of great places */
 
+.reading-width {
+	max-width: $reading-width;
+}
+
 /* Padding    */
 .pt-0 {
 	padding-top: 0;
