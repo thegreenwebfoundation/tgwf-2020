@@ -7,7 +7,7 @@
 // --nv-secondary-accent: #0066ff;
 // --nv-site-bg: #ffffff;
 // --nv-light-bg: #f4f3f2;
-// --nv-dark-bg: #17260b;
+// --nv-dark-bg: #145314;
 // --nv-text-color: #000000;
 // --nv-text-dark-bg: #ffffff;
 // --nv-c-1: #cb2cff;
@@ -28,3 +28,25 @@ $tgwf-green800: #E5F4D9;
 $tgwf-yellow700: #FFE066;
 $tgwf-yellow800: #FFEB99;
 $tgwf-yellow900: #FFF5CC;
+
+//Gradients
+.has-white-to-primary-gradient-background {
+	background: linear-gradient(145deg, rgb(255,255,255) 15%, rgb(0,255,0) 100%);
+
+	a:not(.button):not(.wp-block-file__button):not(.wp-block-button__link) {
+		&:before {
+			background: linear-gradient( 90deg, rgba(20,83,20,1) 30%, rgba(255,255,255,1) 100% ) !important;
+		}
+	}
+}
+.has-primary-to-white-gradient-background {
+	background: linear-gradient(145deg, rgb(0,255,0) 15%, rgb(255,255,255) 100%);
+
+	
+	a:not(.button):not(.wp-block-file__button):not(.wp-block-button__link) {
+		&:before {
+			background: linear-gradient( 90deg, rgba(20,83,20,1) 30%, rgba(255,255,255,1) 100% ) !important;
+		}
+	}
+}
+

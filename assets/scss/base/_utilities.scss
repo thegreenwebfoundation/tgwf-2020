@@ -21,9 +21,15 @@
 
 
 /* Border      */
+.border-top {
+	border-top: $border-width solid var(--nv-text-color);
+}
 .border-bottom {
 	border-bottom: $border-width solid var(--nv-text-color);
 }
-.border-top {
-	border-top: $border-width solid var(--nv-text-color);
+.border-right {
+	border-right: $border-width solid var(--nv-text-color);
+}
+.border-left {
+	border-left: $border-width solid var(--nv-text-color);
 }

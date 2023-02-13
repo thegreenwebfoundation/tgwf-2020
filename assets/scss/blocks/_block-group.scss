@@ -7,6 +7,11 @@
 
 
 /* 1. GENERAL BLOCK CUSTOMISATIONS */
+.entry-content > .wp-block-group {
+	@extend .border-top;
+	@extend .border-bottom;
+}
+
 .wp-block-group {
 
 	&:not(.has-background) {
@@ -17,16 +22,16 @@
 		}
 	}
 
-	&[class*="has-background"]:not(.alignfull) {
+	&[class*="has-background"] {
 		
 		// Nice spacing for blocks with background colour.
 		> * {
-			//padding: rem($medium-spacing) 0 rem($large-spacing); 
+			padding: rem($large-spacing) 0; 
 		}
 	}
 
 	.wp-block-group__inner-container {
-		> h2:first-of-type, h3:first-of-type, h4:first-of-type {
+		> h2:first-of-type, > 3:first-of-type, > h4:first-of-type {
 			margin-top: 1rem;
 		}
 	}
@@ -43,7 +48,7 @@
 			background: white;
 			padding: 1rem;
 
-			> h2:first-of-type, h3:first-of-type, h4:first-of-type {
+			> h2:first-of-type, > h3:first-of-type, > h4:first-of-type {
 				margin-top: 0;
 			}
 		}

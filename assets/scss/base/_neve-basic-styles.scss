@@ -15,3 +15,25 @@
 .nv-page-title-wrap + .nv-content-wrap {
 	margin-top: 0;
 }
+
+.nv-comment-content a,
+.nv-content-wrap a:not(.button):not(.wp-block-file__button):not(.wp-block-button__link),
+.wp-block-post-content a:not(.button):not(.wp-block-file__button):not(.wp-block-button__link) {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	color: var(--nv-text-color);
+
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: 1px;
+		width: 100%;
+		left: 0;
+		height: $border-width;
+		background: linear-gradient( 90deg, rgba(20,83,20,1) 30%, rgba(0,255,0,1) 100% );
+	}
+	&:hover::before {
+		background: var(--nv-text-color);
+	}
+}

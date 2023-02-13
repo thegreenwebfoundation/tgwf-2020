@@ -8,6 +8,7 @@
 
 add_action( 'wp_enqueue_scripts', 'neve_child_load_css', 20 );
 add_action( 'wp_enqueue_scripts', 'tgwf_load_footer_scripts' );
+add_action( 'after_setup_theme', 'tgwf_gutenberg_css' );
 
 
 if ( ! function_exists( 'neve_child_load_css' ) ) :
@@ -25,6 +26,14 @@ if ( ! function_exists( 'neve_child_load_css' ) ) :
 		}
 	}
 endif;
+
+
+/** Enqueue styles for the editor / backend. */
+function tgwf_gutenberg_css(){
+	add_theme_support( 'editor-styles' ); // if you don't add this line, your stylesheet won't be added.
+	add_editor_style( 'assets/css/editor-styles.min.css' );
+}
+
 
 /**
  * Load scripts into the footer.
