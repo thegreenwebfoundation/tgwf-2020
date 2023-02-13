@@ -64,4 +64,5 @@ return array(
 	<!-- /wp:column --></div>
 	<!-- /wp:columns --></div>
 	<!-- /wp:group -->',
+	'categories'    => array( 'greenweb' ),
 );

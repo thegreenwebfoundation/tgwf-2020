@@ -37,7 +37,9 @@ function register_gwf_patterns() {
 		'three-cols--title-para-button',
 	];
 
-	$theme_path = get_stylesheet_directory();
+	register_block_pattern_category( 'greenweb', array(
+		'label' => __( 'Green Web', 'text-domain' )
+	) );
 
 	/**
 	 * Load patterns.
