@@ -79,7 +79,7 @@ gulp.task('minifycss', function () {
 
 	return gulp
 		.src([
-			// `${paths.css}/custom-editor-style.css`,
+			`${paths.css}/editor-styles.css`,
 			`${paths.css}/main.css`,
 			`${paths.css}/fog-of-enactment.css`,
 		])
