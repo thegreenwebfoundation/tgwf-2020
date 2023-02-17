@@ -1,7 +1,18 @@
 /** Common styles in the Neve theme that we'd like to overwrite. */
 
+.nv-index-posts,
+.nv-single-page-wrap,
+.nv-single-post-wrap {
+
+}
+
 .nv-page-title-wrap.nv-big-title .nv-page-title {
 	border-width: 0;
+	margin: 1rem 0;
+
+	@include media-breakpoint-up( sm ) {
+		margin: 2rem 0;
+	}
 }
 
 .nv-content-wrap {
@@ -18,22 +29,19 @@
 
 .nv-comment-content a,
 .nv-content-wrap a:not(.button):not(.wp-block-file__button):not(.wp-block-button__link),
-.wp-block-post-content a:not(.button):not(.wp-block-file__button):not(.wp-block-button__link) {
-	position: relative;
-	display: inline-block;
-	text-decoration: none;
+.wp-block-post-content a:not(.button):not(.wp-block-file__button):not(.wp-block-button__link),
+.entry-summary a,
+.nv-single-post-wrap a,
+.nv-post-navigation a {
 	color: var(--nv-text-color);
+	text-decoration: none;
+	background-image: linear-gradient( 90deg, rgba(0,255,0,1) 30%, rgba(20,83,20,1) 100% );
+	background-repeat: repeat-x;
+	background-size: 100% 2px;
+	background-position: 0 95%;
 
-	&::before {
-		content: '';
-		position: absolute;
-		bottom: 1px;
-		width: 100%;
-		left: 0;
-		height: $border-width;
-		background: linear-gradient( 90deg, rgba(20,83,20,1) 30%, rgba(0,255,0,1) 100% );
-	}
-	&:hover::before {
+	&:hover {
+		color: white;
 		background: var(--nv-text-color);
 	}
 }

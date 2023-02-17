@@ -19,23 +19,24 @@
 	position: absolute;
 	margin-top: -1rem;
 	margin-left: 1rem;
+	test-transform: uppercase;
 
 	@include media-breakpoint-up(md) {
 		margin-left: 2rem;
 	}
 
 	&:hover {
-		background-color: $tgwf-green400;
+		background-color: var(--nv-text-color);
 	}
 
 	a {
-		color: white;
-		text-decoration: none;
+		color: var(--nv-text-color);
+		background: none;
 	}
 }
 
 .fellowship-post__content-widget-container {
-	background-color: $tgwf-yellow800;
+	background-color: $tgwf-yellow200;
 	font-family: $sketchy-font;
 	font-size: 1.4em;
 
@@ -62,9 +63,10 @@
 
 	h1, h2, h3, h4, h5 {
 		font-family: $sketchy-font;
+		margin-top: 0;
 	}
 	
 	a {
-		color: $tgwf-green300;
+
 	}
 }

@@ -4,11 +4,6 @@
 */
 
 .entry-content {
-	padding-bottom: rem($medium-spacing);
-
-	@include media-breakpoint-up(md) {
-		padding-bottom: rem($large-spacing);	
-	}
 
 	> div[class*="wp-block-"] {
 		margin-top: rem($medium-spacing);
@@ -20,6 +15,10 @@
 		// We want the top most element to butt up under the header.
 		&:first-child {
 			margin-top: 0;
+		}
+		// We want the top most element to butt up under the header.
+		&:last-child {
+			border: 0;
 		}
 	}
 

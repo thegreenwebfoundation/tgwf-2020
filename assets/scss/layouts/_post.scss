@@ -16,6 +16,29 @@
 		font-size: 1.1rem;
 	}
 }
+.blog-entry-title {
+	text-transform: none;
+}
+.nv-post-navigation {
+	border-top: 2px solid var(--nv-text-color);
+	border-bottom: 2px solid var(--nv-text-color);
+	margin: 2rem 0;
+	padding: 2rem 0;
+
+	@include media-breakpoint-up( md ) {
+		margin: 3rem 0;
+		padding: 3rem 0;
+	}
+}
+.nv-related-posts {
+	.entry-title {
+		font-size: 1.4rem;
+		margin-top: 1.5rem;
+	}
+	.posts-wrapper .related-post .content {
+		border: 0;
+	}
+}
 
 
 /* 2. POST CTA                */
@@ -35,5 +58,14 @@
 		&:last-child {
 			margin-right: 0;
 		}
+	}
+}
+
+.article-content-col .content {
+	border-bottom: 2px solid var(--nv-text-color);
+	padding: 2rem 0;
+
+	@include media-breakpoint-up( md ) {
+		padding: 3rem 0;
 	}
 }
