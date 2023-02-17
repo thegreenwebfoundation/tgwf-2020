@@ -3,7 +3,7 @@
 .nv-index-posts,
 .nv-single-page-wrap,
 .nv-single-post-wrap {
-
+	margin-bottom: 0;
 }
 
 .nv-page-title-wrap.nv-big-title .nv-page-title {
@@ -21,6 +21,14 @@
 	@include media-breakpoint-up( sm ) {
 		margin-top: $medium-spacing;
 	}
+
+	> *:last-child {
+		margin-bottom: 2rem;
+		
+		@include media-breakpoint-up( sm ) {
+			margin-bottom: 3rem;
+		}
+	}
 }
 
 .nv-page-title-wrap + .nv-content-wrap {
@@ -31,7 +39,7 @@
 .nv-content-wrap a:not(.button):not(.wp-block-file__button):not(.wp-block-button__link),
 .wp-block-post-content a:not(.button):not(.wp-block-file__button):not(.wp-block-button__link),
 .entry-summary a,
-.nv-single-post-wrap a,
+.fellowship-post__content-widget-container a,
 .nv-post-navigation a {
 	color: var(--nv-text-color);
 	text-decoration: none;

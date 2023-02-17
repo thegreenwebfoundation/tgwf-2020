@@ -8,8 +8,8 @@
 
 /* 1. GENERAL BLOCK CUSTOMISATIONS */
 .entry-content > .wp-block-group {
-	@extend .border-top;
-	@extend .border-bottom;
+	border-top: $border-width-thick solid var(--nv-text-color);
+	border-bottom: $border-width-thick solid var(--nv-text-color);
 }
 
 .wp-block-group {
