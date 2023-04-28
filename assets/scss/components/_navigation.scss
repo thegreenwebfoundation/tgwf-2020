@@ -5,6 +5,10 @@
 
 .nav-ul {
 	font-family: $title-font;
+
+	li > .wrap {
+		height: 100%;
+	}
 }
 
 .nav-ul .sub-menu {
