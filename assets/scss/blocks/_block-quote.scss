@@ -6,17 +6,17 @@ blockquote::before {
 }
 
 blockquote.wp-block-quote {
-	border-left: $border-width solid $tgwf-green500;
-	font-family: $sketchy-font;
+	border-left: $border-width-thick solid $tgwf-green500;
 	font-weight: $bold-font-weight;
+	padding-bottom: $small-spacing !important;
 
 	> * {
 		padding: 1rem;
 	}
 
-	p:first-of-type {
-		padding-top: 0;
-	}
+	em {
+		font-style: normal;
+	}	
 
 	cite {
 		font-family: $body-font;
@@ -29,12 +29,12 @@ blockquote.wp-block-quote {
 			display: inline-block;
 			width: 1em;
 			height: 1rem;
+			margin-right: 0.5rem;
 		}
 	}
 
 	&.is-style-large {
 		padding: 0;
-		margin-bottom: 40px;
 		
 		p {
 			@include media-breakpoint-down(sm) {
