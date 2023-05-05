@@ -14,7 +14,8 @@
 // It's here as backup.
 .alignfull > [class*="__inner-container"],
 .alignwide > [class*="__inner-container"] {
-	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 .alignfull > [class*="__inner-container"] {
 	@include media-breakpoint-up(lg) {

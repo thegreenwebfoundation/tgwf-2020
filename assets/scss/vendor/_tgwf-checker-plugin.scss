@@ -1,3 +1,65 @@
+/* Apply own brand customisations to checker-plugin */
+
+body.green-web-check {
+	.nv-single-page-wrap {
+		max-width: 100% !important;
+	}
+
+	.nv-content-wrap {
+		margin-top: 0;
+	}
+
+}
+
+.tgwf-result__wrapper {
+	.wp-block-cover__inner-container {
+		color: var(--nv-text-color);
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.tgwf-result__page-title {
+	border-bottom: $border-width solid var(--nv-text-color);
+	
+	h1 {
+		font-size: var(--wp--preset--font-size--medium);
+		margin-bottom: $small-spacing;
+		font-weight: normal;
+		letter-spacing: 1px;
+	}
+}
+
+.tgwf-result__result {
+	border-bottom: $border-width solid var(--nv-text-color); 
+	padding-bottom: $small-spacing;
+	margin-bottom: $small-spacing;
+
+	@include media-breakpoint-up(md) {
+		padding-bottom: $medium-spacing;
+		margin-bottom: $medium-spacing;
+	}
+
+	span {
+		display: block;
+	}
+}
+
+.tgwf-result__result {
+	letter-spacing: 1px;
+}
+
+.tgwf-result__text--feedback,
+.tgwf-result__text--hosting-outcome {
+	font-size: var(--wp--preset--font-size--x-large);
+	text-transform: uppercase;
+}
+
+.tgwf-result__text--url {
+	font-size: var(--wp--preset--font-size--x-large);
+	word-wrap: break-word;
+}
+
 .tgwf-search-form {
 	margin-top: 2rem;
 	

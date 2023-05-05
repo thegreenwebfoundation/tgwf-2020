@@ -23,10 +23,10 @@
 }
 
 .nv-content-wrap {
-	margin-top: rem($small-spacing);
+	margin-top: rem($medium-spacing);
 
 	@include media-breakpoint-up( sm ) {
-		margin-top: $medium-spacing;
+		margin-top: $xl-spacing;
 	}
 
 	> *:last-child {

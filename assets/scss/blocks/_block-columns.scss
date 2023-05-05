@@ -44,7 +44,7 @@
 			
 			// Should be first child in hierarchy.
 			.wp-block-group {
-				border-bottom: solid 2px black;
+				border-bottom: $border-width solid black;
 
 				// This should always be the heading element itself.
 				> * > *:first-child {
