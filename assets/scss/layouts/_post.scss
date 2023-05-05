@@ -49,6 +49,14 @@
 
 /* 4. POST ARCHIVE            */
 
+.posts-wrapper {
+	margin-bottom: $small-spacing;
+
+	@include media-breakpoint-up(md) {
+		margin: $medium-spacing 0;
+	}
+}
+
 .blog-categories-list {
 
 	> * {

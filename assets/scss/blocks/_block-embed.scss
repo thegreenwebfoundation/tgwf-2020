@@ -1,0 +1,9 @@
+/* Styles for default embed block, eg for videos */
+
+.wp-block-embed {
+	margin: $medium-spacing 0;
+
+	@include media-breakpoint-up(md) {
+		margin: $xl-spacing 0;
+	}
+}
