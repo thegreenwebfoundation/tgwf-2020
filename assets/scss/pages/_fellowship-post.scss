@@ -19,7 +19,7 @@
 	position: absolute;
 	margin-top: -1rem;
 	margin-left: 1rem;
-	test-transform: uppercase;
+	text-transform: uppercase;
 
 	@include media-breakpoint-up(md) {
 		margin-left: 2rem;
@@ -36,9 +36,8 @@
 }
 
 .fellowship-post__content-widget-container {
-	background-color: $tgwf-yellow200;
-	font-family: $sketchy-font;
-	font-size: 1.4em;
+	background-color: $tgwf-yellow100;
+	border: $border-width solid var(--nv-text-color);
 
 	> * > * {
 		padding-right: 1rem;
@@ -62,8 +61,8 @@
 	}
 
 	h1, h2, h3, h4, h5 {
-		font-family: $sketchy-font;
 		margin-top: 0;
+		text-transform: uppercase;
 	}
 	
 	a {
