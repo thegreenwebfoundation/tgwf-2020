@@ -1,0 +1,8 @@
+/* Layout and styling for page template in general. */
+
+.nv-single-page-wrap {
+
+	@include media-breakpoint-up( lg ) {
+		max-width: 70% !important; //Override neve customiser in individual pages every time.
+	}
+}
