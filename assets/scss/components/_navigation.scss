@@ -12,8 +12,20 @@
 }
 
 .nav-ul .sub-menu {
+
+	@include media-breakpoint-up(lg) {
+		width: 280px;
+		left: 0;
+		right: none;
+		top: 85%;
+	}
+
 	li > a {
 		justify-content: flex-start;
+	}
+
+	li.menu-item a:hover {
+		font-weight: $bold-font-weight;
 	}
 }
 
