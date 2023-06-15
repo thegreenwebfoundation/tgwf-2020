@@ -31,10 +31,11 @@ function remove_patterns() {
 	}
 }
 
-// Remove all the default patterns, and patterns bundled by theme.
+// Register our bespoke GWF patterns.
 function register_gwf_patterns() {
 	$gwf_patterns = [
 		'three-cols--title-para-button',
+		'text-gradient-image',
 	];
 
 	register_block_pattern_category( 'greenweb', array(

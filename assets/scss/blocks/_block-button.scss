@@ -8,6 +8,7 @@
 }
 
 .wp-block-button__link {
+	height: 3rem; // Keep same standard height as form fields;
 
 	&:hover {
 		background-color: var(--nv-site-bg);

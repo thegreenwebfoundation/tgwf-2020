@@ -17,6 +17,9 @@
 
 #content.neve-main .container .alignfull > [class*="__inner-container"], 
 #content.neve-main .container .alignwide > [class*="__inner-container"] {
+	padding-left: 15px;
+	padding-right: 15px;
+
 	@include media-breakpoint-up(lg) {
 		width: 100%;
 		max-width: 100%;
