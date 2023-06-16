@@ -15,5 +15,12 @@
 	}
 }
 
+.wp-block-button.is-style-primary {
+
+	.wp-block-button__link {
+		border: $border-width solid black;
+	}
+}
+
 
 
