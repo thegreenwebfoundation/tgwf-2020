@@ -8,7 +8,7 @@
 }
 
 .wp-block-button__link {
-	height: 3rem; // Keep same standard height as form fields;
+	min-height: 3rem; // Keep same standard height as form fields;
 	border: $border-width solid black !important;
 	
 	&:hover {
