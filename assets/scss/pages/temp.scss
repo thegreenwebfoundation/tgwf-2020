@@ -1,0 +1,246 @@
+/*****
+These are styles from the fog of enactment page that haven't been worked into the new brand.
+Not sure if they are all needed.
+Don't forget to clear this file out and delete it from the repo!
+*****/
+
+
+/*
+colwidth is a class to handle SVG graphics - without this, they default
+to being around 100px wide. This scales them back up
+*/
+
+figure.colwidth img {
+	width: 100%;
+	max-width: 50rem;
+  }
+  
+  .wp-block-image {
+	margin-bottom: 4rem;
+	/*
+	we add the clear both to account for spaces where we have long sidenotes
+	that overlap with images. this makes sure we have the whitespace
+	*/
+	clear: both;
+  }
+  
+  .wp-block-image figcaption {
+	font-size: 0.8rem;
+	text-align: center;
+	float: none;
+  }
+  
+  /*
+  override on the footer to push it over enough to account
+  our static sidebar.
+  */
+  .site-footer {
+	padding-left: 20rem;
+	max-width: 85rem;
+	margin: 0 auto;
+	overflow: hidden;
+	box-shadow: 0px 38px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  @media (max-width: 1024px) {
+  
+	/*
+	visually hidden class to avoid touches/clicks on the site
+	nav menu being triggered when trying to click on the
+	report table of contents
+	https://www.a11yproject.com/posts/how-to-hide-content/
+  */
+	.visually-hidden {
+	  clip: rect(0 0 0 0);
+	  clip-path: inset(50%);
+	  height: 1px;
+	  overflow: hidden;
+	  position: absolute;
+	  white-space: nowrap;
+	  width: 1px;
+	}
+  
+	.item-button {
+	  display: inline-block;
+	}
+  
+  
+	.report-site-nav-menu {
+  
+	  /*
+	  replicate the look and feel of the usual disclosure button for the site nav
+	  */
+	  button.toggle {
+		display: block;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		background-color: #fff;
+		border: 1px solid black;
+  
+		.icon-bar {
+		  background-color: black;
+		}
+	  }
+  
+  
+	  .nav-menu-primary {
+		position: fixed;
+		top: 5rem;
+		right: 6px;
+		height: 90vh;
+		width: 90%;
+		background-color: #fff;
+		overflow: auto;
+		transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+		border: none;
+		z-index: 999;
+		padding: 2rem 1rem 1rem 1rem;
+		opacity: 0;
+		visibility: hidden;
+		border-radius: 5px;
+  
+  
+  
+		/* overrides to show the full menu on mobile */
+		.nav-ul {
+		  display: block;
+		}
+  
+		/* more overrides */
+		.sub-menu {
+		  visibility: visible;
+		  position: inherit;
+		  top: auto;
+		  opacity: 1;
+		  border: none;
+		  box-shadow: none;
+  
+		}
+	  }
+  
+  
+	  .visible {
+		opacity: 1;
+		visibility: visible;
+	  }
+	}
+  
+  
+  
+	.fog-of-enactment {
+  
+	  button.tocToggle {
+		position: fixed;
+		display: block;
+		bottom: 30px;
+		right: 30px;
+		padding: 1rem;
+	  }
+  
+  
+	  article {
+		section {
+  
+		  p,
+		  dl,
+		  ol,
+		  ul {
+			width: 90%
+		  }
+		}
+	  }
+	}
+  
+  
+	/*
+	we don't show this by default on mobile, but we fade it in
+	when triggering the table of contents toggle
+	*/
+	.fog-of-enactment nav {
+	  /* negate the large screen fixed menu styles */
+	  width: 100%;
+	  height: auto;
+	  position: initial;
+	  padding-bottom: 0;
+	  padding-top: 0.5rem;
+  
+	  .logo {
+		padding-top: 0;
+		padding-bottom: 0;
+		padding-left: 0;
+	  }
+  
+	  .toc {
+	  //   position: fixed;
+		bottom: 30px;
+		right: 30px;
+		height: 70vh;
+		width: 15rem;
+		transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+		border: none;
+		z-index: 999;
+		border-radius: 5px;
+		padding: 2rem 1rem 1rem 1rem;
+		opacity: 0;
+		visibility: hidden;
+		color: #fff;
+		font-weight: bold;
+		overflow: auto;
+  
+		button {
+		  display: block;
+		  position: absolute;
+		  top: 10px;
+		  right: 10px;
+		}
+  
+		// override to make sure our site nav links are the correct color
+		a {
+		  color: #fff;
+		}
+	  }
+  
+	  .visible {
+		opacity: 1;
+		visibility: visible;
+	  }
+	}
+  
+	/* negate the large screen margin for the fixed menu */
+	.fog-of-enactment article {
+	  margin-left: 0rem;
+	}
+  
+	label.margin-toggle:not(.sidenote-number) {
+	  display: inline;
+	}
+  
+  
+	/* sidenote handling on mobile */
+	.sidenote {
+	  display: none;
+	}
+  
+	.margin-toggle:checked+.sidenote {
+	  display: block;
+	  float: left;
+	  left: 1rem;
+	  clear: both;
+	  width: 95%;
+	  margin: 1rem 2.5%;
+	  vertical-align: baseline;
+	  position: relative;
+	}
+  
+	label {
+	  cursor: pointer;
+	}
+  
+  
+  /*
+  Override for the scroll to top button. Most of the time we need it,
+  but on the report page we don't.
+  */
+  
+  

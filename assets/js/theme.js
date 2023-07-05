@@ -1,8 +1,14 @@
+window.addEventListener('DOMContentLoaded', function (event) {
+  //addScrollingToToC()
+  //addToggleMobileToC()
+  addSideNotes();
+});
 /**
  * Accept an element, and if it's a link inside summary element,
  * open the parent details element to show extra content
  * @param  {HTMLElement} elem
  */
+
 function toggleDetailsIfSummary(elem) {
   if (elem.tagName == "A" && elem.parentNode.tagName == "SUMMARY") {
     // we have a link, check if we're in a details element
@@ -99,6 +105,21 @@ function addToggleMobileToC() {
   });
 }
 /**
+ * Find all the footnotes in the text and add the
+ * easier-to-read sidenotes on the page.
+ *
+ */
+
+
+function addSideNotes() {
+  // Get all the footnotes.
+  const footnotes = document.querySelectorAll("a[rel='footnote']");
+
+  for (const footnote of footnotes) {
+    addSideNote(footnote);
+  }
+}
+/**
  * Accept a link pointing to footnote text in a document, then
  * create a easier-to-read sidenote
  *
@@ -112,26 +133,7 @@ function addSideNote(footnote) {
   const clonedReference = document.querySelector(reference).cloneNode(true);
   clonedReference.querySelector("a[rev='footnote']").remove();
   const referenceText = clonedReference.innerHTML;
-  const sideNoteText = '<span class="sidenote">' + footnote.innerText + '. ' + referenceText + '</span>';
+  const sideNoteText = '<span class="sidenote">' + footnote.innerText + '. ' + referenceText + '</span>'; // insert the sidenote next to the reference in the text body.
+
   footnote.insertAdjacentHTML('afterend', sideNoteText);
 }
-/**
- * Find all the footnotes in the text and add the
- * easier-to-read sidenotes on the page.
- *
- */
-
-
-function addSideNotes() {
-  const footnotes = document.querySelectorAll("a[rel='footnote']");
-
-  for (const footnote of footnotes) {
-    addSideNote(footnote);
-  }
-}
-
-window.addEventListener('DOMContentLoaded', function (event) {
-  addScrollingToToC();
-  addToggleMobileToC();
-  addSideNotes();
-});
