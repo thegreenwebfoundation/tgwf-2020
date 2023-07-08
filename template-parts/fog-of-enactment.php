@@ -9,6 +9,8 @@
 
 <nav id="toc_nav_holder">
 
+	<h2 class="toc__heading">Report chapters</h2>
+
 	<button class="tocToggle">
 		Table of Contents
 	</button>

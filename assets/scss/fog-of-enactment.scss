@@ -14,5 +14,11 @@
 @import "bootstrap/mixins/grid-framework";
 @import "bootstrap/mixins/grid";
 
+@import 'base/rem';
+@import 'base/variables';
+@import 'base/typography';
+
+
+
 // Page specific styles
 @import 'pages/report-fog-of-enactment';

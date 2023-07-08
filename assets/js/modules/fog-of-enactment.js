@@ -1,3 +1,28 @@
+window.onload = function() {
+
+    var sidebar   = document.getElementById("toc_nav_holder"),
+        offset    = sidebar.offsetTop;
+
+	/**
+	 * Determines if the header is in view or not.
+	 * If not in view fixes the table of contents in position.
+	 */
+	function TOCFixedClass() {
+        if ( window.scrollY > offset ) {
+			sidebar.classList.add('fixed-toc');
+			console.log( "added" );
+        } else {
+            sidebar.classList.remove('fixed-toc');
+        }
+	  }
+
+	document.addEventListener("scroll", (event) => {
+	  	clearTimeout(timer);
+		let timer = setTimeout( TOCFixedClass, 200 );
+	});   
+};
+
+
 window.addEventListener('DOMContentLoaded', function (event) {
 	//addScrollingToToC()
 	//addToggleMobileToC()
@@ -86,6 +111,8 @@ function addScrollingToToC() {
     addScrollBehaviourToLink(link)
   }
 }
+
+
 /**
  * Add the floating mobile table of contents to make navigation through a large
  * page easier on devices with small screens

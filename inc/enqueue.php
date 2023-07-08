@@ -45,7 +45,13 @@ function tgwf_load_footer_scripts() {
 	// Conditionally load FOE report JS.
 	if ( is_page( 'report-fog-of-enactment' ) ) {
 		$foe_js_version = filemtime( get_stylesheet_directory() . '/assets/js/theme.js' );
-		wp_enqueue_script( 'fog-of-enactment-report', get_stylesheet_directory_uri() . '/assets/js/theme.min.js', array(), $foe_js_version, true );
+		wp_enqueue_script( 
+			'fog-of-enactment-report',
+			get_stylesheet_directory_uri() . '/assets/js/theme.min.js',
+			'',
+			$foe_js_version,
+			true 
+		);
 	}
 
 	// Only enqueue this JS if there is an FAQ block present on the page.
