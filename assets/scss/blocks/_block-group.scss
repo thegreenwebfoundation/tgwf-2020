@@ -7,7 +7,7 @@
 
 
 /* 1. GENERAL BLOCK CUSTOMISATIONS */
-.entry-content > .wp-block-group {
+.entry-content > .wp-block-group:not(.no-border) {
 	border-top: $border-width solid var(--nv-text-color);
 	border-bottom: $border-width solid var(--nv-text-color);
 }

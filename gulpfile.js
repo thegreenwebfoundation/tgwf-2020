@@ -50,7 +50,8 @@ gulp.task('watch', function () {
 	gulp.watch(
 		[
 			`${paths.sass}/**/*.scss`, 
-			`${paths.sass}/*.scss`
+			`${paths.sass}/*.scss`,
+			`blocks/**/*.css`
 		], 
 		gulp.series('styles', 'reload' )
 	);

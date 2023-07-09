@@ -19,8 +19,10 @@
 
 
 /* Margin      */
-.mt-0 {
-	margin-top: 0;
+
+// We have the more verbose version for content editors.
+.mt-0, .no-margin-top {
+	margin-top: 0 !important;
 }
 
 
