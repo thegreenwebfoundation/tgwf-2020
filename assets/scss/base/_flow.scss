@@ -23,9 +23,11 @@
 
 		> div[class*="__inner-container"] {
 			padding-top: rem($medium-spacing);
+			padding-bottom: rem($medium-spacing);
 
 			@include media-breakpoint-up(md) {
 				padding-top: rem($large-spacing);	
+				padding-bottom: rem($large-spacing);
 			}
 
 			> h2:first-of-type, 

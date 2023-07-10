@@ -27,6 +27,13 @@
 
 
 /* Border      */
+.no-border-top {
+	border-top: none !important;
+}
+.no-border-bottom {
+	border-bottom: none !important;
+}
+
 .border-top {
 	border-top: $border-width solid var(--nv-text-color);
 }
