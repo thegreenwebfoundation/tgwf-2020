@@ -7,6 +7,10 @@ body.green-web-check {
 
 	.nv-content-wrap {
 		margin-top: 0;
+
+		> *:last-child {
+			margin-bottom: 0;
+		}
 	}
 
 }
@@ -94,4 +98,15 @@ body.green-web-check {
 	@include media-breakpoint-up(lg) {
 		max-width: none;
 	}
+}
+
+.gwf-check-again__text {
+	max-width: 789px;
+	margin: auto;
+}
+
+.gwf-check-again .wp-block-cover__inner-container::after {
+	max-width: 789px;
+	left: 50%;
+	transform: translate(-50%, 0);
 }

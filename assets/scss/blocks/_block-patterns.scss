@@ -12,11 +12,9 @@
 		width: 100%;
 		left: 0;
 		right: 0;
-		object-fit: cover;
 		
 		@include media-breakpoint-up( md ) {
 			max-width: 1140px;  
-			object-fit: contain;
 			object-position: right center;
 			margin: 0 auto;
 		}
@@ -28,7 +26,6 @@
 		&::after {
 			position: absolute;
 			top: 0;
-			left: -15px;
 			z-index: -1;
 			height: 100%;
 			width: calc( 100% - 30px );
@@ -56,36 +53,19 @@
 				border-right: $border-width solid black;  
 			}	
 
-			> * {
+			.wp-block-group__inner-container {
 				max-width: 500px;
-				
-				&:first-child {
-					padding-top: $medium-spacing;
-				}
-				&:last-child {
-					padding-bottom: $medium-spacing;
+			
+				> * {
+
+					&:first-child {
+						padding-top: $medium-spacing;
+					}
+					&:last-child {
+						padding-bottom: $medium-spacing;
+					}
 				}
 			}
-		}
-
-		h2 {
-			padding-bottom: $medium-spacing;
-			border-bottom: $border-width solid black;
-			position: relative;
-			padding-left: 130px;
-
-		&::after {
-			position: absolute;
-			top: 0;
-			left: 0;
-			height: 100%;
-			width: 100px;
-			display: block;
-			content: '';
-			background-image: url( '../img/gwf-brand-icons/gwf-green-tilted-arrow.svg' );
-			background-size: 100% 100%;
-			background-repeat: no-repeat;
-		}
 		}
 	}
 }
