@@ -4,7 +4,7 @@
 	border-top: $border-width solid var(--nv-text-color);
 	border-bottom: $border-width solid var(--nv-text-color);
 	margin: 2rem 0;
-	padding: 2rem 0;
+	padding: 2rem 0 1rem;
 
 	@include media-breakpoint-up( md ) {
 		margin: 3rem 0;
