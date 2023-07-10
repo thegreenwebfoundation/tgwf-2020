@@ -20,6 +20,20 @@
 		&:last-child {
 			border: 0;
 		}
+
+		> div[class*="__inner-container"] {
+			padding-top: rem($medium-spacing);
+
+			@include media-breakpoint-up(md) {
+				padding-top: rem($large-spacing);	
+			}
+
+			> h2:first-of-type, 
+			> h3:first-of-type, 
+			> h4:first-of-type {
+				margin-top: 0;
+			}
+		}
 	}
 
 	> div[class*="has-background"],
@@ -36,6 +50,19 @@
 			margin-top: 1.5rem;
 		}
 	}
+
+	// Section blocks followed by text need spacing.
+	> .wp-block-cover,
+	> .wp-block-group {
+		+ p, + ol, + ul,
+		+ figure {
+			margin-top: rem($medium-spacing);
+
+			@include media-breakpoint-up(md) {
+				margin-top: rem($large-spacing);	
+			}
+		}
+	}
 }
 
 .wp-block-buttons + h3 {
@@ -45,14 +72,3 @@
 h2 + h3 {
 	margin-top: 1rem;
 }
-
-// Targetting nested groups and cover blocks.
-// #content.neve-main .container .alignfull > [class*="__inner-container"], 
-// #content.neve-main .container .alignwide > [class*="__inner-container"] {
-
-// 	.wp-block-group,
-// 	.wp-block-cover {
-// 		padding-left: 0;
-// 		padding-right: 0;
-// 	}
-// }

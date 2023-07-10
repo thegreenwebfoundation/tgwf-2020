@@ -13,7 +13,8 @@
 // Sometimes it shows up as an inline style.
 // It's here as backup.
 .alignfull {
-	padding: 0;
+	padding-right: 0;
+	padding-left: 0;
 }
 
 .alignfull > [class*="__inner-container"],

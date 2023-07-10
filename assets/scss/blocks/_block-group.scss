@@ -14,34 +14,6 @@
 
 .wp-block-group {
 
-	&:not(.has-background) {
-		//margin-top: rem($medium-spacing);
-
-		@include media-breakpoint-up(md) {
-			//margin-top: rem($large-spacing);	
-		}
-	}
-
-	&[class*="has-background"] {
-		
-		// Nice spacing for blocks with background colour.
-		> * {
-			margin-top: $large-spacing;
- 
-		}
-		> *:last-child{
-			margin-bottom: $large-spacing;
-		}
-
-	
-	}
-
-	.wp-block-group__inner-container {
-		> h2:first-of-type, > 3:first-of-type, > h4:first-of-type {
-			margin-top: 1rem;
-		}
-	}
-
 	&.gradient-outline {
 		background: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(192,201,191) 100%);
 		padding: 0.25rem;
