@@ -67,6 +67,19 @@
 			margin-right: 0;
 		}
 	}
+
+	.wp-block-button__link {
+		background-color: var(--nv-text-color);
+		color: var(--nv-primary-accent);
+		min-height: unset;
+		border: 0;
+		padding: rem(6px) 0.5rem;
+
+		@include media-breakpoint-up( md ) {
+			padding: 0.5rem 1rem;
+	
+		}
+	}
 }
 
 .article-content-col .content {
