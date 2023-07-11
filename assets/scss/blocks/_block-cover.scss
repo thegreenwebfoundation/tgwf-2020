@@ -4,6 +4,7 @@
 */
 
 .wp-block-cover {
+	border-bottom: solid $border-width black;
 
 	&.hide-image-on-mobile {
 		
@@ -13,6 +14,12 @@
 			@include media-breakpoint-up(md) {
 				display: block;
 			}
+		}
+	}
+	&.hide-bg-on-mobile .wp-block-cover__background {
+		
+		@include media-breakpoint-down(sm) {
+			background: none !important;
 		}
 	}
 }

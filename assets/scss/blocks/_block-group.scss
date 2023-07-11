@@ -7,29 +7,12 @@
 
 
 /* 1. GENERAL BLOCK CUSTOMISATIONS */
+.entry-content > .wp-block-group:not(.no-border) {
+	border-top: $border-width solid var(--nv-text-color);
+	border-bottom: $border-width solid var(--nv-text-color);
+}
+
 .wp-block-group {
-
-	&:not(.has-background) {
-		margin-top: rem($medium-spacing);
-
-		@include media-breakpoint-up(md) {
-			margin-top: rem($large-spacing);	
-		}
-	}
-
-	&[class*="has-background"] {
-		
-		// Nice spacing for blocks with background colour.
-		> * {
-			padding: rem($medium-spacing) 0 rem($large-spacing); 
-		}
-	}
-
-	.wp-block-group__inner-container {
-		> h2:first-of-type, h3:first-of-type, h4:first-of-type {
-			margin-top: 1rem;
-		}
-	}
 
 	&.gradient-outline {
 		background: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(192,201,191) 100%);
@@ -43,7 +26,7 @@
 			background: white;
 			padding: 1rem;
 
-			> h2:first-of-type, h3:first-of-type, h4:first-of-type {
+			> h2:first-of-type, > h3:first-of-type, > h4:first-of-type {
 				margin-top: 0;
 			}
 		}

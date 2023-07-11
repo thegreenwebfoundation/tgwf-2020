@@ -16,6 +16,29 @@
 		font-size: 1.1rem;
 	}
 }
+.blog-entry-title {
+	text-transform: none;
+}
+.nv-post-navigation {
+	border-top: 2px solid var(--nv-text-color);
+	border-bottom: 2px solid var(--nv-text-color);
+	margin: 2rem 0;
+	padding: 2rem 0;
+
+	@include media-breakpoint-up( md ) {
+		margin: 3rem 0;
+		padding: 3rem 0;
+	}
+}
+.nv-related-posts {
+	.entry-title {
+		font-size: 1.4rem;
+		margin-top: 1.5rem;
+	}
+	.posts-wrapper .related-post .content {
+		border: 0;
+	}
+}
 
 
 /* 2. POST CTA                */
@@ -26,14 +49,47 @@
 
 /* 4. POST ARCHIVE            */
 
+.posts-wrapper {
+	margin-bottom: $small-spacing;
+
+	@include media-breakpoint-up(md) {
+		margin: $medium-spacing 0;
+	}
+}
+
 .blog-categories-list {
 
 	> * {
-		margin-right: rem($small-spacing);
+		margin-right: 0.5rem;
 		margin-bottom: rem($small-spacing);
 
 		&:last-child {
 			margin-right: 0;
 		}
+
+		@include media-breakpoint-up( md ) {
+			margin-right: $small-spacing;
+		}
+	}
+
+	.wp-block-button__link {
+		background-color: var(--nv-text-color);
+		color: var(--nv-site-bg);
+		min-height: unset;
+		border: 0;
+		padding: rem(6px) 0.5rem;
+
+		@include media-breakpoint-up( md ) {
+			padding: 0.5rem 1rem;
+		}
+	}
+}
+
+.article-content-col .content {
+	border-bottom: 2px solid var(--nv-text-color);
+	padding: 2rem 0;
+
+	@include media-breakpoint-up( md ) {
+		padding: 3rem 0;
 	}
 }

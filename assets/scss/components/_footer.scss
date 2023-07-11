@@ -9,7 +9,15 @@
 		padding-bottom: rem($medium-spacing);
 	}
 	.footer-bottom-inner {
-		padding-bottom: rem($medium-spacing);
+		// padding-bottom: rem($medium-spacing);
+	}
+
+	.hfg-slot {
+		margin-bottom: rem($medium-spacing);
+
+		@include media-breakpoint-up( md ) {
+			margin-bottom: 0;
+		}
 	}
 }
 

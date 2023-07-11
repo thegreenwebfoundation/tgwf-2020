@@ -1,3 +1,33 @@
+window.onload = function() {
+
+    var sidebar   = document.getElementById("toc_nav_holder"),
+        offset    = sidebar.offsetTop;
+
+	/**
+	 * Determines if the header is in view or not.
+	 * If not in view fixes the table of contents in position.
+	 */
+	function TOCFixedClass() {
+        if ( window.scrollY > offset ) {
+			sidebar.classList.add('fixed-toc');
+			console.log( "added" );
+        } else {
+            sidebar.classList.remove('fixed-toc');
+        }
+	  }
+
+	document.addEventListener("scroll", (event) => {
+	  	clearTimeout(timer);
+		let timer = setTimeout( TOCFixedClass, 200 );
+	});   
+};
+
+
+window.addEventListener('DOMContentLoaded', function (event) {
+	//addScrollingToToC()
+	//addToggleMobileToC()
+	addSideNotes()
+  });
 
 /**
  * Accept an element, and if it's a link inside summary element,
@@ -81,6 +111,8 @@ function addScrollingToToC() {
     addScrollBehaviourToLink(link)
   }
 }
+
+
 /**
  * Add the floating mobile table of contents to make navigation through a large
  * page easier on devices with small screens
@@ -107,35 +139,41 @@ function addToggleMobileToC() {
 }
 
 /**
- * Accept a link pointing to footnote text in a document, then
- * create a easier-to-read sidenote
- *
- * @param  {HTMLElement} footnote
- */
-function addSideNote(footnote) {
-  const reference = footnote.hash
-  // copy the element, so we can remove the unneeded return link
-  const clonedReference = document.querySelector(reference).cloneNode(true)
-  clonedReference.querySelector("a[rev='footnote']").remove()
-  const referenceText = clonedReference.innerHTML
-  const sideNoteText = '<span class="sidenote">' + footnote.innerText + '. ' + referenceText + '</span>'
-  footnote.insertAdjacentHTML('afterend', sideNoteText)
-}
-
-/**
  * Find all the footnotes in the text and add the
  * easier-to-read sidenotes on the page.
  *
  */
 function addSideNotes() {
-  const footnotes = document.querySelectorAll("a[rel='footnote']")
-  for (const footnote of footnotes) {
-    addSideNote(footnote)
-  }
+	// Get all the footnotes.
+	const footnotes = document.querySelectorAll("a[rel='footnote']")
+
+	for ( const footnote of footnotes ) {
+	  addSideNote( footnote )
+	}
 }
 
-window.addEventListener('DOMContentLoaded', function (event) {
-  addScrollingToToC()
-  addToggleMobileToC()
-  addSideNotes()
-});
+/**
+ * Accept a link pointing to footnote text in a document, then
+ * create a easier-to-read sidenote
+ *
+ * @param  {HTMLElement} footnote
+ */
+function addSideNote( footnote ) {
+
+	const reference = footnote.hash
+
+	// copy the element, so we can remove the unneeded return link
+	const clonedReference = document.querySelector(reference).cloneNode(true)
+
+	clonedReference.querySelector("a[rev='footnote']").remove()
+
+	const referenceText = clonedReference.innerHTML
+
+	const sideNoteText = '<span class="sidenote">' + footnote.innerText + '. ' + referenceText + '</span>'
+
+	// insert the sidenote next to the reference in the text body.
+	footnote.insertAdjacentHTML('afterend', sideNoteText)
+}
+
+
+

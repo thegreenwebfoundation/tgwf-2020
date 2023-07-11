@@ -2,15 +2,20 @@
  * Customisations for gutenberg button blocks.
 */
 
-.wp-block-button__link {
-	background-color: var(--nv-c-2);
+.wp-block-buttons {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
-.wp-block-button.is-style-outline {
-	.wp-block-button__link {
-		color: var(--nv-c-2);
-		border-color: var(--nv-c-2);
+.wp-block-button__link {
+	min-height: 3rem; // Keep same standard height as form fields;
+	border: $border-width solid black !important;
+	
+	&:hover {
+		background-color: var(--nv-site-bg);
 	}
 }
+
+
 
 

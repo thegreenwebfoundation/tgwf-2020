@@ -1,0 +1,42 @@
+/* Basic layout functions, widths etc */
+
+.alignwide {
+	width: 100%;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include media-breakpoint-up(md) {
+		width: 100vw;
+		max-width: 100vw;
+		margin-left: calc( 50% - 50vw );
+		margin-right: calc( 50% - 50vw );
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	@include media-breakpoint-up(xl) {
+		width: 1170px;
+		max-width: none;
+		margin-left: calc( 50% - ( 1170px / 2 ) );
+
+	}
+}
+
+/* Override Neve inline styles */
+
+#content.neve-main .container .alignfull > [class*="__inner-container"], 
+#content.neve-main .container .alignwide > [class*="__inner-container"] {
+	padding-left: 15px;
+	padding-right: 15px;
+
+	@include media-breakpoint-up(lg) {
+		width: 100%;
+		max-width: 100%;
+		margin-left: auto;
+	}
+	
+	@include media-breakpoint-up(xl) {
+		max-width: 1170px;
+	}
+}

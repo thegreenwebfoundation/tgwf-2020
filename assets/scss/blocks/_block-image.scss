@@ -1,0 +1,11 @@
+/* Styling and customisations for images. */
+
+.wp-block-image {
+	figure > a {
+		background-image: none !important;
+
+		&:hover {
+			background: none !important;
+		}
+	}
+}

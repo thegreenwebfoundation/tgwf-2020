@@ -1,0 +1,71 @@
+/* CSS classes relating to block patterns we've created */
+
+.wp-block-cover.pattern__text-gradient-image {
+	//background-color: $tgwf-blue-700;
+	background: linear-gradient(40deg, $tgwf-blue-700 50%, $tgwf-blue-700 80%, rgb(255,255,255) 95%);
+	min-height: unset;
+	border-top: $border-width solid black;
+	border-bottom: $border-width solid black;
+
+	// Target first level of children.
+	> .wp-block-cover__image-background {
+		width: 100%;
+		left: 0;
+		right: 0;
+		
+		@include media-breakpoint-up( md ) {
+			max-width: 1140px;  
+			object-position: right center;
+			margin: 0 auto;
+		}
+	}
+
+	.wp-block-cover__inner-container:first-of-type {
+		position: relative;
+
+		&::after {
+			position: absolute;
+			top: 0;
+			z-index: -1;
+			height: 100%;
+			width: calc( 100% - 30px );
+			display: block;
+			content: '';
+			background-image: url( '../img/gradients/gradient-bg__blue-blur.png' );
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+
+			@include media-breakpoint-up( md ) {
+
+			}
+		}
+
+		> .wp-block-group {
+			margin-bottom: $large-spacing;
+
+			@include media-breakpoint-up( md ) {
+				padding-right: $medium-spacing;
+				padding-left: $medium-spacing;
+			}
+
+			@include media-breakpoint-up( xl ) {
+				border-left: $border-width solid black;
+				border-right: $border-width solid black;  
+			}	
+
+			.wp-block-group__inner-container {
+				max-width: 500px;
+			
+				> * {
+
+					&:first-child {
+						padding-top: $medium-spacing;
+					}
+					&:last-child {
+						padding-bottom: $medium-spacing;
+					}
+				}
+			}
+		}
+	}
+}

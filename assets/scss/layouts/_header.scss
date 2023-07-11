@@ -2,11 +2,13 @@
  * Styling / layout for the header
 */
 
-.hfg_header .header-bottom-inner {
-	background-color: $tgwf-darkdarkgreen !important;
+.hfg_header {
+	.nv-navbar {
+		border-bottom: $border-width solid var(--nv-text-color);
+	}
 
-	.brand {
-		font-size: 1.2em;
-		font-weight: bold;
+	.header-bottom-inner {
+		background-color: var(--nv-primary-accent) !important;
+		border-bottom: $border-width solid var(--nv-text-color);
 	}
 }

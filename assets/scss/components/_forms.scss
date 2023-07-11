@@ -2,3 +2,35 @@
  * General styling for forms
 */
 
+form {
+	> * {
+		margin-bottom: $small-spacing;
+		height: 3rem;
+
+		@include media-breakpoint-up( md ) {
+		}
+	}
+}
+
+input[type="color"], input[type="date"], 
+input[type="datetime-local"], input[type="datetime"], 
+input[type="email"], input[type="month"], 
+input[type="number"], input[type="password"], 
+input[type="search"], input[type="tel"], 
+input[type="text"], input[type="time"], 
+input[type="url"], input[type="week"] {
+	font-size: 1rem;
+	width: 100%;
+}
+
+textarea {
+	font-size: 1rem;
+	border: 0;
+	background-color: transparent;
+	border-radius: 0;
+}
+
+::placeholder {
+	color: var(--nv-text-color);
+	opacity: 0.6;
+}

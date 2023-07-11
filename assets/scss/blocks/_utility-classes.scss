@@ -12,9 +12,15 @@
 // This should be in the theme but for some reason doesn't always apply.
 // Sometimes it shows up as an inline style.
 // It's here as backup.
+.alignfull {
+	padding-right: 0;
+	padding-left: 0;
+}
+
 .alignfull > [class*="__inner-container"],
 .alignwide > [class*="__inner-container"] {
-	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 .alignfull > [class*="__inner-container"] {
 	@include media-breakpoint-up(lg) {

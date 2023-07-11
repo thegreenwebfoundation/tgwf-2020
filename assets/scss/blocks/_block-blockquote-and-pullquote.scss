@@ -1,22 +1,29 @@
 /* Styling for the blockquote (quotes) block */
 
+$quote-border-color: $tgwf-green500;
+
+/* 1. BLOCKQUOTE     */
+/* 2. PULLQUOTE      */
+
+
+/* 1. BLOCKQUOTE     */
 blockquote::after,
 blockquote::before {
 	display: none;
 }
 
 blockquote.wp-block-quote {
-	border-left: $border-thickness solid $tgwf-green500;
-	font-family: $sketchy-font;
+	border-left: $border-width-thick solid $quote-border-color;
 	font-weight: $bold-font-weight;
+	padding-bottom: $small-spacing !important;
 
 	> * {
 		padding: 1rem;
 	}
 
-	p:first-of-type {
-		padding-top: 0;
-	}
+	em {
+		font-style: normal;
+	}	
 
 	cite {
 		font-family: $body-font;
@@ -29,12 +36,12 @@ blockquote.wp-block-quote {
 			display: inline-block;
 			width: 1em;
 			height: 1rem;
+			margin-right: 0.5rem;
 		}
 	}
 
 	&.is-style-large {
 		padding: 0;
-		margin-bottom: 40px;
 		
 		p {
 			@include media-breakpoint-down(sm) {
@@ -55,5 +62,18 @@ blockquote.wp-block-quote {
 		p {
 			font-size: 1.3em;
 		}
+	}
+}
+
+
+/* 2. PULLQUOTE      */
+.wp-block-pullquote {
+	font-size: var(--wp--preset--font-size--medium);
+	border-top-color: $quote-border-color;
+	border-bottom-color: $quote-border-color;
+	margin: $medium-spacing 0;
+
+	@include media-breakpoint-up(md) {
+		margin: $xl-spacing 0;
 	}
 }

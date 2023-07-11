@@ -1,0 +1,14 @@
+{
+    "name": "gwf/three-cols-t-p-b",
+    "title": "GWF Three cols with title, para and button",
+    "description": "Three columns, each with a title, single paragraph and button.",
+    "style": [ "file:./block-three-cols.css" ],
+    "category": "formatting",
+    "icon": "columns",
+    "keywords": ["three columns"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "block-three-cols.php"
+    },
+    "align": "full"
+}

@@ -1,0 +1,15 @@
+.wp-block-latest-posts__featured-image {
+	width: 100%;
+
+	> a {
+		display: block;
+	}
+
+	img {
+		width: 100%;
+	}
+}
+.wp-block-latest-posts__post-title {
+	font-size: 1.6rem;
+	line-height: 1.4;
+}

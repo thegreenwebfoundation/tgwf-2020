@@ -1,15 +1,48 @@
 /* Useful classes that can be reused in all sorts of great places */
 
-// // Force an element to become the full-width of the screen.
-// @mixin force-full-width {
-//     width: 100vw;
-//     position: relative;
-//     left: 50%;
-//     right: 50%;
-//     margin-left: -50vw;
-//     margin-right: -50vw;
-// }
+.reading-width {
+	max-width: $reading-width;
+}
 
-// .full-width, .alignfull {
-// 	@include force-full-width;
-// }
+/* Padding    */
+.pt-0 {
+	padding-top: 0;
+}
+
+.pb-4 {
+	padding-bottom: 1rem;
+}
+.px-0 {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+
+/* Margin      */
+
+// We have the more verbose version for content editors.
+.mt-0, .no-margin-top {
+	margin-top: 0 !important;
+}
+
+
+/* Border      */
+.no-border-top {
+	border-top: none !important;
+}
+.no-border-bottom {
+	border-bottom: none !important;
+}
+
+.border-top {
+	border-top: $border-width solid var(--nv-text-color);
+}
+.border-bottom {
+	border-bottom: $border-width solid var(--nv-text-color);
+}
+.border-right {
+	border-right: $border-width solid var(--nv-text-color);
+}
+.border-left {
+	border-left: $border-width solid var(--nv-text-color);
+}

@@ -24,6 +24,7 @@
 @import 'base/typography';
 @import 'base/htmlelements';
 @import 'base/utilities';
+@import 'base/layout';
 @import 'base/flow';
 @import 'base/neve-basic-styles';
 
@@ -49,9 +50,12 @@
 @import 'blocks/block-cover';
 @import 'blocks/block-columns';
 @import 'blocks/block-button';
-@import 'blocks/block-quote';
+@import 'blocks/block-blockquote-and-pullquote';
 @import 'blocks/block-yoast-faq';
-
+@import 'blocks/block-latest-posts';
+@import 'blocks/block-embed';
+@import 'blocks/block-image'; 
+@import 'blocks/block-patterns';
 
 
 // Vendor
@@ -66,6 +70,7 @@
 @import 'layouts/main-menu';
 @import 'layouts/entry-classes';
 @import 'layouts/featured-image';
+@import 'layouts/page';
 @import 'layouts/post';
 
 

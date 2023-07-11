@@ -1,13 +1,13 @@
 /* Summary highlight block */
 
 .summary-highlight {
-	border-top: 1px solid $tgwf-lightgrey;
-	border-bottom: 1px solid $tgwf-lightgrey;
-	margin: rem($small-spacing) 0 rem($medium-spacing);
-	padding: rem($small-spacing) 0;
+	border-top: $border-width solid var(--nv-text-color);
+	border-bottom: $border-width solid var(--nv-text-color);
+	margin: 2rem 0;
+	padding: 2rem 0 1rem;
 
 	@include media-breakpoint-up( md ) {
-		margin: rem($medium-spacing) 0 rem($large-spacing);
-		padding: rem($medium-spacing) 0;
+		margin: 3rem 0;
+		padding: 3rem 0;
 	}
 }

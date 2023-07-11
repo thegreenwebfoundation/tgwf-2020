@@ -4,13 +4,16 @@
 
 
 // Commonly used layout dimensions.
-$border-thickness: 4px;
-// $border-radius: 40px;
+$border-width: 2px;
+$border-width-thick: 4px;
 
-// $reading-width: 700px;
+$border-radius: 2rem;
+
+$reading-width: 800px;
 
 // $icon-size: 40px;
 
-$small-spacing: 15px;
-$medium-spacing: 30px;
-$large-spacing: 60px;
+$small-spacing: 1rem;
+$medium-spacing: 2rem;
+$large-spacing: 3rem;
+$xl-spacing: 4rem;

@@ -50,7 +50,8 @@ gulp.task('watch', function () {
 	gulp.watch(
 		[
 			`${paths.sass}/**/*.scss`, 
-			`${paths.sass}/*.scss`
+			`${paths.sass}/*.scss`,
+			`blocks/**/*.css`
 		], 
 		gulp.series('styles', 'reload' )
 	);
@@ -79,7 +80,7 @@ gulp.task('minifycss', function () {
 
 	return gulp
 		.src([
-			// `${paths.css}/custom-editor-style.css`,
+			`${paths.css}/editor-styles.css`,
 			`${paths.css}/main.css`,
 			`${paths.css}/fog-of-enactment.css`,
 		])

@@ -1,3 +1,34 @@
 /**
  * Pagination styling
 */
+
+ul.page-numbers {
+	margin: 0 0 $medium-spacing;
+
+	@include media-breakpoint-up(md) {
+		margin: $medium-spacing 0 $xl-spacing;
+	}
+}
+
+.nv-index-posts {
+
+	a.page-numbers,
+	span.page-numbers {
+		display: inline-block;
+		padding: 0.5rem 0.75rem;
+		background-color: var(--nv-text-color);
+		color: white;
+		font-weight: bold;
+		border-radius: 0.5rem;
+	}
+
+	span.page-numbers {
+		background-color: var(--nv-light-bg);
+		color: var(--nv-text-color);
+	}
+
+	a.next, a.prev {
+		background-color: var(--nv-text-color);
+		color: var(--nv-site-bg);
+	}
+}
