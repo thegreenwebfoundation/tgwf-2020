@@ -2,3 +2,7 @@
  * Social icons styling and layout
 */
 
+// Overwrite our link styling.
+.nv-content-wrap a.wp-block-social-link-anchor {
+	background-image: none !important;
+}
