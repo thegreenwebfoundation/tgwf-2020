@@ -14,10 +14,6 @@ $toc-width: 19rem;
 /* 1. VISIBILITY and LAYOUT OF TOC      */
 // Styles to control the visibility of the tables of contents.
 
-	// Make sure the toc goes under the header.
-	&__page .header {
-		z-index: 1;
-	}
 
 	// This the page container level, one level below main.
 	@include media-breakpoint-up(lg) {
@@ -89,7 +85,7 @@ $toc-width: 19rem;
 		@include media-breakpoint-up(lg) {
 			position: absolute;
 			/* we use z-index, to put the toc behind the header */
-			// z-index: -1;
+			// z-index: 1;
 			//top: 0;
 			overflow: auto;
 			width: $toc-width;
