@@ -2,6 +2,8 @@
 
 .reading-width {
 	max-width: $reading-width;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 // Also an override in wp-block-cols, check there.
