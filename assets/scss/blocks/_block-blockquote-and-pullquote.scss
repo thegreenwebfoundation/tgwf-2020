@@ -71,9 +71,11 @@ blockquote.wp-block-quote {
 	font-size: var(--wp--preset--font-size--medium);
 	border-top-color: $quote-border-color;
 	border-bottom-color: $quote-border-color;
-	margin: $medium-spacing 0;
+	margin-top: $medium-spacing;
+	margin-bottom: $medium-spacing;
 
 	@include media-breakpoint-up(md) {
-		margin: $xl-spacing 0;
+		margin-top: $xl-spacing;
+		margin-bottom: $xl-spacing;
 	}
 }

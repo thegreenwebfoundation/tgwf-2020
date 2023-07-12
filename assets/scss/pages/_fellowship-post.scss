@@ -36,8 +36,12 @@
 }
 
 .fellowship-post__content-widget-container {
-	background-color: $tgwf-yellow100;
 	border: $border-width solid var(--nv-text-color);
+
+	> * {
+		padding-top: $medium-spacing;
+		padding-bottom: $medium-spacing;
+	}
 
 	> * > * {
 		padding-right: 1rem;
@@ -48,20 +52,13 @@
 			padding-right: 2rem;
 		}
 
-		&:first-child {
-			.fellowship-post__header & {
-				margin-top: 1rem;
-			}
-		}
-
 		&:last-child {
-			padding-bottom: 0;
 			margin-bottom: 0;
 		}
 	}
 
 	h1, h2, h3, h4, h5 {
-		margin-top: 0;
+		margin-top: $small-spacing;
 		text-transform: uppercase;
 	}
 	
