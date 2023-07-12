@@ -9,11 +9,11 @@ add_action( 'neve_before_post_content', 'tgwf_output_fellowship_header' );
 add_action( 'neve_after_content', 'tgwf_output_fellowship_footer' );
 
 /**
- * Outputs a content header on a single post in the 'fellowship notebook' category.
+ * Outputs a content header on a single post in the 'fellowship' category.
  */
 function tgwf_output_fellowship_header() {
 
-	$fellowship_cat = 'Fellowship notebook';
+	$fellowship_cat = 'Fellowship';
 
 	$args = array(
 		'fellowship_cat' => $fellowship_cat,
@@ -28,11 +28,11 @@ function tgwf_output_fellowship_header() {
 }
 
 /**
- * Outputs a content footer on a single post in the 'fellowship notebook' category.
+ * Outputs a content footer on a single post in the 'fellowship' category.
  */
 function tgwf_output_fellowship_footer() {
 
-	$fellowship_cat = 'Fellowship notebook';
+	$fellowship_cat = 'Fellowship';
 
 	$args = array(
 		'fellowship_cat' => $fellowship_cat,
