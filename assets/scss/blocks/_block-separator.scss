@@ -1,0 +1,9 @@
+/* Styling customisations for the default separator block. */
+
+hr.wp-block-separator {
+	margin-top: rem($medium-spacing);
+
+	@include media-breakpoint-up(md) {
+		margin-top: rem($large-spacing);	
+	}
+}
