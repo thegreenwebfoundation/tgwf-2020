@@ -1,6 +1,6 @@
 {
 	"browserSyncOptions": {
-		"proxy": "https://tgwf.local/",
+		"proxy": "https://gwf.local/",
 		"notify": true
 	},
 	"browserSyncWatchFiles": ["./assets/css/main.min.css", "./assets/js/*.min.js", "./**/*.php"],
