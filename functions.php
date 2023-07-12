@@ -33,6 +33,11 @@ add_theme_support(
 			'slug'     => 'primary-to-white',
 		),
 		array(
+			'name'     => __( 'White to blue', 'tgwf' ),
+			'gradient' => 'linear-gradient(145deg, rgb(255,255,255) 15%, rgb(0,102,255) 100%)',
+			'slug'     => 'white-to-blue',
+		),
+		array(
 			'name'     => __( 'White to orange', 'tgwf' ),
 			'gradient' => 'linear-gradient(145deg, rgb(255,255,255) 15%, rgb(250,170,0) 100%)',
 			'slug'     => 'white-to-orange',

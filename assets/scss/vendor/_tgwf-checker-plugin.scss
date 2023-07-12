@@ -70,11 +70,15 @@ body.green-web-check {
 .tgwf-search-form {
 	margin-top: 2rem;
 	
-	h1 {
+	h1, h2 {
 		@extend .border-bottom;
+		padding-bottom: $small-spacing;
 	}
 	p, input {
 		font-size: 1.25rem;
+	}
+	p {
+		padding-bottom: $small-spacing;
 	}
 	form {
 		@extend .border-top;

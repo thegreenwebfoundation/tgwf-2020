@@ -10,4 +10,12 @@
 	.entry-content {
 		margin-top: 0;
 	}
+
+	.gwf-tagline {
+
+		@media screen and (min-width: 800px) {
+			position: relative;
+			margin-top: -26px !important;
+		}
+	}
 }

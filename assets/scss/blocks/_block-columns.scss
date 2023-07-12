@@ -4,10 +4,7 @@
 
 .wp-block-columns {
 
-	.wp-block-column {
-
-		margin-bottom: 2rem;
-
+	&:not(.no-border) .wp-block-column {
 		// 782px is theme breakpoint, not one of our standard ones.
 		@media screen and (min-width: 782px) {
 			border-right: $border-width solid var(--nv-text-color);
@@ -17,6 +14,10 @@
 		&:last-of-type {
 			border: none;
 		}
+	}
+
+	.wp-block-column {
+		margin-bottom: 2rem;
 
 		> *:first-child {
 			margin-top: 0;
@@ -32,48 +33,17 @@
 			padding: 1rem 0 0 0;
 			margin: 0;
 		}
-	}
 
-	&.gwf-columns__title-para-button {
-
-		.wp-block-column {
-
-			> h2, > h3 {
-				border: none;
-			}
-			
-			// Should be first child in hierarchy.
-			.wp-block-group {
-				border-bottom: $border-width solid black;
-
-				// This should always be the heading element itself.
-				> * > *:first-child {
-					margin-top: 0;
-					text-transform: uppercase;
-				}
-			}
-
-			// 782px is theme breakpoint, not one of our standard ones.
-			@media screen and (min-width: 782px) {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-
-				// To get all the headings the same height, put them in a group block.
-				.wp-block-group {
-					min-height: rem(90px);
-					
-					// should be .wp-block-group__inner-container
-					> * {
-						display: flex;
-						align-items: center;
-						height: 100%;
-						margin: 0 !important;
-					}
+		.hide-image-on-mobile {
+			img {
+		
+				// Override styling in utilities file.
+				@include media-breakpoint-up(md) {
+					display: none;
 				}
 
-				.wp-block-buttons {
-					flex: 1 0 auto;
+				@media screen and (min-width: 800px) {
+					display: block;
 				}
 			}
 		}

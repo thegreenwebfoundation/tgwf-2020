@@ -4,11 +4,25 @@
 	max-width: $reading-width;
 }
 
+// Also an override in wp-block-cols, check there.
+.hide-image-on-mobile {
+	img {
+		display: none;
+
+		@include media-breakpoint-up(md) {
+			display: block;
+		}
+	}
+}
+
 /* Padding    */
 .pt-0 {
 	padding-top: 0;
 }
 
+.pb-0, .no-padding-bottom {
+	padding-bottom: 0 !important;
+}
 .pb-4 {
 	padding-bottom: 1rem;
 }
@@ -24,6 +38,11 @@
 .mt-0, .no-margin-top {
 	margin-top: 0 !important;
 }
+
+.mb-0, .no-margin-bottom {
+	margin-bottom: 0 !important;
+}
+
 
 
 /* Border      */
