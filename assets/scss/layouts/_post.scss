@@ -33,6 +33,15 @@
 	.nav-direction {
 		font-weight: $bold-font-weight;
 	}
+
+	a:hover {
+		span {
+			color: var(--nv-text-color);
+		}
+		span.nav-direction {
+			color: var(--nv-text-color);
+		}
+	}
 }
 .nv-related-posts {
 	.entry-title {

@@ -23,3 +23,14 @@
 		}
 	}
 }
+
+.nv-tags-list {
+	a {
+		color: var(--nv-text-color) !important;
+
+		&:hover {
+			background-color: var(--nv-text-color);
+			color: var(--nv-site-bg) !important;
+		}
+	}
+}
