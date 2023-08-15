@@ -114,3 +114,46 @@ body.green-web-check {
 	left: 50%;
 	transform: translate(-50%, 0);
 }
+
+/* CTAS    */
+
+
+
+.gwf-app-cta__title {
+	text-transform: none;
+	font-size: var(--wp--preset--font-size--large);
+	margin-bottom: 1rem;
+}
+
+.gwf-app-cta__ctas {
+	margin-top: 4rem;
+}
+
+// Override generic styles from ACF Pro created block.
+.gwf-app-cta {
+
+
+
+	.gwf__threecols-t-p-b__title {
+		font-size: var(--wp--preset--font-size--medium);
+	}
+
+
+
+	@include media-breakpoint-up(md) {
+		.wp-block-gwf__threecols-t-p-b {
+			column-gap: 3rem;
+		}
+
+		.wp-block-button__link {
+			width: 100%;
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		.wp-block-button {
+			padding-bottom: 0;
+		}
+	}
+
+}

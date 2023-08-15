@@ -1,0 +1,33 @@
+h3[class*="gwf-iconbg-"] {
+	position: relative;
+	padding-left: 4rem;
+
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 50px;
+		width: 50px;
+
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+	}
+}
+
+.gwf-iconbg-sunburst--black {
+	&:before {
+		background-image: url( '../img/gwf-brand-icons/GWF-icon-sunburst--black.svg' );
+	}
+}
+.gwf-iconbg-plant--black {
+	&:before {
+		background-image: url( '../img/gwf-brand-icons/GWF-icon-plant--black.svg' );
+	}
+}
+.gwf-iconbg-lightning--black {
+	&:before {
+		background-image: url( '../img/gwf-brand-icons/GWF-icon-lightning--black.svg' );
+	}
+}
