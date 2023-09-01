@@ -33,3 +33,22 @@
 	}
 }
 
+/**
+* Group with group has max-width,
+* allowing for a readable text. 
+*/
+.entry-content {
+	> .wp-block-group {
+		&.align-wide, &.alignfull {
+
+			.wp-block-group:first-of-type {
+
+				@include media-breakpoint-up(lg) {
+					max-width: 70%;
+					margin: auto;
+				}
+			}
+		}
+	}
+}
+
