@@ -1,0 +1,14 @@
+.wp-block-group.logo-grid {
+	column-gap: 1.5rem;
+	row-gap: 1.5rem;
+
+	@include media-breakpoint-up(sm) {
+		column-gap: 2rem;
+		row-gap: 2rem;
+	}
+
+	@include media-breakpoint-up(lg) {
+		column-gap: 3rem;
+		row-gap: 3rem;
+	}
+}
