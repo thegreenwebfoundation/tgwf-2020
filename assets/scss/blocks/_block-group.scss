@@ -15,11 +15,11 @@
 .wp-block-group {
 
 	&.gradient-outline {
-		background: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(192,201,191) 100%);
+		// background: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(192,201,191) 100%);
 		padding: 0.25rem;
 
 		&:nth-of-type(even) {
-			background: linear-gradient(135deg, rgb(192,201,191) 0%,rgb(238,238,238) 100%);
+			// background: linear-gradient(135deg, rgb(192,201,191) 0%,rgb(238,238,238) 100%);
 		}
 
 		.wp-block-group__inner-container {

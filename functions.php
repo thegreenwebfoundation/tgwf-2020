@@ -50,3 +50,15 @@ add_action( 'init', 'register_acf_blocks' );
 function register_acf_blocks() {
     register_block_type( __DIR__ . '/blocks/threecols--title-para-button' );
 }
+
+add_filter( 'body_class', 'add_slug_body_class' );
+
+function add_slug_body_class( $classes ) {
+	global $post;
+
+	if ( isset( $post ) ) {
+		$classes[] = $post->post_type . '-' . $post->post_name;
+	}
+
+	return $classes;
+}
