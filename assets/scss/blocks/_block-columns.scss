@@ -34,6 +34,13 @@
 			margin: 0;
 		}
 
+		&.hide-column-on-mobile {
+
+			@media screen and (max-width: 781.9px) {
+				display: none;
+			}
+		}
+
 		.hide-image-on-mobile {
 			img {
 		
