@@ -30,9 +30,14 @@
 }
 
 .nav-menu-primary {
+	.menu-desktop {
+		flex-wrap: nowrap;
+	}
+
 	li.menu-item {
 		a {
 			text-decoration: none;
+			text-align: center;
 		}
 	}
 
