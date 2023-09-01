@@ -45,6 +45,17 @@
 		+ div[class*="has-background"] {
 			margin-top: 0;
 		}		
+
+		// Columns inside coloured areas.
+		.wp-block-columns {
+			margin-bottom: 0;
+		}
+		// 782px is theme breakpoint, not one of our standard ones.
+		@media screen and (min-width: 782px) {
+			.wp-block-column {
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	p, ol, ul {
