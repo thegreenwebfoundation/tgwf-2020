@@ -7,37 +7,18 @@
 
 
 /* 1. GENERAL BLOCK CUSTOMISATIONS */
-.entry-content > .wp-block-group:not(.no-border) {
-	border-top: $border-width solid var(--nv-text-color);
-	border-bottom: $border-width solid var(--nv-text-color);
-}
-
-.wp-block-group {
-
-	&.gradient-outline {
-		// background: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(192,201,191) 100%);
-		padding: 0.25rem;
-
-		&:nth-of-type(even) {
-			// background: linear-gradient(135deg, rgb(192,201,191) 0%,rgb(238,238,238) 100%);
-		}
-
-		.wp-block-group__inner-container {
-			background: white;
-			padding: 1rem;
-
-			> h2:first-of-type, > h3:first-of-type, > h4:first-of-type {
-				margin-top: 0;
-			}
-		}
+.entry-content { 
+	> .wp-block-group:not(.no-border) {
+		border-top: $border-width solid var(--nv-text-color);
+		border-bottom: $border-width solid var(--nv-text-color);
 	}
-}
 
-/**
-* Group with group has max-width,
-* allowing for a readable text. 
-*/
-.entry-content {
+	// If first block on page is group, remove top border.
+	.wp-block-group:first-child {
+		border-top: none;
+	}
+
+	// Group with group has max-width, allowing for a readable text.
 	> .wp-block-group {
 		&.align-wide, &.alignfull {
 
@@ -51,3 +32,4 @@
 		}
 	}
 }
+
