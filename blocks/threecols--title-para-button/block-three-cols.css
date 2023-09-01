@@ -22,8 +22,8 @@
 .gwf__threecols-t-p-b__title {
 	align-self: center;
 	margin-top: 0;
-	margin-bottom: 0;
-	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	padding-bottom: 0;
 	text-transform: uppercase;
 }
 

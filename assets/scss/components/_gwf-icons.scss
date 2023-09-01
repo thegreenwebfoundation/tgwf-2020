@@ -6,7 +6,9 @@ h3[class*="gwf-iconbg-"] {
 		content: '';
 		display: block;
 		position: absolute;
-		top: 0;
+		top: 50%;
+    	transform: translate(0,-50%);
+		//top: 0;
 		left: 0;
 		height: 50px;
 		width: 50px;
@@ -19,6 +21,11 @@ h3[class*="gwf-iconbg-"] {
 .gwf-iconbg-sunburst--black {
 	&:before {
 		background-image: url( '../img/gwf-brand-icons/GWF-icon-sunburst--black.svg' );
+	}
+}
+.gwf-iconbg-sunburst--green {
+	&:before {
+		background-image: url( '../img/gwf-brand-icons/GWF-icon-sunburst--green.svg' );
 	}
 }
 .gwf-iconbg-plant--black {
