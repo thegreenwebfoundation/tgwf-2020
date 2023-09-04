@@ -13,6 +13,7 @@
 		@media screen and (min-width: 782px) {
 			border-right: $border-width solid var(--nv-text-color);
 			padding-right: 2rem;
+			margin-top: 0;
 		}
 
 		&:last-of-type {
@@ -21,7 +22,6 @@
 	}
 
 	.wp-block-column {
-		margin-bottom: 2rem;
 
 		> *:first-child {
 			margin-top: 0;

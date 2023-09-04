@@ -11,4 +11,12 @@
 		column-gap: 3rem;
 		row-gap: 3rem;
 	}
+
+	// Overwrite default flow which puts margin-top on wp-blocks.
+	.entry-content & {
+
+		> * + * {
+			margin-top: 0;
+		}
+	}
 }

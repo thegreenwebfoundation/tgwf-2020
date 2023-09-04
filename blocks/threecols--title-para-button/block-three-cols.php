@@ -20,12 +20,12 @@ if ( ! empty( $block['anchor'] ) ) {
 // Create class attribute allowing for custom "className" and "align" values.
 $class_name = 'wp-block-gwf__threecols-t-p-b';
 
-if ( ! empty( $block['className'] ) ) {
-    $class_name .= ' ' . $block['className'];
+$column_number = get_field( 'column_number' );
+
+if ( $column_number === "Two" ) {
+    $class_name .= ' ' . $class_name . '--two-cols';
 }
-if ( ! empty( $block['align'] ) ) {
-    $class_name .= ' align' . $block['align'];
-}
+
 
 // Load values and assign defaults.
 $heading_one             = get_field( 'heading_one' ) ?: 'Heading one';
@@ -44,12 +44,12 @@ $button_link_one         = get_field( 'button_link_one' ) ?: 'button link';
 $button_link_two         = get_field( 'button_link_two' ) ?: 'button link';
 $button_link_three       = get_field( 'button_link_three' ) ?: 'button link';
 
-// Build a valid style attribute for background and text colors.
-$styles = array( 'background-color: ' . $background_color, 'color: ' . $text_color );
-$style  = implode( '; ', $styles );
+// Set up custom styles based on column width.
+//$styles = array( 'background-color: ' . $background_color, 'color: ' . $text_color );
+//$style  = implode( '; ', $styles );
 
 ?>
-<div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name ); ?>" style="<?php echo esc_attr( $style ); ?>">
+<div <?php echo $anchor; ?>class="<?php echo esc_attr( $class_name ); ?>">
     
 	<h3 class="gwf__threecols-t-p-b__title"><?php echo esc_html( $heading_one ); ?></h3>
 	<div class="gwf__threecols-t-p-b__para"><?php echo wp_kses_post( $paragraph_one ); ?></div>
@@ -68,12 +68,18 @@ $style  = implode( '; ', $styles );
 		</a>
 	</div>
 
-	<h3 class="gwf__threecols-t-p-b__title"><?php echo esc_html( $heading_three ); ?></h3>
-	<div class="gwf__threecols-t-p-b__para"><?php echo wp_kses_post( $paragraph_three ); ?></div>	
-	<div class="wp-block-button gwf__threecols-t-p-b__button">
-		<a class="wp-block-button__link" href="<?php echo esc_html( $button_link_three ); ?>">
-			<?php echo esc_html( $button_text_three ); ?>
-		</a>
-	</div>
+	<?php 
+	if ( $column_number != "Two" ) :
+		?>
+		<h3 class="gwf__threecols-t-p-b__title"><?php echo esc_html( $heading_three ); ?></h3>
+		<div class="gwf__threecols-t-p-b__para"><?php echo wp_kses_post( $paragraph_three ); ?></div>	
+		<div class="wp-block-button gwf__threecols-t-p-b__button">
+			<a class="wp-block-button__link" href="<?php echo esc_html( $button_link_three ); ?>">
+				<?php echo esc_html( $button_text_three ); ?>
+			</a>
+		</div>
+		<?php
+	endif;
+	?>
 	
 </div>

@@ -2,9 +2,9 @@
  * Customisations for gutenberg button blocks.
 */
 
-.wp-block-buttons {
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+// Overwrite default flow conditions.
+.entry-content .wp-block-button + .wp-block-button {
+	margin-top: 0;
 }
 
 .wp-block-button__link {

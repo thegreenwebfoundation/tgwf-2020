@@ -1,0 +1,41 @@
+.wp-block-media-text {
+	row-gap: $medium-spacing;
+
+	> *:first-child {
+		 
+		padding-left: 0;
+		padding-right: 2rem;
+		margin-right: 2rem;
+
+		// 600px is theme breakpoint, not one of our standard ones.
+		@media screen and (min-width: 600px) {
+			border-right: $border-width solid var(--nv-text-color);
+		}
+	}
+
+	// Always show the media under the text if it's on the right.
+	&.has-media-on-the-right {
+
+		@media screen and (max-width: 599.9px) {
+
+			.wp-block-media-text__content {
+				grid-row: 1;
+			}
+			.wp-block-media-text__media {
+				grid-row: 2;
+			}
+		}
+	}
+
+	.entry-content & {
+		.wp-block-media-text__content {
+			margin-top: 0;
+		}
+	}
+
+	h3 {
+		//padding-bottom: $small-spacing;
+		border-bottom: $border-width solid var(--nv-text-color);
+	}
+
+}

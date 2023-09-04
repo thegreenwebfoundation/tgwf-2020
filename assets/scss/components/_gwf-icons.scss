@@ -38,3 +38,8 @@ h3[class*="gwf-iconbg-"] {
 		background-image: url( '../img/gwf-brand-icons/GWF-icon-lightning--black.svg' );
 	}
 }
+.gwf-iconbg-lightning--purple {
+	&:before {
+		background-image: url( '../img/gwf-brand-icons/GWF-icon-lightning--purple.svg' );
+	}
+}
