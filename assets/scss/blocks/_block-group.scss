@@ -22,7 +22,7 @@
 	> .wp-block-group {
 		&.align-wide, &.alignfull {
 
-			.wp-block-group:first-of-type {
+			.wp-block-group:first-of-type:not(.alignwide) {
 
 				@include media-breakpoint-up(lg) {
 					max-width: 70%;
