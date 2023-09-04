@@ -26,6 +26,10 @@ if ( $column_number === "Two" ) {
     $class_name .= ' ' . $class_name . '--two-cols';
 }
 
+if ( ! empty( $block['align'] ) ) {
+    $class_name .= ' align' . $block['align'];
+}
+
 
 // Load values and assign defaults.
 $heading_one             = get_field( 'heading_one' ) ?: 'Heading one';
