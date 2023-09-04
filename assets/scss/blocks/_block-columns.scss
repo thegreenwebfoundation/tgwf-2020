@@ -2,6 +2,10 @@
  * Customsations to the columns layout
 */
 
+/* 1. GENERAL CUSTOMISATIONS        */
+/* 2. SPECIAL CLASSES               */
+/* 2A. four-summary-boxes           */
+
 .wp-block-columns {
 
 	&:not(.no-border) .wp-block-column {
@@ -57,3 +61,68 @@
 	}
 }
 
+
+/* 2. SPECIAL CLASSES               */
+
+/* 2A. four-summary-boxes           */
+.four-summary-boxes:not(.no-border) {
+	flex-wrap: wrap !important;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 1fr 1fr;
+
+	.wp-block-column {
+		position: relative;
+		display: flex;
+  		align-items: center;
+		height: 100%;
+		background-color: white;
+		border-radius: $border-radius;
+		border: $border-width solid var(--nv-text-color);
+		padding: 1rem 1rem 2rem;
+
+		&:last-of-type {
+			border: $border-width solid var(--nv-text-color);
+		}
+
+		&:hover {
+			background-color: var(--nv-text-color);
+			color: white;
+	
+			.wp-block-button__link {
+				color: white;
+			}
+
+			h3:before  {
+				background-image: url( '../img/gwf-brand-icons/GWF-icon-sunburst--green.svg' );
+				border-color: $tgwf-green500;
+			}
+		}
+	}
+
+	h3 {
+		padding-left: 100px;
+		border-bottom: 0;
+
+		&:before {
+			border-right: $border-width solid var(--nv-text-color);
+			width: 80px;
+			margin-right: 2rem;
+		}
+	}
+
+	.wp-block-button__link {
+		position: absolute;
+		top: 0;
+		border: none !important;
+		background-color: transparent;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		display: block;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		color: black;
+	}
+}

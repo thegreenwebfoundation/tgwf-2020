@@ -87,7 +87,8 @@ h2 + h3 {
 }
 
 p + h2,
-.wp-block-buttons + h2 {
+.wp-block-buttons + h2,
+.wp-block-media-text + .wp-block-media-text {
 	margin-top: $medium-spacing;
 
 	@include media-breakpoint-up(md) {
