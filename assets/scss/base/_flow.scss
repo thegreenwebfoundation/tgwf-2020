@@ -16,9 +16,9 @@
 		&:first-child {
 			margin-top: 0;
 		}
-		// We want the top most element to butt up under the header.
+		// We want the bottom most element to butt up under the footer.
 		&:last-child {
-			border: 0;
+			border-bottom: 0;
 		}
 
 		> div[class*="__inner-container"] {
