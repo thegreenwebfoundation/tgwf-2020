@@ -1,0 +1,51 @@
+div.wpforms-container-full .wpforms-form {
+	.wpforms-field {
+		margin-bottom: 2rem;
+	}
+
+	input[type="color"], input[type="date"], 
+	input[type="datetime-local"], input[type="datetime"], 
+	input[type="email"], input[type="month"], 
+	input[type="number"], input[type="password"], 
+	input[type="search"], input[type="tel"], 
+	input[type="text"], input[type="time"], 
+	input[type="url"], input[type="week"] {
+		background-color: $tgwf-green-50;
+		border: 0;
+		border-bottom: $border-width solid black;
+	}
+
+	button[type="submit"] {
+		min-width: 150px;
+		min-height: 3rem; // Keep same standard height as form fields;
+		background-color: var(--nv-primary-accent);
+		border: $border-width solid var(--nv-text-color);
+		border-radius: $border-radius;
+		padding: 0.75rem 1rem;
+		
+		&:hover {
+			background-color: var(--nv-text-color);
+			color: var(--nv-site-bg);
+			border: $border-width solid var(--nv-text-color);
+		}
+	}
+
+	textarea {
+		background-color: $tgwf-green-50;
+		border: $border-width solid black;
+	}
+
+	.wpforms-field-label,
+	.wpforms-field-label-inline {
+		font-size: var(--bodyfontsize);
+	}
+
+	.wpforms-field-description {
+		font-size: rem(15px);
+	}
+
+	.wpforms-required-label {
+		color: $twgf-purple-500;
+		font-size: var(--wp--preset--font-size--medium);
+	}
+}
