@@ -49,3 +49,9 @@ div.wpforms-container-full .wpforms-form {
 		font-size: var(--wp--preset--font-size--medium);
 	}
 }
+
+.wpforms-confirmation-container-full, 
+div[submit-success] > .wpforms-confirmation-container-full:not(.wpforms-redirection-message) {
+	background-color: $tgwf-green-50;
+	border: $border-width solid black;
+}
