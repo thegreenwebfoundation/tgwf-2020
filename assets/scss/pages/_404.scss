@@ -1,0 +1,11 @@
+.error404 {
+	.archive-container {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+
+		@include media-breakpoint-up(md) {
+			margin-top: 4rem;
+			margin-bottom: 4rem;
+		}
+	}
+}
