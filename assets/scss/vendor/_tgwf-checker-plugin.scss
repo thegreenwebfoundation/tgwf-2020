@@ -23,14 +23,22 @@ body.green-web-check {
 	}
 }
 
-.tgwf-result__page-title {
+.tgwf-result__title {
 	border-bottom: $border-width solid var(--nv-text-color);
 	
 	h1 {
 		font-size: var(--wp--preset--font-size--medium);
-		margin-bottom: $small-spacing;
+		margin-bottom: 0;
 		font-weight: normal;
 		letter-spacing: 1px;
+	}
+
+	@include media-breakpoint-up(sm) {
+		display: flex;
+
+		.tgwf-result__title--help {
+			flex-grow: 1;
+		}
 	}
 }
 
@@ -43,16 +51,20 @@ body.green-web-check {
 }
 
 .tgwf-result__result {
-	letter-spacing: 1px;
 	margin-bottom: 0;
 
 	> * {
 		margin-bottom: 1rem;
 		line-height: 1.3;
-		font-size: var(--wp--preset--font-size--large);
+		
+		&:not(:first-child) {
+			font-size: var(--wp--preset--font-size--large);
+		}
 
 		@include media-breakpoint-up(md) {
-			font-size: var(--wp--preset--font-size--x-large);
+			&:not(:first-child) {
+				font-size: var(--wp--preset--font-size--x-large);
+			}
 
 			&:last-child {
 				margin-bottom: 2rem;
@@ -118,9 +130,6 @@ body.green-web-check {
 }
 
 /* CTAS    */
-
-
-
 .gwf-app-cta__title {
 	text-transform: none;
 	font-size: var(--wp--preset--font-size--large);
