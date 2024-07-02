@@ -40,7 +40,9 @@ function tgwf_gutenberg_css(){
  */
 function tgwf_load_footer_scripts() {
 	// Cabin analytics.
-	wp_enqueue_script( 'cabin', 'https://scripts.withcabin.com/hello.js', array(), '1.0.0', true );
+	if ( 'local' !== wp_get_environment_type() ) { 
+		wp_enqueue_script( 'cabin', 'https://scripts.withcabin.com/hello.js', array(), '1.0.0', true );
+	}
 
 	// Conditionally load FOE report JS.
 	if ( is_page( 'report-fog-of-enactment' ) ) {
