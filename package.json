@@ -1,18 +1,18 @@
 {
-  "name": "GWF 2020 theme",
+  "name": "GWF-2020-theme",
   "version": "1.0.0",
   "description": "Build files based on Understrap",
   "main": "index.js",
   "scripts": {
     "bs": "browser-sync start --config src/build/browser-sync.config.js",
     "css": "npm-run-all css-compile css-minify",
-    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css --quiet assets/scss/main.scss:assets/css/nain.css assets/scss/editor-styles.scss:assets/css/editor-styles.css assets/scss/fog-of-enactment.scss:assets/css/fog-of-enactment.css",
-    "css-minify": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output css/ --batch --batch-suffix \".min\" \"css/*.css\" \"!css/*.min.css\" \"!css/*rtl*.css\" \"!css/*-bootstrap4.css\"",
+    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css --quiet assets/scss/main.scss:assets/css/main.css assets/scss/editor-styles.scss:assets/css/editor-styles.css assets/scss/fog-of-enactment.scss:assets/css/fog-of-enactment.css",
+    "css-minify": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output assets/css/ --batch --batch-suffix \".min\" \"assets/css/*.css\" \"!assets/css/*.min.css\" \"!assets/css/*rtl*.css\" \"!assets/css/*-bootstrap4.css\"",
     "js": "npm-run-all js-minify",
-    "js-minify": "terser js/theme.min.js --config-file src/build/terser.config.json --source-map \"content=js/theme.js.map,url=theme.min.js.map,filename=theme.min.js\" --output js/theme.min.js",
+    "js-minify": "terser assets/js/theme.min.js --config-file src/build/terser.config.json --source-map \"content=assets/js/theme.js.map,url=theme.min.js.map,filename=theme.min.js\" --output assets/js/theme.min.js",
     "watch": "npm-run-all --parallel watch-run-*",
     "watch-bs": "npm-run-all --parallel bs watch-run-*",
-    "watch-run-css": "nodemon --watch assets/scss/ --ext scss --exec \"npm-run-all css\"",
+    "watch-run-css": "nodemon --watch assets/scss/ --ext assets/scss --exec \"npm-run-all css\"",
     "watch-run-js": "nodemon --watch assets/js/ --ext js --exec \"npm-run-all js\"",
     "copy-assets": "node src/build/copy-assets.js"
   },
