@@ -5,13 +5,17 @@
 form {
 	> * {
 		margin-bottom: $small-spacing;
-		height: 3rem;
 
 		@include media-breakpoint-up( md ) {
 		}
 	}
+
+	label {
+		font-weight: $bold-font-weight;
+	}
 }
 
+form input:read-write,
 input[type="color"], input[type="date"], 
 input[type="datetime-local"], input[type="datetime"], 
 input[type="email"], input[type="month"], 
@@ -20,17 +24,40 @@ input[type="search"], input[type="tel"],
 input[type="text"], input[type="time"], 
 input[type="url"], input[type="week"] {
 	font-size: 1rem;
-	width: 100%
+	width: 100%;
+	height: 3rem;
+	background: $tgwf-green-50;
+	border: 0;
+	border-bottom: $border-width solid black;
+	border-radius: 0;
 }
 
 textarea {
 	font-size: 1rem;
 	border: 0;
-	background-color: transparent;
 	border-radius: 0;
+	background-color: $tgwf-green-50;
+	border: $border-width solid black;
 }
 
 ::placeholder {
 	color: var(--nv-text-color);
 	opacity: 0.6;
+}
+
+input[type="submit"] {
+	min-width: 150px;
+	min-height: 3rem; // Keep same standard height as form fields;
+	background-color: var(--nv-primary-accent);
+	border: $border-width solid var(--nv-text-color);
+	border-radius: $border-radius;
+	padding: 0.75rem 1rem;
+	line-height: 1.6;
+	text-transform: none;
+	
+	&:hover {
+		background-color: var(--nv-text-color);
+		color: var(--nv-site-bg);
+		border: $border-width solid var(--nv-text-color);
+	}
 }
