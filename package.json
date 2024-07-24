@@ -11,9 +11,9 @@
     "js": "npm-run-all js-minify",
     "js-minify": "terser assets/js/theme.js --output assets/js/theme.min.js",
     "watch": "npm-run-all --parallel watch-run-*",
-    "watch-bs": "npm-run-all --parallel bs watch-run-*",
-    "watch-run-css": "nodemon --watch assets/scss/ --ext assets/scss --exec \"npm-run-all css\"",
-    "watch-run-js": "nodemon --watch assets/js/ --ext assets/js --exec \"npm-run-all js\""
+    "watch-bs": "npm-run-all --parallel bs watch-run-css",
+    "watch-run-css": "nodemon --watch assets/scss/ --ext scss --exec \"npm-run-all css\"",
+    "watch-run-js": "nodemon --watch assets/js/ --ext js --exec \"npm-run-all js\""
   },
   "babel": {
     "extends": "./src/build/babel.config.js"
