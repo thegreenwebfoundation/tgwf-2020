@@ -16,6 +16,7 @@ require 'inc/patterns.php';
 require 'inc/news-archive.php';
 require 'inc/fellowship-post.php';
 require 'inc/fog-of-enactment.php';
+require 'inc/rss-newsletter.php';
 
 
 // Add theme support for gradients, and define them.
