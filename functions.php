@@ -14,6 +14,7 @@ require 'inc/widgets.php';
 require 'inc/patterns.php';
 
 require 'inc/news-archive.php';
+require 'inc/after-single-posts.php';
 require 'inc/fellowship-post.php';
 require 'inc/fog-of-enactment.php';
 require 'inc/rss-newsletter.php';
