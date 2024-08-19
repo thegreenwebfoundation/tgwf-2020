@@ -5,32 +5,32 @@
  * @package tgwf
  */
 
-add_action( 'neve_after_content', 'gwf_after_post_content' );
+add_filter( 'the_content', 'gwf_after_post_main_content' );
 
 /**
  * Display the list of post categories on the blog archive page only.
  */
-function gwf_after_post_content() {
+function gwf_after_post_main_content( $content ) {
 
-    // Output tags at end of content for all posts.
-    // Can't use Neve hooks, as no way to insert stuff after tags.
-	if ( is_single() ) :
-        output_post_tags();
+    // Double-check we're on a single post.
+	if ( is_singular() && in_the_loop() && is_main_query() ) :
 
-        $co2_cat = 'CO2.js';
+        // Output tags at end of content for all posts.
+        // Can't use Neve hooks, as no way to insert stuff after tags.
+        $content .= output_post_tags();
 
-        $args = array(
-            'co2_cat' => $co2_cat,
-        );
+        if ( in_category( 'case-studies' ) ) :
+            // Output the software vendors CTA block.
+            $content .= get_post_field( 'post_content', 5814 );
+        endif;
 
         // Only do this for posts in the CO2.js category.
-        if ( in_category( $co2_cat ) ) :
-            ?>
-                <hr/>
-                <h3>Get notified about new CO2.js posts</h3>
-            <?php
-            echo do_shortcode( '[sibwp_form id=2]' );
+        if ( in_category( 'CO2.js' ) ) :
+            $content .= '<h3>Get notified about new CO2.js posts</h3>';
+            $content .= do_shortcode( "[sibwp_form id=2]" );
         endif;
+
+        return $content;
     endif;
 }
 
@@ -50,5 +50,5 @@ function output_post_tags() {
         $html    .= esc_html( $tag->name ) . '</a>';
     }
     $html .= ' </div> ';
-    echo $html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+    return $html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 }
