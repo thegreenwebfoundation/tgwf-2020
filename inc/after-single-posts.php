@@ -19,11 +19,6 @@ function gwf_after_post_main_content( $content ) {
         // Can't use Neve hooks, as no way to insert stuff after tags.
         $content .= output_post_tags();
 
-        if ( in_category( 'case-studies' ) ) :
-            // Output the software vendors CTA block.
-            $content .= get_post_field( 'post_content', 5814 );
-        endif;
-
         // Only do this for posts in the CO2.js category.
         if ( in_category( 'CO2.js' ) ) :
             $content .= '<h3>Get notified about new CO2.js posts</h3>';
