@@ -37,13 +37,13 @@ function output_post_tags() {
     if ( ! is_array( $tags ) ) {
         return;
     }
-    $html  = '<div class="nv-tags-list">';
+    $html  = '<p class="nv-tags-list">';
     $html .= '<span>' . __( 'Tags', 'neve' ) . ':</span>';
     foreach ( $tags as $tag ) {
         $tag_link = get_tag_link( $tag->term_id );
         $html    .= '<a href=' . esc_url( $tag_link ) . ' title="' . esc_attr( $tag->name ) . '" class=' . esc_attr( $tag->slug ) . ' rel="tag">';
         $html    .= esc_html( $tag->name ) . '</a>';
     }
-    $html .= ' </div> ';
+    $html .= ' </p> ';
     return $html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 }
