@@ -1,3 +1,13 @@
 /**
  * Various grid layouts for use in all sorts of places.
 */
+
+.two-col-grid {
+    @include media-breakpoint-up(md) {
+        flex-wrap: wrap !important;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 2rem;
+    }
+}
