@@ -41,7 +41,7 @@ function fog_of_enactment_toc( $context, $position ) {
 		get_template_part( 'template-parts/fog-of-enactment', '', '');
 	} else if ( is_page( 'report-ai-environmental-impact' ) && $position == 'left' ) {
 
-		get_template_part( 'template-parts/fog-of-enactment', '', '');
+		get_template_part( 'template-parts/ai-briefing', '', '');
 	}
 }
 
