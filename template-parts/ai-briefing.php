@@ -59,11 +59,13 @@
 					</ol>
 				</details>
 			</li>
+            
+            <li>
+				<a href="#acknowledgements">Acknowledgements</a>
+			</li>
 
 			<li>
-				<a href="#footnotes">
-					Footnotes
-				</a>
+				<a href="#footnotes">Footnotes</a>
 			</li>
 		</ol>
 	</div>
