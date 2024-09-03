@@ -31,7 +31,7 @@
 					<summary><a href="#introduction">Introduction</a>
 					<ol>
 						<li><a href="#what-is-ai">What is AI?</a></li>
-						<li><a href="#about-the-author">The story of AI’s adoption boom</a></li>
+						<li><a href="#the-story-of-ais-adoption-boom">The story of AI’s adoption boom</a></li>
 					</ol>
 				</details>
 			</li>

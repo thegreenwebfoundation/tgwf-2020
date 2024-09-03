@@ -65,6 +65,11 @@ $toc-width: 19rem;
 				max-width: rem(700px) !important;
 			}
 		}
+		> .wp-block-table.alignwide {
+			@include media-breakpoint-up(xl) {
+				max-width: none !important;
+			}
+		}
 	}
 
 	// The toc holder.

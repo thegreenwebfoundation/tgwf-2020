@@ -63,6 +63,11 @@
     max-width: 43.75rem !important;
   }
 }
+@media (min-width: 1170px) {
+  .gwf-publication-report .nv-content-wrap > .wp-block-table.alignwide {
+    max-width: none !important;
+  }
+}
 .gwf-publication-report nav {
   display: none;
 }
