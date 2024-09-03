@@ -22,121 +22,47 @@
 		</button>
 
 		<ol>
-			<li>
-				<details>
-					<summary><a href="#acknowledgements">AI all the way babys</a></summary>
-					<ol>
-						<li><a href="#the-green-web-foundation">The Green Web Foundation</a></li>
-						<li><a href="#about-the-author">About the author</a></li>
-						<li><a href="#suggested-citation">Suggested Citation</a></li>
-					</ol>
-				</details>
-			</li>
-
-			<li>
-				<details>
-					<summary><a href="#foreword">Foreword</a></summary>
-					<ol>
-						<li><a href="#the-fog-of-enactment">The Fog of Enactment</a></li>
-						<li><a href="#why-we-published-this-report">Why we published this report</a></li>
-					</ol>
-				</details>
-			</li>
-
-			<li>
+            <li>
 				<a href="#executive-summary">Executive summary</a></summary>
 			</li>
 
 			<li>
-				<a href="#introduction">Introduction</a>
-			</li>
-
-			<li>
 				<details>
-					<summary>
-						<a href="#gaps-in-how-we-model-impact">Gaps in how we model impact</a>
-					</summary>
-
+					<summary><a href="#introduction">Introduction</a>
 					<ol>
-						<li><a href="#estimating-footprint-of-a-digital-service-or-product">Estimating the footprint of a digital service or product</a>
-							</a></li>
-						<li>
-							<a href="#what-about-global-estimates">What about global estimates?</a>
-							</a>
-						</li>
+						<li><a href="#what-is-ai">What is AI?</a></li>
+						<li><a href="#about-the-author">The story of AI’s adoption boom</a></li>
 					</ol>
 				</details>
 			</li>
 
 			<li>
 				<details>
-					<summary>
-						<a href="#critical-assessment-of-industry-sustainability-claims">
-							Critical assessment of industry sustainability claims
-						</a>
-					</summary>
-
+					<summary><a href="#five-things-to-know-about-ais-environmental-impact">5 things every business should know about the environmental impact of AI</a></summary>
 					<ol>
-						<li><a href="#looking-at-direct-and-indirect-effects">
-								Looking at direct and indirect effects
-							</a>
-						</li>
-						<li>
-							<a href="#claims-of-positive-impacts">
-								Claims of positive impacts
-							</a>
-						</li>
-						<li>
-							<a href="#lessons-learned">
-								Lessons learned
-							</a>
-						</li>
+						<li><a href="#area-one-to-know">1. There’s a large and growing environmental impact associated with AI adoption</a></li>
+						<li><a href="#area-two-to-know">2. Significant use of AI is likely to jeopardise most sustainability goals</a></li>
+                        <li><a href="#area-three-to-know">3. AI’s footprint can be measured estimated, but it’s an emerging discipline</a></li>
+                        <li><a href="#area-four-to-know">4. Changing your choice of AI model and task impacts the footprint</a></li>
+                        <li><a href="#area-five-to-know">5. Any AI code can be run in ways that reduce the footprint</a></li>
 					</ol>
 				</details>
 			</li>
 
 			<li>
 				<details>
-					<summary>
-						<a href="#extractive-industries-and-the-tech-sector-the-case-of-fossil-fuels">
-							Extractive industries and the tech sector: the case of fossil fuels
-						</a>
-					</summary>
-
+					<summary><a href="#three-action-for-every-business-to-consider">Recommendations: 3 actions for every business when considering using AI</a></summary>
 					<ol>
-						<li>
-							<a href="#reaching-carbon-neutrality">
-								Reaching carbon neutrality
-							</a>
-						</li>
-						<li>
-							<a href="#digitization-for-fossil-fuel-industry">
-								Digitization for fossil fuel industry?
-							</a>
-						</li>
-						<li><a href="#reducing-embodied-emissions">
-								Reducing Embodied Emissions
-							</a>
-						</li>
+						<li><a href="#recommendation-one">1. Question your use of AI  ➡️ know when to use it</a></li>
+						<li><a href="#recommendation-two">2. Optimise AI use ➡️ use it responsibly</a></li>
+                        <li><a href="#recommendation-three">3. Prioritise getting estimates of AI’s footprint ➡️  ask for your usage data from suppliers</a></li>
 					</ol>
 				</details>
-			</li>
-
-			<li>
-				<a href="#conclusion">
-					Conclusion
-				</a>
 			</li>
 
 			<li>
 				<a href="#footnotes">
 					Footnotes
-				</a>
-			</li>
-			
-			<li>
-				<a href="#appendix">
-					Appendix
 				</a>
 			</li>
 		</ol>
