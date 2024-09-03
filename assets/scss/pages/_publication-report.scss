@@ -65,9 +65,18 @@ $toc-width: 19rem;
 				max-width: rem(700px) !important;
 			}
 		}
-		> .wp-block-table.alignwide {
-			@include media-breakpoint-up(xl) {
+		> .wp-block-table.make-wide {
+			@include media-breakpoint-up(md) {
+
+			}
+		
+			@media (min-width: 1500px) {
+				margin-right: calc( 50% - 50vw );
+				padding-left: 15px;
+				padding-right: 15px;
+				width: 1170px;
 				max-width: none !important;
+				margin-left: calc( 50% - ( 1170px / 2 ) );
 			}
 		}
 	}
