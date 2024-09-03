@@ -1,25 +1,26 @@
-window.onload = function () {
-  var sidebar = document.getElementById("toc_nav_holder"),
-      offset = sidebar.offsetTop;
-  /**
-   * Determines if the header is in view or not.
-   * If not in view fixes the table of contents in position.
-   */
+// window.onload = function () {
+//   var sidebar = document.getElementById("toc_nav_holder"),
+//       offset = sidebar.offsetTop,
+//       timer = setTimeout(TOCFixedClass, 200);
+//   /**
+//    * Determines if the header is in view or not.
+//    * If not in view fixes the table of contents in position.
+//    */
 
-  function TOCFixedClass() {
-    if (window.scrollY > offset) {
-      sidebar.classList.add('fixed-toc');
-      console.log("added");
-    } else {
-      sidebar.classList.remove('fixed-toc');
-    }
-  }
+//   function TOCFixedClass() {
+//     if (window.scrollY > offset) {
+//       sidebar.classList.add('fixed-toc');
+//       console.log("added");
+//     } else {
+//       sidebar.classList.remove('fixed-toc');
+//     }
+//   }
 
-  document.addEventListener("scroll", event => {
-    clearTimeout(timer);
-    let timer = setTimeout(TOCFixedClass, 200);
-  });
-};
+//   document.addEventListener("scroll", event => {
+//     clearTimeout(timer);
+//     let timer = setTimeout(TOCFixedClass, 200);
+//   });
+// };
 
 window.addEventListener('DOMContentLoaded', function (event) {
   //addScrollingToToC()
@@ -152,9 +153,8 @@ function addSideNotes() {
 
 function addSideNote(footnote) {
   const reference = footnote.hash; // copy the element, so we can remove the unneeded return link
-
   const clonedReference = document.querySelector(reference).cloneNode(true);
-  clonedReference.querySelector("a[rev='footnote']").remove();
+  //clonedReference.querySelector("a[rev='footnote']").remove();
   const referenceText = clonedReference.innerHTML;
   const sideNoteText = '<span class="sidenote">' + footnote.innerText + '. ' + referenceText + '</span>'; // insert the sidenote next to the reference in the text body.
 
