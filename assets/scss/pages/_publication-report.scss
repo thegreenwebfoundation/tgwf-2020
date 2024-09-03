@@ -66,11 +66,10 @@ $toc-width: 19rem;
 			}
 		}
 		> .wp-block-table.make-wide {
-			@include media-breakpoint-up(md) {
-
-			}
 		
 			@media (min-width: 1500px) {
+				position: relative;
+				background-color: white;
 				margin-right: calc( 50% - 50vw );
 				padding-left: 15px;
 				padding-right: 15px;
