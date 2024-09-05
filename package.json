@@ -6,7 +6,7 @@
   "scripts": {
     "bs": "browser-sync start --config src/build/browser-sync.config.js",
     "css": "npm-run-all css-compile css-minify",
-    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css --quiet assets/scss/main.scss:assets/css/main.css assets/scss/editor-styles.scss:assets/css/editor-styles.css assets/scss/fog-of-enactment.scss:assets/css/fog-of-enactment.css",
+    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css --quiet assets/scss/main.scss:assets/css/main.css assets/scss/editor-styles.scss:assets/css/editor-styles.css assets/scss/publication-report.scss:assets/css/publication-report.css",
     "css-minify": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output assets/css/ --batch --batch-suffix \".min\" \"assets/css/*.css\" \"!assets/css/*.min.css\" \"!assets/css/*rtl*.css\"",
     "js": "npm-run-all js-minify",
     "js-minify": "terser assets/js/theme.js --output assets/js/theme.min.js",

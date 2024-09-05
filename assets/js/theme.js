@@ -1,6 +1,7 @@
 window.onload = function () {
   var sidebar = document.getElementById("toc_nav_holder"),
-      offset = sidebar.offsetTop;
+      offset = sidebar.offsetTop,
+      timer = setTimeout(TOCFixedClass, 200);
   /**
    * Determines if the header is in view or not.
    * If not in view fixes the table of contents in position.
@@ -9,7 +10,6 @@ window.onload = function () {
   function TOCFixedClass() {
     if (window.scrollY > offset) {
       sidebar.classList.add('fixed-toc');
-      console.log("added");
     } else {
       sidebar.classList.remove('fixed-toc');
     }
@@ -17,7 +17,7 @@ window.onload = function () {
 
   document.addEventListener("scroll", event => {
     clearTimeout(timer);
-    let timer = setTimeout(TOCFixedClass, 200);
+    timer = setTimeout(TOCFixedClass, 200);
   });
 };
 
@@ -152,7 +152,6 @@ function addSideNotes() {
 
 function addSideNote(footnote) {
   const reference = footnote.hash; // copy the element, so we can remove the unneeded return link
-
   const clonedReference = document.querySelector(reference).cloneNode(true);
   clonedReference.querySelector("a[rev='footnote']").remove();
   const referenceText = clonedReference.innerHTML;
