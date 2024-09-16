@@ -28,10 +28,12 @@
 
 			<li>
 				<details>
-					<summary><a href="#introduction">Introduction</a>
+					<summary><a href="#introduction">Introduction</a></summary>
 					<ol>
 						<li><a href="#what-is-ai">What is AI?</a></li>
 						<li><a href="#the-story-of-ais-adoption-boom">The story of AI’s adoption boom</a></li>
+						<li><a href="#growing-concerns">Growing concerns about the deployment of AI</a></li>
+						<li><a href="#direct-impacts">Understanding the direct environmental impacts of AI</a></li>
 					</ol>
 				</details>
 			</li>
@@ -41,7 +43,7 @@
 					<summary><a href="#five-things-to-know-about-ais-environmental-impact">5 things every business should know about the environmental impact of AI</a></summary>
 					<ol>
 						<li><a href="#area-one-to-know">1. There’s a large and growing environmental impact associated with AI adoption</a></li>
-						<li><a href="#area-two-to-know">2. Significant use of AI is likely to jeopardise most sustainability goals</a></li>
+						<li><a href="#area-two-to-know">2. Mass adoption of AI is jeopardising existing company sustainability goals</a></li>
                         <li><a href="#area-three-to-know">3. AI’s footprint can be measured estimated, but it’s an emerging discipline</a></li>
                         <li><a href="#area-four-to-know">4. Changing your choice of AI model and task impacts the footprint</a></li>
                         <li><a href="#area-five-to-know">5. Any AI code can be run in ways that reduce the footprint</a></li>
