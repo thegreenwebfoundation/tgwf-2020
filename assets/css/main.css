@@ -1384,6 +1384,9 @@ div[submit-success] > .wpforms-confirmation-container-full:not(.wpforms-redirect
 .single-post article .entry-content {
   font-size: 1.1rem;
 }
+.single-post h2 {
+  text-transform: none;
+}
 
 .blog-entry-title {
   text-transform: none;
