@@ -723,6 +723,7 @@ h3[class*=gwf-iconbg-]:before {
 @media (min-width: 960px) {
   .wp-block-group.gwf-testimonials--three .wp-block-group p.quote {
     grid-row: 1;
+    margin-bottom: 1rem;
   }
 }
 .wp-block-group.gwf-testimonials--three .wp-block-group p.quote::before, .wp-block-group.gwf-testimonials--three .wp-block-group p.quote::after {
