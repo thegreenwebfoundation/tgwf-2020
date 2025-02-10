@@ -44,6 +44,11 @@ add_theme_support(
 			'gradient' => 'linear-gradient(145deg, rgb(255,255,255) 15%, rgb(250,170,0) 100%)',
 			'slug'     => 'white-to-orange',
 		),
+		array(
+			'name'     => __( 'White to yellow', 'tgwf' ),
+			'gradient' => 'linear-gradient(145deg, rgb(255,255,255) 15%, rgb(250,230,0) 50%, rgb(255,255,255) 85%)',
+			'slug'     => 'white-to-yellow',
+		),
 	)
 );
 
