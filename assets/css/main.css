@@ -1462,6 +1462,83 @@ div[submit-success] > .wpforms-confirmation-container-full:not(.wpforms-redirect
   }
 }
 
+.wp-block-group.gwf-testimonials--three {
+  padding: 3rem 1rem;
+}
+@media (min-width: 960px) {
+  .wp-block-group.gwf-testimonials--three {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 0 1rem;
+  }
+}
+.wp-block-group.gwf-testimonials--three .wp-block-group {
+  width: 100%;
+  max-width: 600px !important;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 960px) {
+  .wp-block-group.gwf-testimonials--three .wp-block-group {
+    padding: 0 1rem;
+    display: grid;
+    grid-row: 1/-1;
+    grid-template-rows: subgrid;
+  }
+}
+@media (min-width: 960px) {
+  .wp-block-group.gwf-testimonials--three .wp-block-group + .wp-block-group {
+    margin-top: 0;
+  }
+}
+.wp-block-group.gwf-testimonials--three .wp-block-group p.quote {
+  height: 100%;
+  background-color: white;
+  border-radius: 1rem;
+  border: 2px solid var(--nv-text-color);
+  padding: 1rem;
+  position: relative;
+}
+@media (min-width: 960px) {
+  .wp-block-group.gwf-testimonials--three .wp-block-group p.quote {
+    grid-row: 1;
+  }
+}
+.wp-block-group.gwf-testimonials--three .wp-block-group p.quote::before, .wp-block-group.gwf-testimonials--three .wp-block-group p.quote::after {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  left: calc(50% - 15px);
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid white;
+}
+.wp-block-group.gwf-testimonials--three .wp-block-group p.quote::before {
+  border-top-color: black;
+  bottom: -17px;
+}
+.wp-block-group.gwf-testimonials--three .wp-block-group figure {
+  margin-top: 1.5rem;
+}
+@media (min-width: 960px) {
+  .wp-block-group.gwf-testimonials--three .wp-block-group figure {
+    grid-row: 2;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 960px) {
+  .wp-block-group.gwf-testimonials--three .wp-block-group p.source {
+    grid-row: 3;
+  }
+}
+
 /* Styling for the category archive pages. */
 .category .nv-page-title-wrap.nv-big-title .nv-page-title h1 + p {
   margin-bottom: 2rem;
