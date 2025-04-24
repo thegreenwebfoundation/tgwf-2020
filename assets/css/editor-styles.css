@@ -680,27 +680,26 @@ h3[class*=gwf-iconbg-]:before {
   margin-top: 0;
 }
 
-.wp-block-group.gwf-testimonials--three {
+[class*=gwf-testimonials] {
   padding: 3rem 1rem;
 }
 @media (min-width: 960px) {
-  .wp-block-group.gwf-testimonials--three {
+  [class*=gwf-testimonials] {
     padding-top: 4rem;
     padding-bottom: 4rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: grid !important;
     grid-template-rows: repeat(3, auto);
     gap: 0 1rem;
   }
 }
-.wp-block-group.gwf-testimonials--three .wp-block-group {
+[class*=gwf-testimonials] .wp-block-group {
   width: 100%;
   max-width: 600px !important;
   margin-right: auto;
   margin-left: auto;
 }
 @media (min-width: 960px) {
-  .wp-block-group.gwf-testimonials--three .wp-block-group {
+  [class*=gwf-testimonials] .wp-block-group {
     padding: 0 1rem;
     display: grid;
     grid-row: 1/-1;
@@ -708,11 +707,11 @@ h3[class*=gwf-iconbg-]:before {
   }
 }
 @media (min-width: 960px) {
-  .wp-block-group.gwf-testimonials--three .wp-block-group + .wp-block-group {
+  [class*=gwf-testimonials] .wp-block-group + .wp-block-group {
     margin-top: 0;
   }
 }
-.wp-block-group.gwf-testimonials--three .wp-block-group p.quote {
+[class*=gwf-testimonials] .wp-block-group p.quote {
   height: 100%;
   background-color: white;
   border-radius: 1rem;
@@ -721,12 +720,12 @@ h3[class*=gwf-iconbg-]:before {
   position: relative;
 }
 @media (min-width: 960px) {
-  .wp-block-group.gwf-testimonials--three .wp-block-group p.quote {
+  [class*=gwf-testimonials] .wp-block-group p.quote {
     grid-row: 1;
     margin-bottom: 1rem;
   }
 }
-.wp-block-group.gwf-testimonials--three .wp-block-group p.quote::before, .wp-block-group.gwf-testimonials--three .wp-block-group p.quote::after {
+[class*=gwf-testimonials] .wp-block-group p.quote::before, [class*=gwf-testimonials] .wp-block-group p.quote::after {
   content: "";
   position: absolute;
   bottom: -14px;
@@ -738,23 +737,42 @@ h3[class*=gwf-iconbg-]:before {
   border-right: 15px solid transparent;
   border-top: 15px solid white;
 }
-.wp-block-group.gwf-testimonials--three .wp-block-group p.quote::before {
+[class*=gwf-testimonials] .wp-block-group p.quote::before {
   border-top-color: black;
   bottom: -17px;
 }
-.wp-block-group.gwf-testimonials--three .wp-block-group figure {
+[class*=gwf-testimonials] .wp-block-group figure {
   margin-top: 1.5rem;
 }
 @media (min-width: 960px) {
-  .wp-block-group.gwf-testimonials--three .wp-block-group figure {
+  [class*=gwf-testimonials] .wp-block-group figure {
     grid-row: 2;
     margin-left: auto;
     margin-right: auto;
   }
 }
 @media (min-width: 960px) {
-  .wp-block-group.gwf-testimonials--three .wp-block-group p.source {
+  [class*=gwf-testimonials] .wp-block-group p.source {
     grid-row: 3;
+  }
+}
+
+@media (min-width: 960px) {
+  .wp-block-group.gwf-testimonials--one {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.wp-block-group.gwf-testimonials--one .wp-block-group p.quote {
+  height: auto;
+}
+@media (min-width: 960px) {
+  .wp-block-group.gwf-testimonials--two {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 960px) {
+  .wp-block-group.gwf-testimonials--three {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

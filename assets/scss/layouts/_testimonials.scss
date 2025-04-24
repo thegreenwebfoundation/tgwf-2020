@@ -1,84 +1,104 @@
-.wp-block-group.gwf-testimonials {
-    
-    &--three {
-        padding: 3rem 1rem;
+// General styling for the quote styling first.
+[class*="gwf-testimonials"] { 
+    padding: 3rem 1rem;
 
+    @include media-breakpoint-up(lg) {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        display: grid !important;
+        grid-template-rows: repeat(3, auto);
+        gap: 0 1rem;
+    }
 
+    // Single testimonial wrapper.
+    .wp-block-group {
+        width: 100%;
+        max-width: 600px !important;
+        margin-right: auto;
+        margin-left: auto;
+        
         @include media-breakpoint-up(lg) {
-            padding-top: 4rem;
-            padding-bottom: 4rem;
+            padding: 0 1rem;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, auto);
-            gap: 0 1rem;
+            grid-row: 1 / -1;
+            grid-template-rows: subgrid;
         }
 
-        // Single testimonial wrapper.
-        .wp-block-group {
-            width: 100%;
-            max-width: 600px !important;
-            margin-right: auto;
-            margin-left: auto;
-            
+        & + .wp-block-group {
             @include media-breakpoint-up(lg) {
-                padding: 0 1rem;
-                display: grid;
-                grid-row: 1 / -1;
-                grid-template-rows: subgrid;
+                margin-top: 0;
+            }
+        }
+
+        p.quote {
+            height: 100%;
+            background-color: white;
+            border-radius: 1rem;
+            border: $border-width solid var(--nv-text-color);
+            padding: 1rem;
+            position: relative;
+
+            @include media-breakpoint-up(lg) {
+                grid-row: 1;
+                margin-bottom: 1rem;
             }
 
-            & + .wp-block-group {
-                @include media-breakpoint-up(lg) {
-                    margin-top: 0;
-                }
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                bottom: -14px;
+                left: calc(50% - 15px);
+                display: block;
+                width: 10px; 
+                height: 10px; 
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+                border-top: 15px solid white; 
             }
+            &::before {
+                border-top-color: black;
+                bottom: -17px;
+            }
+        }
 
+        figure {
+            margin-top: 1.5rem;
+
+            @include media-breakpoint-up(lg) {
+                grid-row: 2;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        p.source {
+            @include media-breakpoint-up(lg) {
+                grid-row: 3;
+            }    
+        }
+    }
+}
+
+// Layouts for multiple testimonials in a block below.
+.wp-block-group.gwf-testimonials {
+    &--one {
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: repeat(1, 1fr);
+        }      
+        .wp-block-group {
             p.quote {
-                height: 100%;
-                background-color: white;
-                border-radius: 1rem;
-                border: $border-width solid var(--nv-text-color);
-                padding: 1rem;
-                position: relative;
-
-                @include media-breakpoint-up(lg) {
-                    grid-row: 1;
-                    margin-bottom: 1rem;
-                }
-
-                &::before, &::after {
-                    content: '';
-                    position: absolute;
-                    bottom: -14px;
-                    left: calc(50% - 15px);
-                    display: block;
-                    width: 10px; 
-                    height: 10px; 
-                    border-left: 15px solid transparent;
-                    border-right: 15px solid transparent;
-                    border-top: 15px solid white; 
-                }
-                &::before {
-                    border-top-color: black;
-                    bottom: -17px;
-                }
+                height: auto;
             }
-
-            figure {
-                margin-top: 1.5rem;
-
-                @include media-breakpoint-up(lg) {
-                    grid-row: 2;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-            }
-
-            p.source {
-                @include media-breakpoint-up(lg) {
-                    grid-row: 3;
-                }    
-            }
+        }
+    }
+    &--two {
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: repeat(2, 1fr);
+        }      
+    }
+    &--three {
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 }
