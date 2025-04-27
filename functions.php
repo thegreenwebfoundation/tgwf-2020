@@ -18,6 +18,7 @@ require 'inc/after-single-posts.php';
 require 'inc/fellowship-post.php';
 require 'inc/publication-report.php';
 require 'inc/rss-newsletter.php';
+require 'inc/support-form.php';
 
 
 // Add theme support for gradients, and define them.
