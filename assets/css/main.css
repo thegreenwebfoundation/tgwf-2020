@@ -1668,4 +1668,42 @@ div[submit-success] > .wpforms-confirmation-container-full:not(.wpforms-redirect
   }
 }
 
+/**
+ * Customisations for the support page FAQ section.
+*/
+.support-faq-query-loop .wp-block-columns {
+  row-gap: 0.5rem;
+}
+.support-faq-query-loop .wp-block-columns p.pb-0 {
+  padding-top: 0;
+  padding-right: 0.33rem;
+}
+.support-faq-query-loop .wp-block-columns p.pb-0,
+.support-faq-query-loop .wp-block-columns .wp-block-post-date {
+  display: inline;
+  width: auto;
+}
+.support-faq-query-loop .wp-block-column h3.wp-block-post-title a {
+  text-decoration: none;
+  background-image: none !important;
+  --linkdeco: none;
+}
+.support-faq-query-loop .wp-block-column h3.wp-block-post-title a:hover, .support-faq-query-loop .wp-block-column h3.wp-block-post-title a:focus {
+  text-decoration: underline;
+  background-image: none !important;
+  --linkdeco: underline;
+}
+.support-faq-query-loop .wp-block-column:last-of-type {
+  margin-top: 0;
+}
+
+@media (min-width: 782px) {
+  .support-faq-query-loop .wp-block-columns p.pb-0,
+  .support-faq-query-loop .wp-block-columns .wp-block-post-date {
+    display: block;
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */

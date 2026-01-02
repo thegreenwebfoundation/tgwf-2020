@@ -1,0 +1,53 @@
+/**
+ * Customisations for the support page FAQ section.
+*/
+
+.support-faq-query-loop {
+
+    .wp-block-columns {
+        row-gap: 0.5rem;
+    
+        // The title "published".
+        p.pb-0 {
+	        padding-top: 0;
+            padding-right: 0.33rem;
+        }
+
+        p.pb-0, 
+        .wp-block-post-date {
+	        display: inline;
+	        width: auto;
+        }
+    } 
+
+    // Support page title & link.
+    .wp-block-column h3.wp-block-post-title { 
+        a {
+            text-decoration: none;
+            background-image: none !important;
+            --linkdeco: none;
+        }
+
+        a:hover, a:focus {
+	        text-decoration: underline;
+	        background-image: none !important;
+	        --linkdeco: underline;
+        }
+    }
+
+    .wp-block-column:last-of-type {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 782px) {
+
+	.support-faq-query-loop {
+        .wp-block-columns p.pb-0, 
+        .wp-block-columns .wp-block-post-date {
+	        display: block;
+	        width: 100%;
+            padding-right: 0;
+        }
+    }
+}
