@@ -25,8 +25,9 @@ function gwf_after_post_main_content( $content ) {
             $content .= do_shortcode( "[sibwp_form id=2]" );
         endif;
 
-        return $content;
     endif;
+
+    return $content;
 }
 
 /**
