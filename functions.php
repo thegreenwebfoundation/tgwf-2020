@@ -14,8 +14,10 @@ require 'inc/widgets.php';
 require 'inc/patterns.php';
 
 require 'inc/news-archive.php';
+require 'inc/after-single-posts.php';
 require 'inc/fellowship-post.php';
 require 'inc/fog-of-enactment.php';
+require 'inc/publication-report.php';
 require 'inc/rss-newsletter.php';
 
 
@@ -42,6 +44,11 @@ add_theme_support(
 			'name'     => __( 'White to orange', 'tgwf' ),
 			'gradient' => 'linear-gradient(145deg, rgb(255,255,255) 15%, rgb(250,170,0) 100%)',
 			'slug'     => 'white-to-orange',
+		),
+		array(
+			'name'     => __( 'White to yellow', 'tgwf' ),
+			'gradient' => 'linear-gradient(145deg, rgb(255,255,255) 15%, rgb(250,230,0) 50%, rgb(255,255,255) 85%)',
+			'slug'     => 'white-to-yellow',
 		),
 	)
 );

@@ -67,7 +67,7 @@
 // Styling and customisations for plugins or other third party code.
 @import 'vendor/tgwf-checker-plugin';
 @import 'vendor/wp-forms';
-
+@import 'vendor/brevo';
 
 
 // Layouts
@@ -78,6 +78,7 @@
 @import 'layouts/featured-image';
 @import 'layouts/page';
 @import 'layouts/post';
+@import 'layouts/testimonials';
 
 
 
@@ -96,3 +97,4 @@
 @import 'pages/fellowship-post';
 @import 'pages/donate';
 @import 'pages/404';
+@import 'pages/support.scss';

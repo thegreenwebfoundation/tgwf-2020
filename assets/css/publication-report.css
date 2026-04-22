@@ -1,0 +1,194 @@
+/**
+ * Report specific SCSS files
+ * These styles only apply on the report pages
+ * We already import the main css file in the header
+ * in the theme, so we want to minimise the redeclared styles
+*/
+/**
+* Sass function and mixin to use rem units with optional pixel fallback.
+* Author: Pierre Burel
+* Source: https://github.com/pierreburel/sass-rem
+*/
+/**
+ * Variables for use throughout the rest of the SASS partials.
+*/
+/**
+ * Default typography styles and variables.
+ * Overrides of key TwentyTwenty typography styles.
+*/
+/* Default typography styles and variables */
+/* 1. VISIBILITY and LAYOUT OF TOC      */
+/* 2. CONTENTS OF TOC                   */
+/* 3. REPORT CONTENT                    */
+/* 4. FOOTNOTES AND SIDENOTES           */
+.gwf-publication-report {
+  /* 1. VISIBILITY and LAYOUT OF TOC      */
+  /* 2. CONTENTS OF TOC                   */
+  /* 3. REPORT CONTENT                    */
+  /* 4. FOOTNOTES AND SIDENOTES           */
+  /* FILE END   */
+}
+@media (min-width: 960px) {
+  .gwf-publication-report {
+    margin: auto 0;
+  }
+  .gwf-publication-report .row {
+    margin-right: 0;
+  }
+}
+@media (min-width: 1170px) {
+  .gwf-publication-report {
+    margin: auto;
+  }
+}
+@media (min-width: 960px) {
+  .gwf-publication-report .nv-single-page-wrap {
+    max-width: calc(100% - 19rem) !important;
+    margin-left: 19rem;
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .gwf-publication-report .nv-single-page-wrap .entry-content > *:first-child {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+@media (min-width: 1170px) {
+  .gwf-publication-report .nv-single-page-wrap .entry-content > *:first-child {
+    margin-right: 0;
+  }
+}
+@media (min-width: 1170px) {
+  .gwf-publication-report .nv-content-wrap > *:not(:first-child) {
+    max-width: 43.75rem !important;
+  }
+}
+@media (min-width: 1500px) {
+  .gwf-publication-report .nv-content-wrap > .wp-block-table.make-wide {
+    position: relative;
+    background-color: white;
+    margin-right: calc(50% - 50vw);
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 1170px;
+    max-width: none !important;
+    margin-left: calc(50% - 585px);
+  }
+}
+.gwf-publication-report nav {
+  display: none;
+}
+@media (min-width: 960px) {
+  .gwf-publication-report nav {
+    display: block;
+  }
+}
+@media (min-width: 960px) {
+  .gwf-publication-report nav {
+    position: absolute;
+    /* we use z-index, to put the toc behind the header */
+    overflow: auto;
+    width: 19rem;
+    height: 100vh;
+    padding: 1rem;
+    border-right: 2px solid black;
+    font-family: "twkeverett", sans-serif;
+  }
+  .gwf-publication-report nav.fixed-toc {
+    position: fixed;
+    top: 0;
+  }
+  .gwf-publication-report nav .tocToggle {
+    display: none;
+  }
+  .gwf-publication-report nav .toc__heading {
+    font-size: var(--wp--preset--font-size--medium);
+    border-bottom: 2px solid black;
+    margin-top: 4rem;
+  }
+  .gwf-publication-report nav .toc {
+    position: relative;
+  }
+  .gwf-publication-report nav .toc button {
+    display: none;
+  }
+  .gwf-publication-report nav ol {
+    list-style: none;
+    margin-top: 0.5rem;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .gwf-publication-report nav ol li {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    padding: 0.3rem;
+  }
+  .gwf-publication-report nav ol li a {
+    text-decoration: none;
+    color: black;
+  }
+  .gwf-publication-report nav ol li a:hover {
+    text-decoration: underline;
+  }
+  .gwf-publication-report nav details {
+    margin-top: 0.5rem;
+  }
+  .gwf-publication-report nav details > summary {
+    list-style: none;
+    cursor: pointer;
+  }
+  .gwf-publication-report nav summary::-webkit-details-marker {
+    display: none;
+  }
+}
+.gwf-publication-report .entry-content {
+  margin-top: 0;
+}
+.gwf-publication-report dl,
+.gwf-publication-report ol,
+.gwf-publication-report ul {
+  max-width: 50rem;
+  padding-left: 2rem;
+  -webkit-padding-start: 5%;
+}
+.gwf-publication-report li p {
+  width: 100%;
+}
+.gwf-publication-report table p {
+  width: 100%;
+  font-size: 0.9rem;
+}
+.gwf-publication-report .nv-content-wrap {
+  padding-top: 0;
+  margin-top: 0;
+}
+.gwf-publication-report figure.colwidth img {
+  width: 100%;
+}
+.gwf-publication-report .sidenote {
+  display: none;
+}
+@media (min-width: 1170px) {
+  .gwf-publication-report .sidenote {
+    display: block;
+    position: relative;
+    width: 7.5rem;
+    float: right;
+    clear: right;
+    margin: 0.3rem -21% 1rem 0;
+    font-size: 0.8rem;
+    vertical-align: baseline;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .gwf-publication-report .sidenote {
+    width: 9.375rem;
+    margin-right: -30%;
+  }
+}
+.gwf-publication-report .footnotes p,
+.gwf-publication-report .footnotes li {
+  font-size: 0.8rem;
+}
+
+/*# sourceMappingURL=publication-report.css.map */
